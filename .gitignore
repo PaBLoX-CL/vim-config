@@ -1,0 +1,11 @@
+bundle/
+tmp/
+.cache/
+vimproc/
+
+# compiled spell vim file
+*.spl
+
+# vim generated file
+.netrwhist
+
