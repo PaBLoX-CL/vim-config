@@ -131,7 +131,6 @@ NeoBundle 'scrooloose/syntastic' "{{{
   let g:syntastic_style_warning_symbol = '≈'
   "}}}
 NeoBundle 'airblade/vim-gitgutter'
-"NeoBundle 'mhinz/vim-signify' " too slow?
 NeoBundleLazy 'sjl/gundo.vim', {'autoload':{'commands':'GundoToggle'}} "{{{
   nnoremap <silent> <F5> :GundoToggle<CR>
   "}}}
@@ -702,13 +701,6 @@ set wildignore+=.DS_Store,tmp,*.swp,*.scssc
 set wildignore+=log/
 set wildignore+=vendor/,node_modules/
 " }}}
-
-" signify
-let g:signify_vcs_list = [ 'git', 'hg' ]
-let g:signify_sign_change            = '~'
-highlight SignifySignAdd    ctermfg=2 ctermbg=NONE
-highlight SignifySignDelete ctermfg=1 ctermbg=NONE
-highlight SignifySignChange ctermfg=3 ctermbg=NONE
 
 NeoBundleCheck
 " vim: foldmethod=marker tabstop=2 softtabstop=2 shiftwidth=2 foldlevel=0
