@@ -391,7 +391,7 @@ NeoBundleLazy 'zhaocai/GoldenView.Vim', {'autoload':{'mappings':['<Plug>ToggleGo
 NeoBundleLazy 'Shougo/vimshell.vim', {'autoload':{'commands':[ 'VimShell', 'VimShellInteractive' ]}} "{{{
   let g:vimshell_editor_command='vim'
   let g:vimshell_right_prompt='getcwd()'
-  let g:vimshell_temporary_directory='~/.vim/.cache/vimshell'
+  let g:vimshell_data_directory='~/.vim/.cache/vimshell'
   let g:vimshell_vimshrc_path='~/.vim/vimshrc'
 
   nnoremap <leader>c :VimShell -split<cr>
