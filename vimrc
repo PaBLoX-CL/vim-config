@@ -209,9 +209,7 @@ NeoBundleLazy 'godlygeek/tabular', {'autoload':{'commands':'Tabularize'}} " {{{
   vmap <Leader>a<Bar> :Tabularize /<Bar><CR>
   " }}}
 NeoBundle 'bufkill.vim'
-NeoBundle 'maxbrunsfeld/vim-yankstack' "{{{
-  call yankstack#setup()
-  "}}}
+NeoBundle 'maxbrunsfeld/vim-yankstack'
 NeoBundle 'vim-scripts/YankRing.vim' "{{{
   let g:yankring_replace_n_pkey = '<leader>['
   let g:yankring_replace_n_nkey = '<leader>]'
@@ -222,18 +220,12 @@ NeoBundle 'vim-scripts/YankRing.vim' "{{{
 
 " _ Navigation {{{
 NeoBundleLazy 'EasyGrep', {'autoload':{'commands':'GrepOptions'}} "{{{
-      let g:EasyGrepRecursive=1
-      let g:EasyGrepAllOptionsInExplorer=1
-      let g:EasyGrepCommand=1
-      nnoremap <leader>vo :GrepOptions<cr>
+  let g:EasyGrepRecursive=1
+  let g:EasyGrepAllOptionsInExplorer=1
+  let g:EasyGrepCommand=1
+  nnoremap <leader>vo :GrepOptions<cr>
   "}}}
-NeoBundle 'justinmk/vim-sneak' "{{{
-  let g:sneak#streak = 1
-  nmap s <Plug>Sneak_s
-  nmap S <Plug>Sneak_S
-  xmap s <Plug>Sneak_s
-  xmap S <Plug>Sneak_S
-  "}}}
+NeoBundle 'justinmk/vim-sneak'
 NeoBundle 'kien/ctrlp.vim', { 'depends': 'tacahiroy/ctrlp-funky' } "{{{
   let g:ctrlp_clear_cache_on_exit=1
   let g:ctrlp_max_height=40
@@ -420,6 +412,7 @@ NeoBundle 'benmills/vimux' "{{{
 " }}}
 
 call neobundle#end()
+call yankstack#setup()
 
 " 2. Base configuration {{{
 
@@ -631,7 +624,14 @@ vnoremap > >gv
 
 " }}}
 
-" 4. Mappings {{{
+" 4. Mappings {{{1
+
+" vim-sneak {{{2
+let g:sneak#streak = 1
+nmap s <Plug>Sneak_s
+nmap S <Plug>Sneak_S
+xmap s <Plug>Sneak_s
+xmap S <Plug>Sneak_S
 
 " set pastetoggle=<F2>
 map <F6> :set invpaste<CR>:set paste?<CR>
