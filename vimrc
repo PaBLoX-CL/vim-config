@@ -208,7 +208,6 @@ NeoBundleLazy 'godlygeek/tabular', {'autoload':{'commands':'Tabularize'}} " {{{
   nmap <Leader>a<Bar> :Tabularize /<Bar><CR>
   vmap <Leader>a<Bar> :Tabularize /<Bar><CR>
   " }}}
-"NeoBundle 'rgarver/Kwbd.vim'
 NeoBundle 'bufkill.vim'
 NeoBundle 'maxbrunsfeld/vim-yankstack' "{{{
   call yankstack#setup()
