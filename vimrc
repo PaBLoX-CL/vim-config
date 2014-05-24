@@ -164,6 +164,8 @@ NeoBundleLazy 'Shougo/neocomplete.vim', {'autoload':{'insert':1}, 'vim_version':
 " __ Ruby {{{
 NeoBundle 'tpope/vim-rails'
 NeoBundle 'vim-ruby/vim-ruby'
+NeoBundle 'tpope/vim-bundler'
+NeoBundle 'tpope/vim-rails'
 NeoBundleLazy 'nelstrom/vim-textobj-rubyblock', {'autoload':{'filetypes':['ruby']}}
 NeoBundleLazy 'skwp/vim-rspec', {'autoload':{'filetypes':['ruby']}}
 " __}}}
