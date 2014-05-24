@@ -393,7 +393,6 @@ NeoBundleLazy 'Shougo/vimshell.vim', {'autoload':{'commands':[ 'VimShell', 'VimS
   nnoremap <leader>cr :VimShellInteractive irb<cr>
   nnoremap <leader>cp :VimShellInteractive python<cr>
   "}}}
-NeoBundleLazy 'tpope/vim-scriptease', {'autoload':{'filetypes':['vim']}}
 NeoBundle 'mhinz/vim-startify' "{{{
   let g:startify_session_dir = '~/.vim/.cache/sessions'
   let g:startify_change_to_vcs_root = 1
@@ -407,10 +406,7 @@ NeoBundle 'benmills/vimux' "{{{
   "map <LocalLeader>d :call VimuxRunCommand(@v, 0)<CR>
   "}}}
 
-" _}}}
-
-" }}}
-
+" ~~~ Interludio ~~~ {{{1
 call neobundle#end()
 call yankstack#setup()
 
@@ -423,7 +419,7 @@ syntax enable
 set autoread
 
 set timeoutlen=500 "mapping timeout
-set ttimeoutlen=50 "keycode timeout
+set ttimeoutlen=100 "keycode timeout
 
 set matchpairs+=<:>
 
