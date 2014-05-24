@@ -263,19 +263,18 @@ NeoBundle 'kien/ctrlp.vim', { 'depends': 'tacahiroy/ctrlp-funky' } "{{{
 NeoBundle 'mileszs/ack.vim' "{{{
   let g:ackprg = "ag --nogroup --column --smart-case --follow"
   "}}}
-NeoBundleLazy 'scrooloose/nerdtree', {'autoload':{'commands':['NERDTreeToggle','NERDTreeFind']}} "{{{
-  let NERDTreeShowHidden=1
-  let NERDTreeQuitOnOpen=0
-  let NERDTreeShowLineNumbers=1
-  let NERDTreeChDirMode=0
-  let NERDTreeShowBookmarks=1
-  let NERDTreeIgnore=['\.git','\.hg']
-  let NERDTreeBookmarksFile='~/.vim/.cache/NERDTreeBookmarks'
-  nnoremap <F2> :NERDTreeToggle<CR>
-  nnoremap <F3> :NERDTreeFind<CR>
-  "}}}
-
-" }}}
+" NeoBundleLazy 'scrooloose/nerdtree', {'autoload':{'commands':['NERDTreeToggle','NERDTreeFind']}} "{{{
+"   let NERDTreeShowHidden=1
+"   let NERDTreeQuitOnOpen=0
+"   let NERDTreeShowLineNumbers=1
+"   let NERDTreeChDirMode=0
+"   let NERDTreeShowBookmarks=1
+"   let NERDTreeIgnore=['\.git','\.hg']
+"   let NERDTreeBookmarksFile='~/.vim/.cache/NERDTreeBookmarks'
+"   nnoremap <F2> :NERDTreeToggle<CR>
+"   nnoremap <F3> :NERDTreeFind<CR>
+"   "}}}
+NeoBundle 'tpope/vim-vinegar'
 
 " _ Filetypes {{{
 NeoBundleLazy 'tpope/vim-git', {'autoload':{'filetypes':['git','gitcommit','gitconfig','gitrebase','gitsendemail']}}
