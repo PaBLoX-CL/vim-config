@@ -1,23 +1,23 @@
 " vimrc
-" Author: Pablo Olmos de Aguilera C. <pablo at glatelier dot org>
-"
+" Author: Pablo Olmos de Aguilera C.
 
+" i. Bootstrap system {{{1
 set nocompatible "anybody cares?
+
 nnoremap <Space> <Nop>
 let mapleader=" "
 let localmapleader=" "
 
-" i. Load external configuration before anything else {{{
+" i. Load external configuration before anything else {{{2
 if filereadable(expand("~/.vim/before.vimrc"))
   source ~/.vim/before.vimrc
 endif
-" }}}
 
-" ii. NeoBundle Configuration {{{
+" ii. NeoBundle Configuration {{{2
 
 " Necessary to configure neobundle
 set runtimepath+=~/.vim/bundle/neobundle.vim/
-call neobundle#rc(expand('~/.vim/bundle/'))
+call neobundle#begin(expand('~/.vim/bundle/'))
 
 " Let NeoBundle manage NeoBundle
 NeoBundleFetch 'Shougo/neobundle.vim'
@@ -25,9 +25,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 " Recommended to install
 NeoBundle 'Shougo/vimproc', { 'build' : { 'unix' : 'make -f make_unix.mak' } }
 
-" }}}
-
-" 1. Packages {{{
+" 1. Packages {{{1
 
 " _ General {{{
 NeoBundle 'tpope/vim-surround'
@@ -419,6 +417,8 @@ NeoBundle 'benmills/vimux' "{{{
 " _}}}
 
 " }}}
+
+call neobundle#end()
 
 " 2. Base configuration {{{
 
