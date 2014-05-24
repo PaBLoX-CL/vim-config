@@ -121,6 +121,7 @@ NeoBundle 'tpope/vim-fugitive' "{{{
   "}}}
 NeoBundle 'gregsexton/gitv', { 'depends': 'tpope/vim-fugitive', 'autoload': {'commands': 'Gitv'}}
 NeoBundle 'tpope/vim-endwise'
+NeoBundle 'tpope/vim-dispatch'
 NeoBundle 'tomtom/tcomment_vim'
 NeoBundle 'scrooloose/syntastic' "{{{
   let g:syntastic_error_symbol = '✗'
