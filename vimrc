@@ -9,6 +9,11 @@ let mapleader=" "
 let localmapleader=" "
 
 " i. Load external configuration before anything else {{{2
+for fpath in split(globpath('~/.vim/before', '*.vim'), '\n')
+  exe 'source' fpath
+endfor
+
+" for local changes that aren't supposed to go under version control
 if filereadable(expand("~/.vim/before.vimrc"))
   source ~/.vim/before.vimrc
 endif
