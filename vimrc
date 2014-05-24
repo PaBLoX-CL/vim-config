@@ -703,5 +703,7 @@ set wildignore+=log/
 set wildignore+=vendor/,node_modules/
 " }}}
 
+" El fin {{{1
 NeoBundleCheck
-" vim: foldmethod=marker tabstop=2 softtabstop=2 shiftwidth=2 foldlevel=0
+" vim: expandtab softtabstop=2 shiftwidth=2
+" vim: foldmethod=marker
