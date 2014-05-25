@@ -401,42 +401,38 @@ call yankstack#setup()
 filetype plugin indent on
 syntax enable
 
-" set t_Co=256
 set autoread
-
-set timeoutlen=500 "mapping timeout
-set ttimeoutlen=100 "keycode timeout
-
+set display+=lastline
+set encoding=utf-8
+set hidden                        "allow buffer switch without saving
+set history=1000
 set matchpairs+=<:>
-
 set mouse=a
 set mousehide
-
-set history=1000
-
-set ttyfast "assume fast terminal connection
-set encoding=utf-8
-
-set viewoptions=folds,options,cursor,unix,slash
 set modeline
 set modelines=5
-
-set hidden " allow buffer switch without saving
-
-set showcmd "display incomplete commands
+set showcmd                       "display incomplete commands
+set spellfile=~/.vim/spell/en.utf-8.add
+set splitright
+set splitbelow
+" set t_Co=256                      "force 256 colors
+set timeoutlen=500                "mapping timeout
+set ttimeoutlen=70                "keycode timeout
+set ttyfast                       "assume fast terminal connection
+set viewoptions=folds,options,cursor,unix,slash
 
 " 2.2. Whitespace {{{2
 
 set autoindent
-set backspace=indent,eol,start "allow backspacing everything in insert mode
-set expandtab "spaces instead of tabs — sorry tab lovers
-set smarttab "use shiftwidth to enter tabs
+set backspace=indent,eol,start    "allow backspacing everything in insert mode
+set expandtab                     "spaces instead of tabs — sorry tab lovers
+set smarttab                      "use shiftwidth to enter tabs
 
 set tabstop=2
 set softtabstop=2
 set shiftwidth=2
 
-set list "highlight whitespace
+set list                          "highlight whitespace
 set listchars=tab:»·,extends:❯,precedes:❮,trail:␣,conceal:Δ
 set showbreak=↪
 
@@ -491,7 +487,7 @@ nnoremap :s/ :s/\v
 nnoremap <BS> :set hlsearch! hlsearch?<CR>
 
 " Don't jump when using * for search
-nnoremap * *<c-o>
+nnoremap * *<C-o>
 
 " Keep search matches in the middle of the window.
 nnoremap n nzzzv
@@ -510,11 +506,14 @@ set colorcolumn=+3
 set conceallevel=1                "enable concealing by default
 set formatoptions=qn1             "see 'fo-table' for more info
 set lazyredraw
-set laststatus=2
+set laststatus=2                  "always show statusline
+set matchtime=2                   "tens of a second to show the matching paren
 set noshowmode
+set number
+set numberwidth=3
+"set relativenumber
 set ruler
-set formatoptions=qn1
-set conceallevel=1
+set showmatch                     "briefly jump to the matching bracket when inserted
 
 " fold magic
 set foldenable
@@ -546,10 +545,10 @@ augroup END
 
 " Navigation {{{2
 
-set scrolloff=1
 set scrolljump=5 "minimum number of lines to scroll
+set scrolloff=1
 
-" move cursor by display lines when wrapping
+" Move cursor by display lines when wrapping
 " NOTE: it seems that breaks the movement commands in conjunction with other
 " commands
 nnoremap <buffer> <silent> j gj
