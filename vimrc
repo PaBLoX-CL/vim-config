@@ -4,9 +4,8 @@
 " i. Bootstrap system {{{1
 set nocompatible "anybody cares?
 
-nnoremap <Space> <Nop>
-let mapleader=" "
-let localmapleader=" "
+let mapleader="ñ"
+let localmapleader="ñ"
 
 " i. Load external configuration before anything else {{{2
 for fpath in split(globpath('~/.vim/before', '*.vim'), '\n')
@@ -328,8 +327,8 @@ NeoBundle 'Shougo/unite.vim' "{{{
   endfunction
   autocmd FileType unite call s:unite_settings()
 
-  nmap , [unite]
-  nnoremap [unite] <nop>
+  nmap <Space> [unite]
+  nnoremap [unite] <Nop>
 
   nnoremap <silent> [unite]<space> :<C-u>Unite -toggle -auto-resize -buffer-name=mixed file_rec/async:! buffer file_mru bookmark<CR><C-u>
   nnoremap <silent> [unite]f :<C-u>Unite -toggle -auto-resize -buffer-name=files file_rec/async:!<CR><C-u>
