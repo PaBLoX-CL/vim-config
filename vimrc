@@ -203,11 +203,6 @@ NeoBundleLazy 'godlygeek/tabular', {'autoload':{'commands':'Tabularize'}} " {{{
   " }}}
 NeoBundle 'bufkill.vim'
 NeoBundle 'maxbrunsfeld/vim-yankstack'
-NeoBundle 'vim-scripts/YankRing.vim' "{{{
-  let g:yankring_replace_n_pkey = '<leader>['
-  let g:yankring_replace_n_nkey = '<leader>]'
-  let g:yankring_history_dir = '~/.vim/.cache/yankring'
-  "}}}
 
 " 1.5. Navigation {{{2
 NeoBundleLazy 'EasyGrep', {'autoload':{'commands':'GrepOptions'}} "{{{
