@@ -31,7 +31,7 @@ NeoBundle 'Shougo/vimproc', { 'build' : { 'unix' : 'make -f make_unix.mak' } }
 
 " 1. Packages {{{1
 
-" _ General {{{
+" 1.1. General {{{2
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'tpope/vim-unimpaired' "{{{
   " Bubble single lines
@@ -47,22 +47,19 @@ NeoBundle 'pbrisbin/vim-mkdir'
 NeoBundle 'pbrisbin/vim-restore-cursor'
 NeoBundle 'pbrisbin/vim-rename-file'
 
-" _}}}
-
-" _ Colorschemes {{{
+" 1.2. Colorschemes {{{2
 
 NeoBundle 'ScrollColors'
 "NeoBundle 'godlygeek/csapprox'
 
-" __ Both dark and light {{{
+" Both dark and light {{{3
 NeoBundle 'chriskempson/base16-vim'
 NeoBundle 'altercation/vim-colors-solarized' "{{{
   let g:solarized_termcolors=256
   let g:solarized_termtrans=1
   "}}}
-" }}}
 
-" __ Dark {{{
+" Dark {{{3
 NeoBundle 'sjl/badwolf'
 NeoBundle 'tomasr/molokai'
 NeoBundle 'zaiste/Atom'
@@ -98,14 +95,11 @@ NeoBundle 'tir_black'
 
 " doesn't work in gVim
 NeoBundle 'wombat256.vim'
-" __}}}
 
-" __ Light {{{
+" Light {{{3
 NeoBundle 'github-theme'
-" __ }}}
-" }}}
 
-" _ Development {{{
+" 1.3. Development {{{2
 NeoBundle 'kana/vim-textobj-user'
 NeoBundleLazy 'mattn/gist-vim', { 'depends': 'mattn/webapi-vim', 'autoload': { 'commands': 'Gist' } } "{{{
   let g:gist_post_private=1
@@ -147,7 +141,7 @@ NeoBundle 'Shougo/neosnippet.vim' "{{{
   smap <expr><TAB> neosnippet#expandable_or_jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
   imap <expr><S-TAB> pumvisible() ? "\<C-p>" : ""
   smap <expr><S-TAB> pumvisible() ? "\<C-p>" : ""
-"}}}
+  "}}}
 NeoBundleLazy 'Shougo/neocomplete.vim', {'autoload':{'insert':1}, 'vim_version':'7.3.885'} "{{{
   let g:neocomplete#enable_at_startup=1
   let g:neocomplete#data_directory='~/.vim/.cache/neocomplete'
@@ -165,16 +159,14 @@ NeoBundleLazy 'Shougo/neocomplete.vim', {'autoload':{'insert':1}, 'vim_version':
 "   let g:UltiSnipsSnippetsDir='~/.vim/snippets'
 " "}}}
 
-" __ Ruby {{{
-NeoBundle 'tpope/vim-rails'
+" Ruby {{{3
 NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'tpope/vim-bundler'
 NeoBundle 'tpope/vim-rails'
 NeoBundleLazy 'nelstrom/vim-textobj-rubyblock', {'autoload':{'filetypes':['ruby']}}
 NeoBundleLazy 'skwp/vim-rspec', {'autoload':{'filetypes':['ruby']}}
-" __}}}
 
-" __ Web {{{
+" Web {{{3
 " NeoBundleLazy 'mattn/emmet-vim', {'autoload':{'filetypes':['html','xml','xsl','xslt','xsd','css','sass','scss','less','mustache']}} "{{{
 "   function! s:zen_html_tab()
 "     let line = getline('.')
@@ -193,11 +185,7 @@ NeoBundleLazy 'marijnh/tern_for_vim', {
   \ },
 \}
 
-" __}}}
-
-" _}}}
-
-" _ Editing {{{
+" 1.4. Editing {{{2
 NeoBundleLazy 'godlygeek/tabular', {'autoload':{'commands':'Tabularize'}} " {{{
   nmap <Leader>a& :Tabularize /&<CR>
   vmap <Leader>a& :Tabularize /&<CR>
@@ -220,9 +208,7 @@ NeoBundle 'vim-scripts/YankRing.vim' "{{{
   let g:yankring_history_dir = '~/.vim/.cache/yankring'
   "}}}
 
-" }}}
-
-" _ Navigation {{{
+" 1.5. Navigation {{{2
 NeoBundleLazy 'EasyGrep', {'autoload':{'commands':'GrepOptions'}} "{{{
   let g:EasyGrepRecursive=1
   let g:EasyGrepAllOptionsInExplorer=1
@@ -272,7 +258,7 @@ NeoBundle 'mileszs/ack.vim' "{{{
 "   "}}}
 NeoBundle 'tpope/vim-vinegar'
 
-" _ Filetypes {{{
+" 1.6 Filetypes {{{2
 NeoBundleLazy 'tpope/vim-git', {'autoload':{'filetypes':['git','gitcommit','gitconfig','gitrebase','gitsendemail']}}
 NeoBundleLazy 'Keithbsmiley/rspec.vim', {'autoload':{'filetypes':['ruby']}}
 NeoBundleLazy 'tpope/vim-cucumber', {'autoload':{'filetypes':['cucumber']}}
@@ -280,7 +266,7 @@ NeoBundleLazy 'zaiste/tmux.vim', {'autoload':{'filetypes':['tmux']}}
 NeoBundleLazy 'travitch/hasksyn', {'autoload':{'filetypes':['haskell']}}
 NeoBundleLazy 'Twinside/vim-syntax-haskell-cabal', {'autoload':{'filetypes':['haskell,cabal']}}
 
-" Javascript
+" Javascript {{{3
 NeoBundleLazy 'pangloss/vim-javascript', {'autoload':{'filetypes':['javascript']}}
 NeoBundleLazy 'kchmck/vim-coffee-script', {'autoload':{'filetypes':['coffee']}}
 NeoBundleLazy 'mmalecki/vim-node.js', {'autoload':{'filetypes':['javascript']}}
@@ -288,7 +274,7 @@ NeoBundleLazy 'mmalecki/vim-node.js', {'autoload':{'filetypes':['javascript']}}
 NeoBundleLazy 'elzr/vim-json', {'autoload':{'filetypes':['javascript','json']}}
 " NeoBundle 'leshill/vim-json'
 
-" Html/CSS
+" Html/CSS {{{3
 NeoBundleLazy 'othree/html5.vim', {'autoload':{'filetypes':['html']}}
 NeoBundleLazy 'slim-template/vim-slim', {'autoload':{'filetypes':['slim']}}
 NeoBundleLazy 'cakebaker/scss-syntax.vim', {'autoload':{'filetypes':['scss','sass']}}
@@ -298,9 +284,7 @@ NeoBundleLazy 'tpope/vim-haml', {'autoload':{'filetypes':['haml']}}
 NeoBundleLazy 'digitaltoad/vim-jade', {'autoload':{'filetypes':['jade']}}
 NeoBundleLazy 'wavded/vim-stylus', {'autoload':{'filetypes':['stylus']}}
 
-"}}}
-
-" _ Unite {{{
+" 1.7. Unite {{{2
 NeoBundle 'Shougo/unite.vim' "{{{
   let bundle = neobundle#get('unite.vim')
   function! bundle.hooks.on_source(bundle)
@@ -359,9 +343,7 @@ NeoBundleLazy 'Shougo/junkfile.vim', {'autoload':{'commands':'JunkfileOpen','uni
   "}}}
 NeoBundleLazy 'Shougo/neomru.vim', {'autoload':{'unite_sources':'file_mru'}}
 
-" _ }}}
-
-" _ UI {{{
+" 1.8. UI {{{2
 NeoBundle 'itchyny/lightline.vim'
 NeoBundle 'nathanaelkane/vim-indent-guides' "{{{
   let g:indent_guides_start_level=1
@@ -380,10 +362,9 @@ NeoBundle 'nathanaelkane/vim-indent-guides' "{{{
 NeoBundleLazy 'zhaocai/GoldenView.Vim', {'autoload':{'mappings':['<Plug>ToggleGoldenViewAutoResize']}} "{{{
   let g:goldenview__enable_default_mapping=0
   nmap <F4> <Plug>ToggleGoldenViewAutoResize
-"}}}
-" _}}}
+  "}}}
 
-" _ Misc {{{
+" 1.9. Misc {{{2
 NeoBundleLazy 'Shougo/vimshell.vim', {'autoload':{'commands':[ 'VimShell', 'VimShellInteractive' ]}} "{{{
   let g:vimshell_editor_command='vim'
   let g:vimshell_right_prompt='getcwd()'
@@ -414,8 +395,8 @@ NeoBundle 'benmills/vimux' "{{{
 call neobundle#end()
 call yankstack#setup()
 
-" 2. Base configuration {{{
-
+" 2. Base configuration {{{1
+" 2.1 Basic options {{{2
 filetype plugin indent on
 syntax enable
 
@@ -443,7 +424,7 @@ set hidden " allow buffer switch without saving
 
 set showcmd "display incomplete commands
 
-" __ Whitespace {{{
+" 2.2. Whitespace {{{2
 
 set autoindent
 set backspace=indent,eol,start "allow backspacing everything in insert mode
@@ -458,7 +439,7 @@ set list "highlight whitespace
 set listchars=tab:»·,extends:❯,precedes:❮,trail:␣,conceal:Δ
 set showbreak=↪
 
-" ____ Trailing whitespace {{{
+" 2.3. Trailing whitespace {{{2
 " Only shown when not in insert mode so I don't go insane.
 augroup trailing
   au!
@@ -469,14 +450,10 @@ augroup END
 " Remove trailing whitespaces when saving
 " Wanna know more? http://vim.wikia.com/wiki/Remove_unwanted_spaces
 " If you want to remove trailing spaces when you want, so not automatically,
-" see
-" http://vim.wikia.com/wiki/Remove_unwanted_spaces#Display_or_remove_unwanted_whitespace_with_a_script.
+" see http://vim.wikia.com/wiki/Remove_unwanted_spaces#Display_or_remove_unwanted_whitespace_with_a_script.
 autocmd BufWritePre * :%s/\s\+$//e
 
-" ____ }}}
-" __ }}}
-
-" __ Vim file/folders {{{
+" 2.3. Vim file/folders {{{2
 
 " trascendent undo
 set undofile
@@ -492,13 +469,11 @@ set backupdir=~/.vim/.cache/backup
 set directory=~/.vim/.cache/swap
 set noswapfile
 
-" __ }}}
-
-" __ Searching {{{
-set hlsearch                                        "highlight searches
-set incsearch                                       "incremental searching
-set ignorecase                                      "ignore case for searching
-set smartcase                                       "do case-sensitive if there's a capital letter
+" 2.4. Searching {{{2
+set hlsearch                      "highlight searches
+set incsearch                     "incremental searching
+set ignorecase                    "ignore case for searching
+set smartcase                     "do case-sensitive if there's a capital letter
 " set grepprg=ag\ --nogroup\ --column\ --smart-case\ --nocolor\ --follow
 set grepprg=ack\ --nogroup\ --column\ --smart-case\ --nocolor\ --follow\ $*
 set grepformat=%f:%l:%c:%m
@@ -528,20 +503,11 @@ nnoremap g, g,zz
 " Open a Quickfix window for the last search.
 nnoremap <silent> <leader>? :execute 'vimgrep /'.@/.'/g %'<CR>:copen<CR>
 
-" __ }}}
+" 3. UI Configuration {{{1
 
-set splitright
-set splitbelow
-set display+=lastline
-
-" }}}
-
-" 3. UI Configuration {{{
-
-set showmatch "briefly jump to the matching bracket when inserted
-set matchtime=2
-set number
-set numberwidth=3
+set colorcolumn=+3
+set conceallevel=1                "enable concealing by default
+set formatoptions=qn1             "see 'fo-table' for more info
 set lazyredraw
 set laststatus=2
 set noshowmode
@@ -570,7 +536,7 @@ color base16-default
 " color base16-monokai
 set colorcolumn=+3
 
-" __ Cursorline {{{
+" Cursorline {{{2
 set cursorline
 
 " Only show cursorline in the current window and in normal mode.
@@ -581,9 +547,8 @@ augroup cline
   au InsertEnter * set nocursorline
   au InsertLeave * set cursorline
 augroup END
-" __ }}}
 
-" __ Navigation {{{
+" Navigation {{{2
 
 set scrolloff=1
 set scrolljump=5 "minimum number of lines to scroll
@@ -616,15 +581,10 @@ if &term =~ '^screen'
     execute "set <xLeft>=\e[1;*D"
 endif
 
-" Reselect visual block after indent/outdent
-vnoremap < <gv
-vnoremap > >gv
-
-"__ }}}
-
-" }}}
-
 " 4. Mappings {{{1
+
+
+
 
 " vim-sneak {{{2
 let g:sneak#streak = 1
@@ -633,10 +593,7 @@ nmap S <Plug>Sneak_S
 xmap s <Plug>Sneak_s
 xmap S <Plug>Sneak_S
 
-" set pastetoggle=<F2>
-map <F6> :set invpaste<CR>:set paste?<CR>
-
-" _ Insert mode {{{
+" Insert mode {{{2
 
 " smash scape
 inoremap jk <Esc>
@@ -647,7 +604,8 @@ inoremap <C-h> <Left>
 inoremap <C-l> <Right>
 
 inoremap <C-u> <C-g>u<C-u>
-"}}}
+
+" Normal mode {{{2
 
 " remap arrow keys (aka hard mode)
 " nnoremap <Left> :bprev<CR>
@@ -686,12 +644,13 @@ map <F9> :setlocal invspell<CR>:set spell?<CR>
 " inoremap <C-l> <c-g>u<Esc>[s1z=`]a<C-g>u
 " }}}
 
+" Command Line {{{2
 " easy expansion of the active file directory
 cnoremap <expr>%% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
 
 " }}}
 
-" Completion {{{
+" 5. Completion {{{1
 set completeopt=longest,menuone,preview
 set wildmenu
 set wildmode=longest:full,full
