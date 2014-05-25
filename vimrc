@@ -521,21 +521,16 @@ set foldenable
 set foldmethod=syntax
 let g:xml_syntax_folding=1        "enable xml folding
 
+" Color {{{2
+set background=dark
+colorscheme jellybeans
 
-" Color
-" set background=dark
-let g:jellybeans_use_lowcolor_black = 0
-" colorscheme jellybeans
 "let g:zenburn_alternate_Visual = 1
 "let g:zenburn_high_Contrast = 1
 "let g:zenburn_old_Visual = 1
 
-set background=dark
-let base16colorspace=256  " Access colors present in 256 colorspace
-color base16-default
-
-" color base16-monokai
-set colorcolumn=+3
+" let base16colorspace=256          "access colors present in 256 colorspace
+" colorscheme base16-tomorrow
 
 " Cursorline {{{2
 set cursorline
