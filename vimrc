@@ -416,6 +416,16 @@ set ttimeoutlen=70                "keycode timeout
 set ttyfast                       "assume fast terminal connection
 set viewoptions=folds,options,cursor,unix,slash
 
+" http://unix.stackexchange.com/a/34723/21088
+" basically fixes use of ctrl and shift inside tmux
+if &term =~ '^screen'
+    " tmux will send xterm-style keys when xterm-keys is on
+    execute "set <xUp>=\e[1;*A"
+    execute "set <xDown>=\e[1;*B"
+    execute "set <xRight>=\e[1;*C"
+    execute "set <xLeft>=\e[1;*D"
+endif
+
 " 2.2. Whitespace {{{2
 
 set autoindent
@@ -555,15 +565,6 @@ vnoremap <buffer> <silent> j gj
 vnoremap <buffer> <silent> k gk
 vnoremap <buffer> <silent> 0 g0
 vnoremap <buffer> <silent> $ g$
-
-" http://unix.stackexchange.com/a/34723/21088
-if &term =~ '^screen'
-    " tmux will send xterm-style keys when xterm-keys is on
-    execute "set <xUp>=\e[1;*A"
-    execute "set <xDown>=\e[1;*B"
-    execute "set <xRight>=\e[1;*C"
-    execute "set <xLeft>=\e[1;*D"
-endif
 
 " 4. Mappings {{{1
 
