@@ -479,7 +479,7 @@ nnoremap :s/ :s/\v
 
 " clear search matching
 " noremap <Leader><Space> :noh<cr>:call clearmatches()<CR>
-nnoremap <BS> :set hlsearch! hlsearch?<CR>
+" nnoremap <BS> :set hlsearch! hlsearch?<CR>
 
 " Don't jump when using * for search
 nnoremap * *<C-o>
@@ -642,8 +642,8 @@ cnoremap <expr>%% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
 
 " Chords {{{2
 call arpeggio#load()
-Arpeggionnoremap cm :noh<CR>:call clearmatches()<CR>
-Arpeggionoremap ls :ls<CR>
+Arpeggio nnoremap lq :noh<CR>:call clearmatches()<CR>
+Arpeggio nnoremap la :ls<CR>
 
 " 5. Completion {{{1
 set completeopt=longest,menuone,preview
