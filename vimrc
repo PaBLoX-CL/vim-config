@@ -229,7 +229,7 @@ NeoBundle 'kien/ctrlp.vim', { 'depends': 'tacahiroy/ctrlp-funky' } "{{{
     \ 'file': '\.so$\|\.pyc$\|\.gem$'
   \ }
 
-  nmap \ [ctrlp]
+  nmap , [ctrlp]
   nnoremap [ctrlp] <nop>
 
   nnoremap [ctrlp]t :CtrlPBufTag<cr>
