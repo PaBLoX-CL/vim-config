@@ -36,12 +36,12 @@ NeoBundle 'kana/vim-arpeggio'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'tpope/vim-unimpaired' "{{{
   " Bubble single lines
-  nmap <C-Up> [e
-  nmap <C-Down> ]e
+  nmap <C-S-Up> [e
+  nmap <C-S-Down> ]e
   " Bubble multiple lines
-  vmap <C-Up> [egv
-  vmap <C-Down> ]egv
-"}}}
+  vmap <C-S-Up> [egv
+  vmap <C-S-Down> ]egv
+  "}}}
 NeoBundle 'tpope/vim-eunuch'
 NeoBundle 'tpope/vim-repeat'
 NeoBundle 'pbrisbin/vim-mkdir'
@@ -567,12 +567,6 @@ vnoremap <buffer> <silent> k gk
 vnoremap <buffer> <silent> 0 g0
 vnoremap <buffer> <silent> $ g$
 
-" Easier indenting
-nmap <C-Left> <<
-nmap <C-Right> >>
-vmap <C-Left> <gv
-vmap <C-Right> >gv
-
 " http://unix.stackexchange.com/a/34723/21088
 if &term =~ '^screen'
     " tmux will send xterm-style keys when xterm-keys is on
@@ -585,7 +579,15 @@ endif
 " 4. Mappings {{{1
 
 
+" Easier indenting
+nmap <C-S-Left> <<
+nmap <C-S-Right> >>
+vmap <C-S-Left> <gv
+vmap <C-S-Right> >gv
 
+" Reselect visual block after indent/outdent
+vnoremap < <gv
+vnoremap > >gv
 
 " vim-sneak {{{2
 let g:sneak#streak = 1
@@ -665,7 +667,7 @@ set wildignore+=*.jpg,*.png,*.xpm,*.gif
 set wildignore+=.DS_Store,tmp,*.swp,*.scssc
 set wildignore+=log/
 set wildignore+=vendor/,node_modules/
-" }}}
+
 
 " El fin {{{1
 NeoBundleCheck
