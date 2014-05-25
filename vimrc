@@ -519,8 +519,8 @@ set conceallevel=1
 " fold magic
 set foldenable
 set foldmethod=syntax
-set foldlevelstart=99 "open all fold by default
-let g:xml_syntax_folding=1                          "enable xml folding
+let g:xml_syntax_folding=1        "enable xml folding
+
 
 " Color
 " set background=dark
