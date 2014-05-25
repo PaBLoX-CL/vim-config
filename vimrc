@@ -32,6 +32,7 @@ NeoBundle 'Shougo/vimproc', { 'build' : { 'unix' : 'make -f make_unix.mak' } }
 " 1. Packages {{{1
 
 " 1.1. General {{{2
+NeoBundle 'kana/vim-arpeggio'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'tpope/vim-unimpaired' "{{{
   " Bubble single lines
@@ -648,7 +649,10 @@ map <F9> :setlocal invspell<CR>:set spell?<CR>
 " easy expansion of the active file directory
 cnoremap <expr>%% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
 
-" }}}
+" Chords {{{2
+call arpeggio#load()
+Arpeggionnoremap cm :noh<CR>:call clearmatches()<CR>
+Arpeggionoremap ls :ls<CR>
 
 " 5. Completion {{{1
 set completeopt=longest,menuone,preview
