@@ -44,7 +44,6 @@ NeoBundle 'tpope/vim-unimpaired' "{{{
   "}}}
 NeoBundle 'tpope/vim-eunuch'
 NeoBundle 'tpope/vim-repeat'
-NeoBundle 'pbrisbin/vim-mkdir'
 NeoBundle 'pbrisbin/vim-restore-cursor'
 NeoBundle 'pbrisbin/vim-rename-file'
 
