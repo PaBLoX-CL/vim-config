@@ -158,6 +158,7 @@ NeoBundleLazy 'Shougo/neocomplete.vim', {'autoload':{'insert':1}, 'vim_version':
 "   let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 "   let g:UltiSnipsSnippetsDir='~/.vim/snippets'
 " "}}}
+NeoBundle 'eagletmt/neco-ghc'
 
 " Ruby {{{3
 NeoBundle 'vim-ruby/vim-ruby'
