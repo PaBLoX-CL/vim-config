@@ -678,7 +678,7 @@ autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
 
 " 6. Miscellaneous {{{1
 
-" stupid shift keys fixes
+" stupid shift keys fixes {{{2
 " stolen from spf13
 command! -bang -nargs=* -complete=file E e<bang> <args>
 command! -bang -nargs=* -complete=file W w<bang> <args>
@@ -690,6 +690,9 @@ command! -bang Q q<bang>
 command! -bang QA qa<bang>
 command! -bang Qa qa<bang>
 
+" This is important if you use powerline, setting the $PYTHONPATH from the
+" shell could led to really weird issues.
+" let $PYTHONPATH='/usr/lib/python3.4/site-packages'
 
 " El fin {{{1
 NeoBundleCheck
