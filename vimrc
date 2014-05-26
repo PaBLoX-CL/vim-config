@@ -568,6 +568,29 @@ vnoremap <buffer> <silent> $ g$
 
 " 4. Mappings {{{1
 
+" Function keys
+" <F1> Startify
+" <F2>
+" <F3>
+" <F4> GoldenView Autoresize
+" <F5> Gundo Toggle
+" <F6> Paste Toggle
+" <F7>
+" <F8>
+" <F9> Spellcheck Toggle
+" <F10> Get syntax group information
+" <F11>
+" <F12>
+
+set pastetoggle=<F6>
+
+" toggle spell checking
+map <F9> :setlocal invspell<CR>:set spell?<CR>
+
+" Get syntax information
+map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
+        \ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
+        \ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
 
 " Easier indenting
 nmap <C-S-Left> <<
@@ -598,6 +621,10 @@ inoremap <C-l> <Right>
 
 inoremap <C-u> <C-g>u<C-u>
 
+" suggests word when spelling it's on
+" https://stackoverflow.com/a/16481737/417527
+inoremap <C-l> <C-g>u<Esc>[s1z=`]a<C-g>u
+
 " Normal mode {{{2
 
 " remap arrow keys (aka hard mode)
@@ -614,28 +641,10 @@ nnoremap <Leader>po "+p
 nnoremap Y y$
 
 " window shortcuts
-nnoremap <C-h> <C-w>h
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-l> <C-w>l
-
-map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
-        \ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
-        \ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
-
-" Spell {{{
-
-set spellfile=~/.vim/spell/en.utf-8.add
-
-" normal mode mappings
-" TODO toggle with the same key
-" nnoremap <F8> :setlocal spell! spelllang=en_us<CR>
-" noremap <F9> :setlocal nospell<CR>
-map <F9> :setlocal invspell<CR>:set spell?<CR>
-
-" insert mode mappings
-" inoremap <C-l> <c-g>u<Esc>[s1z=`]a<C-g>u
-" }}}
+" nnoremap <C-h> <C-w>h
+" nnoremap <C-j> <C-w>j
+" nnoremap <C-k> <C-w>k
+" nnoremap <C-l> <C-w>l
 
 " Command Line {{{2
 " easy expansion of the active file directory
