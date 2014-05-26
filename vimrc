@@ -205,6 +205,10 @@ NeoBundleLazy 'godlygeek/tabular', {'autoload':{'commands':'Tabularize'}} " {{{
   " }}}
 NeoBundle 'bufkill.vim'
 NeoBundle 'maxbrunsfeld/vim-yankstack'
+NeoBundle 'chrisbra/NrrwRgn'
+NeoBundle 'terryma/vim-expand-region'
+NeoBundle 'terryma/vim-multiple-cursors'
+NeoBundle 'jiangmiao/auto-pairs'
 
 " 1.5. Navigation {{{2
 NeoBundleLazy 'EasyGrep', {'autoload':{'commands':'GrepOptions'}} "{{{
@@ -255,6 +259,9 @@ NeoBundle 'mileszs/ack.vim' "{{{
 "   nnoremap <F3> :NERDTreeFind<CR>
 "   "}}}
 NeoBundle 'tpope/vim-vinegar'
+NeoBundleLazy 'majutsushi/tagbar', {'autoload':{'commands':'TagbarToggle'}} "{{{
+  nnoremap <silent> <F8> :TagbarToggle<CR>
+"}}}
 
 " 1.6. Filetypes {{{2
 NeoBundleLazy 'tpope/vim-git', {'autoload':{'filetypes':['git','gitcommit','gitconfig','gitrebase','gitsendemail']}}
@@ -585,7 +592,7 @@ vnoremap <buffer> <silent> $ g$
 " <F5> Gundo Toggle
 " <F6> Paste Toggle
 " <F7>
-" <F8>
+" <F8> Tagbar Toggle
 " <F9> Spellcheck Toggle
 " <F10> Get syntax group information
 " <F11>
