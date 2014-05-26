@@ -633,6 +633,8 @@ inoremap <C-l> <C-g>u<Esc>[s1z=`]a<C-g>u
 " nnoremap <Up>
 " nnoremap <Down>
 
+nnoremap <Leader>tag :Dispatch ctags -R<CR>
+
 " yank and put to/from the OS's clipboard
 vnoremap <Leader>yo "+y
 nnoremap <Leader>po "+p
