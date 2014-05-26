@@ -158,7 +158,9 @@ NeoBundleLazy 'Shougo/neocomplete.vim', {'autoload':{'insert':1}, 'vim_version':
 "   let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 "   let g:UltiSnipsSnippetsDir='~/.vim/snippets'
 " "}}}
+" Haskell {{{3
 NeoBundle 'eagletmt/neco-ghc'
+NeoBundle 'Twinside/vim-haskellFold'
 
 " Ruby {{{3
 NeoBundle 'vim-ruby/vim-ruby'
@@ -254,7 +256,7 @@ NeoBundle 'mileszs/ack.vim' "{{{
 "   "}}}
 NeoBundle 'tpope/vim-vinegar'
 
-" 1.6 Filetypes {{{2
+" 1.6. Filetypes {{{2
 NeoBundleLazy 'tpope/vim-git', {'autoload':{'filetypes':['git','gitcommit','gitconfig','gitrebase','gitsendemail']}}
 NeoBundleLazy 'Keithbsmiley/rspec.vim', {'autoload':{'filetypes':['ruby']}}
 NeoBundleLazy 'tpope/vim-cucumber', {'autoload':{'filetypes':['cucumber']}}
