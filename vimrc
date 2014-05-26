@@ -266,11 +266,13 @@ NeoBundleLazy 'Twinside/vim-syntax-haskell-cabal', {'autoload':{'filetypes':['ha
 
 " Javascript {{{3
 NeoBundleLazy 'pangloss/vim-javascript', {'autoload':{'filetypes':['javascript']}}
+NeoBundleLazy 'maksimr/vim-jsbeautify', {'autoload':{'filetypes':['javascript']}} "{{{
+  nnoremap <Leader>fjs :call JsBeautify()<CR>
 NeoBundleLazy 'kchmck/vim-coffee-script', {'autoload':{'filetypes':['coffee']}}
 NeoBundleLazy 'mmalecki/vim-node.js', {'autoload':{'filetypes':['javascript']}}
 " NeoBundleLazy 'leshill/vim-json', {'autoload':{'filetypes':['javascript','json']}}
 NeoBundleLazy 'elzr/vim-json', {'autoload':{'filetypes':['javascript','json']}}
-" NeoBundle 'leshill/vim-json'
+NeoBundleLazy 'othree/javascript-libraries-syntax.vim', {'autoload':{'filetypes':['javascript','coffe']}}
 
 " Html/CSS {{{3
 NeoBundleLazy 'othree/html5.vim', {'autoload':{'filetypes':['html']}}
@@ -281,6 +283,7 @@ NeoBundleLazy 'tpope/vim-markdown', {'autoload':{'filetypes':['markdown']}}
 NeoBundleLazy 'tpope/vim-haml', {'autoload':{'filetypes':['haml']}}
 NeoBundleLazy 'digitaltoad/vim-jade', {'autoload':{'filetypes':['jade']}}
 NeoBundleLazy 'wavded/vim-stylus', {'autoload':{'filetypes':['stylus']}}
+NeoBundleLazy 'juvenn/mustache.vim', {'autoload':{'filetypes':['mustache']}}
 
 " 1.7. Unite {{{2
 NeoBundle 'Shougo/unite.vim' "{{{
