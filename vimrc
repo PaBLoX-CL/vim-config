@@ -520,10 +520,14 @@ set numberwidth=3
 set ruler
 set showmatch                     "briefly jump to the matching bracket when inserted
 
-" fold magic
+" Fold magic {{{2
 set foldenable
 set foldmethod=syntax
 let g:xml_syntax_folding=1        "enable xml folding
+nnoremap zr zr:echo &foldlevel<cr>
+nnoremap zm zm:echo &foldlevel<cr>
+nnoremap zR zR:echo &foldlevel<cr>
+nnoremap zM zM:echo &foldlevel<cr>
 
 " Color {{{2
 set background=dark
