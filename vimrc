@@ -2,7 +2,7 @@
 " Author: Pablo Olmos de Aguilera C.
 
 " i. Bootstrap system {{{1
-set nocompatible "anybody cares?
+set nocompatible                  "anybody cares?
 
 let mapleader="ñ"
 let localmapleader="ñ"
@@ -608,16 +608,6 @@ map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans
         \ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
         \ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
 
-" Easier indenting
-nmap <C-S-Left> <<
-nmap <C-S-Right> >>
-vmap <C-S-Left> <gv
-vmap <C-S-Right> >gv
-
-" Reselect visual block after indent/outdent
-vnoremap < <gv
-vnoremap > >gv
-
 " vim-sneak {{{2
 let g:sneak#streak = 1
 nmap s <Plug>Sneak_s
@@ -642,6 +632,16 @@ inoremap <C-u> <C-g>u<C-u>
 inoremap <C-l> <C-g>u<Esc>[s1z=`]a<C-g>u
 
 " Normal mode {{{2
+
+" Easier indenting
+nmap <C-S-Left> <<
+nmap <C-S-Right> >>
+vmap <C-S-Left> <gv
+vmap <C-S-Right> >gv
+
+" Reselect visual block after indent/outdent
+vnoremap < <gv
+vnoremap > >gv
 
 " remap arrow keys (aka hard mode)
 " nnoremap <Left> :bprev<CR>
