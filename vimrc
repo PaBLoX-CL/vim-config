@@ -59,52 +59,57 @@ NeoBundle 'pbrisbin/vim-rename-file'
 NeoBundle 'ScrollColors'
 "NeoBundle 'godlygeek/csapprox'
 
+" Dark {{{3
+NeoBundle 'nanotech/jellybeans.vim'
+NeoBundle 'sjl/badwolf'
+NeoBundle 'w0ng/vim-hybrid'
+NeoBundle 'jnurmine/Zenburn'
+
 " Both dark and light {{{3
-NeoBundle 'chriskempson/base16-vim'
 NeoBundle 'altercation/vim-colors-solarized' "{{{
   let g:solarized_termcolors=256
   let g:solarized_termtrans=1
   "}}}
+NeoBundle 'chriskempson/base16-vim'
+"3}}}
+if exists('g:colorscheme_extras') "{{{3
+  " Dark {{{4
+  NeoBundle 'tomasr/molokai'
+  NeoBundle 'zaiste/Atom'
+  NeoBundle 'Elive/vim-colorscheme-elive'
+  NeoBundle 'zeis/vim-kolor'
+  NeoBundle 'twilight256.vim'
+  NeoBundle 'Wombat'
+  NeoBundle 'dsolstad/vim-wombat256i'
+  NeoBundle 'wgibbs/vim-irblack'
+  NeoBundle 'xoria256.vim'
+  NeoBundle 'Lokaltog/vim-distinguished'
+  NeoBundle 'twilight'
+  NeoBundle 'tpope/vim-vividchalk'
+  NeoBundle 'candycode.vim'
+  NeoBundle 'candy.vim'
+  NeoBundle 'candyman.vim'
+  NeoBundle 'wgibbs/vim-irblack'
+  NeoBundle 'herald.vim'
+  NeoBundle 'sexy-railscasts'
+  NeoBundle 'Railscasts-Theme-GUIand256color'
+  NeoBundle 'itchyny/landscape.vim'
+  NeoBundle 'trapd00r/neverland-vim-theme'
+  " doesn't work in terminal vim
+  NeoBundle '29decibel/codeschool-vim-theme'
+  NeoBundle 'Guardian'
 
-" Dark {{{3
-NeoBundle 'sjl/badwolf'
-NeoBundle 'tomasr/molokai'
-NeoBundle 'zaiste/Atom'
-NeoBundle 'w0ng/vim-hybrid'
-NeoBundle 'Elive/vim-colorscheme-elive'
-NeoBundle 'zeis/vim-kolor'
-NeoBundle 'twilight256.vim'
-NeoBundle 'Wombat'
-NeoBundle 'jnurmine/Zenburn'
-NeoBundle 'dsolstad/vim-wombat256i'
-NeoBundle 'wgibbs/vim-irblack'
-NeoBundle 'nanotech/jellybeans.vim'
-NeoBundle 'xoria256.vim'
-NeoBundle 'Lokaltog/vim-distinguished'
-NeoBundle 'twilight'
-NeoBundle 'tpope/vim-vividchalk'
-NeoBundle 'candycode.vim'
-NeoBundle 'candy.vim'
-NeoBundle 'candyman.vim'
-NeoBundle 'wgibbs/vim-irblack'
-NeoBundle 'herald.vim'
-NeoBundle 'sexy-railscasts'
-NeoBundle 'Railscasts-Theme-GUIand256color'
-NeoBundle 'itchyny/landscape.vim'
-NeoBundle 'trapd00r/neverland-vim-theme'
+  " seems to work with csa_snapshot
+  NeoBundle 'tir_black'
 
-" doesn't work in terminal vim
-NeoBundle '29decibel/codeschool-vim-theme'
-NeoBundle 'Guardian'
+  " doesn't work in gVim
+  NeoBundle 'wombat256.vim'
+  "4}}}
 
-" seems to work with csa_snapshot
-NeoBundle 'tir_black'
-
-" doesn't work in gVim
-NeoBundle 'wombat256.vim'
-
-" Light {{{3
-NeoBundle 'github-theme'
+  " Light {{{
+  NeoBundle 'github-theme'
+  "4}}}
+endif "3}}}
 
 " 1.3. Development {{{2
 NeoBundle 'kana/vim-textobj-user'
