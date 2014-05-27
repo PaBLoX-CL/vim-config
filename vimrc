@@ -29,6 +29,13 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 " Recommended to install
 NeoBundle 'Shougo/vimproc', { 'build' : { 'unix' : 'make -f make_unix.mak' } }
 
+" 0. Functions {{{1
+function! EnsureExists(path) "{{{
+  if !isdirectory(expand(a:path))
+    call mkdir(expand(a:path))
+  endif
+endfunction "}}}
+
 " 1. Packages {{{1
 
 " 1.1. General {{{2
@@ -482,6 +489,11 @@ set backupdir=~/.vim/.cache/backup
 " swap files
 set directory=~/.vim/.cache/swap
 set noswapfile
+
+call EnsureExists('~/.vim/cache')
+call EnsureExists(&undodir)
+call EnsureExists(&backupdir)
+call EnsureExists(&directory)
 
 " 2.4. Searching {{{2
 set hlsearch                      "highlight searches
