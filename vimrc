@@ -143,8 +143,8 @@ NeoBundle 'airblade/vim-gitgutter'
 NeoBundleLazy 'sjl/gundo.vim', {'autoload':{'commands':'GundoToggle'}} "{{{
   nnoremap <silent> <F5> :GundoToggle<CR>
   "}}}
-NeoBundle 'honza/vim-snippets'
-NeoBundle 'Shougo/neosnippet-snippets'
+" NeoBundle 'honza/vim-snippets'
+" NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'Shougo/neosnippet.vim' "{{{
   let g:neosnippet#snippets_directory='~/.vim/bundle/vim-snippets/snippets,~/.vim/snippets'
   let g:neosnippet#enable_snipmate_compatibility=1
