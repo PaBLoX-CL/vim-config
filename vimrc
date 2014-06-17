@@ -130,6 +130,7 @@ NeoBundle 'tpope/vim-fugitive' "{{{
   autocmd BufReadPost fugitive://* set bufhidden=delete
   "}}}
 NeoBundle 'gregsexton/gitv', { 'depends': 'tpope/vim-fugitive', 'autoload': {'commands': 'Gitv'}}
+NeoBundle 'matchit.zip'
 NeoBundle 'tpope/vim-endwise'
 NeoBundle 'tpope/vim-dispatch'
 NeoBundle 'tomtom/tcomment_vim'
