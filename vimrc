@@ -690,6 +690,8 @@ cnoremap <expr>%% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
 call arpeggio#load()
 Arpeggio nnoremap lq :noh<CR>:call clearmatches()<CR>
 Arpeggio nnoremap la :ls<CR>
+Arpeggio inoremap jk <Esc>
+
 
 " 5. Completion {{{1
 set completeopt=longest,menuone,preview
