@@ -553,6 +553,8 @@ set showmatch                     "briefly jump to the matching bracket when ins
 " Fold magic {{{2
 set foldenable
 set foldmethod=syntax
+set foldlevelstart=4
+set foldnestmax=10
 let g:xml_syntax_folding=1        "enable xml folding
 nnoremap zr zr:echo &foldlevel<cr>
 nnoremap zm zm:echo &foldlevel<cr>
@@ -735,4 +737,4 @@ command! -bang Qa qa<bang>
 " El fin {{{1
 NeoBundleCheck
 " vim: expandtab softtabstop=2 shiftwidth=2
-" vim: foldmethod=marker
+" vim: foldmethod=marker foldlevel=0
