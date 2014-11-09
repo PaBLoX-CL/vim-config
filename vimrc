@@ -442,7 +442,7 @@ set spellfile=~/.vim/spell/en.utf-8.add
 set splitright
 set splitbelow
 " set t_Co=256                      "force 256 colors
-set timeoutlen=500                "mapping timeout
+set timeoutlen=800                "mapping timeout
 set ttimeoutlen=70                "keycode timeout
 set ttyfast                       "assume fast terminal connection
 set viewoptions=folds,options,cursor,unix,slash
