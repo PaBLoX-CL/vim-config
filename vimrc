@@ -491,16 +491,17 @@ set undoreload=10000
 set undodir=~/.vim/.cache/undo
 
 " backups
-set backup
-set backupdir=~/.vim/.cache/backup
+" set backup
+" set backupdir=~/.vim/.cache/backup
+set nobackup
 
 " swap files
 set directory=~/.vim/.cache/swap
 set noswapfile
 
-call EnsureExists('~/.vim/cache')
+call EnsureExists('~/.vim/.cache')
 call EnsureExists(&undodir)
-call EnsureExists(&backupdir)
+" call EnsureExists(&backupdir)
 call EnsureExists(&directory)
 
 " 2.4. Searching {{{2
