@@ -145,20 +145,21 @@ NeoBundleLazy 'sjl/gundo.vim', {'autoload':{'commands':'GundoToggle'}} "{{{
   nnoremap <silent> <F5> :GundoToggle<CR>
   "}}}
 " NeoBundle 'honza/vim-snippets'
-" NeoBundle 'Shougo/neosnippet-snippets'
+NeoBundleLazy 'Shougo/neocomplete.vim', {'autoload':{'insert':1}, 'vim_version':'7.3.885'} "{{{
+  let g:neocomplete#enable_at_startup=1
+  let g:neocomplete#data_directory='~/.vim/.cache/neocomplete'
+  "}}}
 NeoBundle 'Shougo/neosnippet.vim' "{{{
-  let g:neosnippet#snippets_directory='~/.vim/bundle/vim-snippets/snippets,~/.vim/snippets'
-  let g:neosnippet#enable_snipmate_compatibility=1
+  let g:neosnippet#snippets_directory='~/.vim/snippets'
+  " let g:neosnippet#snippets_directory='~/.vim/bundle/vim-snippets/snippets,~/.vim/snippets'
+  " let g:neosnippet#disable_runtime_snippets= { '_' : 1 }
 
   imap <expr><TAB> neosnippet#expandable_or_jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : (pumvisible() ? "\<C-n>" : "\<TAB>")
   smap <expr><TAB> neosnippet#expandable_or_jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
   imap <expr><S-TAB> pumvisible() ? "\<C-p>" : ""
   smap <expr><S-TAB> pumvisible() ? "\<C-p>" : ""
   "}}}
-NeoBundleLazy 'Shougo/neocomplete.vim', {'autoload':{'insert':1}, 'vim_version':'7.3.885'} "{{{
-  let g:neocomplete#enable_at_startup=1
-  let g:neocomplete#data_directory='~/.vim/.cache/neocomplete'
-  "}}}
+NeoBundle 'Shougo/neosnippet-snippets'
 " NeoBundle 'Valloric/YouCompleteMe', {'vim_version':'7.3.584'} "{{{
 "   let g:ycm_complete_in_comments_and_strings=1
 "   let g:ycm_key_list_select_completion=['<C-n>', '<Down>']
