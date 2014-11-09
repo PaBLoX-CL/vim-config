@@ -218,7 +218,9 @@ NeoBundleLazy 'godlygeek/tabular', {'autoload':{'commands':'Tabularize'}} " {{{
   vmap <Leader>a<Bar> :Tabularize /<Bar><CR>
   " }}}
 NeoBundle 'bufkill.vim'
-NeoBundle 'maxbrunsfeld/vim-yankstack'
+NeoBundle 'maxbrunsfeld/vim-yankstack' " {{{
+  let g:yankstack_yank_keys = [ 'c', 'C', 'd', 'D', 'x', 'X', 'y', 'Y' ]
+  " }}}
 NeoBundle 'chrisbra/NrrwRgn'
 NeoBundle 'terryma/vim-expand-region'
 NeoBundle 'terryma/vim-multiple-cursors'
@@ -630,13 +632,6 @@ map <F9> :setlocal invspell<CR>:set spell?<CR>
 map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
         \ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
         \ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
-
-" vim-sneak {{{2
-let g:sneak#streak = 1
-nmap s <Plug>Sneak_s
-nmap S <Plug>Sneak_S
-xmap s <Plug>Sneak_s
-xmap S <Plug>Sneak_S
 
 " Insert mode {{{2
 
