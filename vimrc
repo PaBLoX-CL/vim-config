@@ -249,6 +249,7 @@ NeoBundle 'kien/ctrlp.vim', { 'depends': 'tacahiroy/ctrlp-funky' } "{{{
   let g:ctrlp_extensions=['funky']
   let g:ctrlp_user_command='ag %s -l --nocolor -g ""'
 
+  " this only applies when ctrlp_user_command is **not** defined
   let g:ctrlp_custom_ignore = {
     \ 'dir': '\.git$\|\.hg$\|\.svn$',
     \ 'file': '\.so$\|\.pyc$\|\.gem$'
