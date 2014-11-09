@@ -369,7 +369,7 @@ NeoBundleLazy 'Shougo/junkfile.vim', {'autoload':{'commands':'JunkfileOpen','uni
 NeoBundleLazy 'Shougo/neomru.vim', {'autoload':{'unite_sources':'file_mru'}}
 
 " 1.8. UI {{{2
-NeoBundle 'itchyny/lightline.vim'
+" NeoBundle 'itchyny/lightline.vim'
 NeoBundle 'nathanaelkane/vim-indent-guides' "{{{
   let g:indent_guides_start_level=1
   let g:indent_guides_guide_size=1
@@ -730,7 +730,7 @@ command! -bang Qa qa<bang>
 
 " This is important if you use powerline, setting the $PYTHONPATH from the
 " shell could led to really weird issues.
-" let $PYTHONPATH='/usr/lib/python3.4/site-packages'
+let $PYTHONPATH='/usr/lib/python3.4/site-packages'
 
 " El fin {{{1
 NeoBundleCheck
