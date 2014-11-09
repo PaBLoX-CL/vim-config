@@ -1,0 +1,14 @@
+snippet ifcomex
+	# Return if reqs are not found
+	if (( ! $+commands[${1:command}] )); then
+	  return 1
+	fi
+
+snippet header
+	#
+	# ${1:description}
+	#
+	# Authors:
+	#   Pablo Olmos de Aguilera <pablo at glatelier dot org>
+
+# vim: set noexpandtab :
