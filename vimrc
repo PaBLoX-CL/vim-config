@@ -223,6 +223,7 @@ NeoBundle 'chrisbra/NrrwRgn'
 NeoBundle 'terryma/vim-expand-region'
 NeoBundle 'terryma/vim-multiple-cursors'
 NeoBundle 'jiangmiao/auto-pairs'
+NeoBundle 'christoomey/vim-tmux-navigator'
 
 " 1.5. Navigation {{{2
 NeoBundleLazy 'EasyGrep', {'autoload':{'commands':'GrepOptions'}} "{{{
