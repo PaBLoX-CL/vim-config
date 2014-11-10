@@ -572,13 +572,6 @@ nnoremap zM zM:echo &foldlevel<cr>
 set background=dark
 colorscheme jellybeans
 
-"let g:zenburn_alternate_Visual = 1
-"let g:zenburn_high_Contrast = 1
-"let g:zenburn_old_Visual = 1
-
-" let base16colorspace=256          "access colors present in 256 colorspace
-" colorscheme base16-tomorrow
-
 " Cursorline {{{2
 set cursorline
 
