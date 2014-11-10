@@ -514,8 +514,7 @@ set hlsearch                      "highlight searches
 set incsearch                     "incremental searching
 set ignorecase                    "ignore case for searching
 set smartcase                     "do case-sensitive if there's a capital letter
-" set grepprg=ag\ --nogroup\ --column\ --smart-case\ --nocolor\ --follow
-set grepprg=ack\ --nogroup\ --column\ --smart-case\ --nocolor\ --follow\ $*
+set grepprg=ag\ --nogroup\ --column\ --smart-case\ --nocolor\ --follow
 set grepformat=%f:%l:%c:%m
 
 " sane regexes
