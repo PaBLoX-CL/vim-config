@@ -545,7 +545,7 @@ nnoremap <silent> <leader>? :execute 'vimgrep /'.@/.'/g %'<CR>:copen<CR>
 " 3. UI Configuration {{{1
 
 set colorcolumn=+3
-set conceallevel=1                "enable concealing by default
+" set conceallevel=1                "enable concealing by default
 set formatoptions=qn1             "see 'fo-table' for more info
 set lazyredraw
 set laststatus=2                  "always show statusline
