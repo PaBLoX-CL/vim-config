@@ -230,7 +230,7 @@ vnoremap <buffer> <silent> $ g$
 
 " 3. Mappings {{{1
 
-" Function keys
+" Function keys {{{2
 " <F1> Startify
 " <F2>
 " <F3>
