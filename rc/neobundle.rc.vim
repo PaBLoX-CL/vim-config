@@ -7,14 +7,7 @@ NeoBundle 'Shougo/vimproc', { 'build' : { 'unix' : 'make -f make_unix.mak' } }
 " 1. General {{{1
 NeoBundle 'kana/vim-arpeggio'
 NeoBundle 'tpope/vim-surround'
-NeoBundle 'tpope/vim-unimpaired' "{{{
-  " Bubble single lines
-  nmap <C-S-Up> [e
-  nmap <C-S-Down> ]e
-  " Bubble multiple lines
-  vmap <C-S-Up> [egv
-  vmap <C-S-Down> ]egv
-  "}}}
+NeoBundle 'tpope/vim-unimpaired'
 NeoBundle 'tpope/vim-eunuch'
 NeoBundle 'tpope/vim-repeat'
 NeoBundle 'pbrisbin/vim-restore-cursor'

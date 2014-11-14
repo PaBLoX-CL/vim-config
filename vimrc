@@ -270,17 +270,28 @@ inoremap <C-u> <C-g>u<C-u>
 " https://stackoverflow.com/a/16481737/417527
 inoremap <C-l> <C-g>u<Esc>[s1z=`]a<C-g>u
 
-" Normal mode {{{2
+" Visual mode {{{2
 
 " Easier indenting
-nmap <C-S-Left> <<
-nmap <C-S-Right> >>
-vmap <C-S-Left> <gv
-vmap <C-S-Right> >gv
+nnoremap <C-S-Left> <<
+nnoremap <C-S-Right> >>
+xnoremap <C-S-Left> <gv
+xnoremap <C-S-Right> >gv
 
 " Reselect visual block after indent/outdent
-vnoremap < <gv
-vnoremap > >gv
+xnoremap < <gv
+xnoremap > >gv
+
+" vim-unimpaired "{{{
+" Bubble single lines
+nmap <C-S-Up> [e
+nmap <C-S-Down> ]e
+" Bubble multiple lines
+vmap <C-S-Up> [egv
+vmap <C-S-Down> ]egv
+"}}}
+
+" Normal mode {{{2
 
 " remap arrow keys (aka hard mode)
 " nnoremap <Left> :bprev<CR>
