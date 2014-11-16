@@ -71,52 +71,38 @@ endif " }}}
 
 " 3. Development {{{1
 NeoBundle 'kana/vim-textobj-user'
-NeoBundleLazy 'mattn/gist-vim', { 'depends': 'mattn/webapi-vim', 'autoload': { 'commands': 'Gist' } } "{{{
-  let g:gist_post_private=1
-  let g:gist_show_privates=1
-  "}}}
-NeoBundle 'tpope/vim-fugitive' "{{{
-  nnoremap <silent> <leader>gs :Gstatus<CR>
-  nnoremap <silent> <leader>gd :Gdiff<CR>
-  nnoremap <silent> <leader>gc :Gcommit<CR>
-  nnoremap <silent> <leader>gb :Gblame<CR>
-  nnoremap <silent> <leader>gl :Glog<CR>
-  nnoremap <silent> <leader>gp :Git push<CR>
-  nnoremap <silent> <leader>gw :Gwrite<CR>
-  nnoremap <silent> <leader>gr :Gremove<CR>
-  autocmd FileType gitcommit nmap <buffer> U :Git checkout -- <C-r><C-g><CR>
-  autocmd BufReadPost fugitive://* set bufhidden=delete
-  "}}}
-NeoBundle 'gregsexton/gitv', { 'depends': 'tpope/vim-fugitive', 'autoload': {'commands': 'Gitv'}}
+NeoBundleLazy 'mattn/gist-vim', {
+      \ 'depends': 'mattn/webapi-vim',
+      \ 'autoload': {
+      \   'commands': 'Gist',
+      \   }
+      \ }
+NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'gregsexton/gitv', {
+      \   'depends': 'tpope/vim-fugitive',
+      \   'autoload': {
+      \     'commands': 'Gitv'
+      \   },
+      \ }
 NeoBundle 'matchit.zip'
 NeoBundle 'tpope/vim-endwise'
 NeoBundle 'tpope/vim-dispatch'
 NeoBundle 'tomtom/tcomment_vim'
-NeoBundle 'scrooloose/syntastic' "{{{
-  let g:syntastic_error_symbol = '✗'
-  let g:syntastic_style_error_symbol = '✠'
-  let g:syntastic_warning_symbol = '∆'
-  let g:syntastic_style_warning_symbol = '≈'
-  "}}}
+NeoBundle 'scrooloose/syntastic'
 NeoBundle 'airblade/vim-gitgutter'
-NeoBundleLazy 'sjl/gundo.vim', {'autoload':{'commands':'GundoToggle'}} "{{{
-  nnoremap <silent> <F5> :GundoToggle<CR>
-  "}}}
+NeoBundleLazy 'sjl/gundo.vim', {
+      \  'commands': 'GundoToggle'
+      \  }
 " NeoBundle 'honza/vim-snippets'
-NeoBundleLazy 'Shougo/neocomplete.vim', {'autoload':{'insert':1}, 'vim_version':'7.3.885'} "{{{
-  let g:neocomplete#enable_at_startup=1
-  let g:neocomplete#data_directory='~/.vim/.cache/neocomplete'
-  "}}}
-NeoBundle 'Shougo/neosnippet.vim' "{{{
-  let g:neosnippet#snippets_directory='~/.vim/snippets'
+NeoBundleLazy 'Shougo/neocomplete.vim', {
+      \   'autoload': {
+      \     'insert': 1
+      \   },
+      \   'vim_version': '7.3.885'
+      \ }
+NeoBundle 'Shougo/neosnippet.vim'
   " let g:neosnippet#snippets_directory='~/.vim/bundle/vim-snippets/snippets,~/.vim/snippets'
   " let g:neosnippet#disable_runtime_snippets= { '_' : 1 }
-
-  imap <expr><TAB> neosnippet#expandable_or_jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : (pumvisible() ? "\<C-n>" : "\<TAB>")
-  smap <expr><TAB> neosnippet#expandable_or_jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
-  imap <expr><S-TAB> pumvisible() ? "\<C-p>" : ""
-  smap <expr><S-TAB> pumvisible() ? "\<C-p>" : ""
-  "}}}
 NeoBundle 'Shougo/neosnippet-snippets'
 " NeoBundle 'Valloric/YouCompleteMe', {'vim_version':'7.3.584'} "{{{
 "   let g:ycm_complete_in_comments_and_strings=1

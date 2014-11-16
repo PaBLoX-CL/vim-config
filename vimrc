@@ -244,6 +244,12 @@ vnoremap <buffer> <silent> $ g$
 " <F11>
 " <F12>
 
+if neobundle#tap('gundo.vim') "{{{
+  nnoremap <silent> <F5> :GundoToggle<CR>
+
+  call neobundle#untap()
+endif "}}}
+
 set pastetoggle=<F6>
 
 " toggle spell checking
@@ -324,6 +330,20 @@ Arpeggio nnoremap lq :noh<CR>:call clearmatches()<CR>
 Arpeggio nnoremap la :ls<CR>
 Arpeggio inoremap jk <Esc>
 
+" Plugins {{{2
+
+if neobundle#tap('vim-fugitive') "{{{
+  nnoremap <silent> <Leader>gs :Gstatus<CR>
+  nnoremap <silent> <Leader>gd :Gdiff<CR>
+  nnoremap <silent> <Leader>gc :Gcommit<CR>
+  nnoremap <silent> <Leader>gb :Gblame<CR>
+  nnoremap <silent> <Leader>gl :Glog<CR>
+  nnoremap <silent> <Leader>gp :Git push<CR>
+  nnoremap <silent> <Leader>gw :Gwrite<CR>
+  nnoremap <silent> <Leader>gr :Gremove<CR>
+  autocmd BufReadPost fugitive://* set bufhidden=delete
+  call neobundle#untap()
+endif "}}}
 
 " 4. Completion {{{1
 set completeopt=longest,menuone,preview
@@ -348,7 +368,7 @@ autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
 
 " 5. Miscellaneous {{{1
 
-" stupid shift keys fixes {{{2
+" stupid shift keys fixes " {{{
 " stolen from spf13
 command! -bang -nargs=* -complete=file E e<bang> <args>
 command! -bang -nargs=* -complete=file W w<bang> <args>
@@ -359,10 +379,47 @@ command! -bang WA wa<bang>
 command! -bang Q q<bang>
 command! -bang QA qa<bang>
 command! -bang Qa qa<bang>
+" }}}
 
 " This is important if you use powerline, setting the $PYTHONPATH from the
 " shell could led to really weird issues.
 let $PYTHONPATH='/usr/lib/python3.4/site-packages'
+
+" 6. Plugins {{{1
+
+if neobundle#tap('gist-vim') "{{{
+  let g:gist_post_private=1
+  let g:gist_show_privates=1
+
+  call neobundle#untap()
+endif "}}}
+
+if neobundle#tap('syntastic') "{{{
+  let g:syntastic_error_symbol = '✗'
+  let g:syntastic_style_error_symbol = '✠'
+  let g:syntastic_warning_symbol = '∆'
+  let g:syntastic_style_warning_symbol = '≈'
+
+  call neobundle#untap()
+endif "}}}
+
+if neobundle#tap('neocomplete.vim') "{{{
+  let g:neocomplete#enable_at_startup=1
+  let g:neocomplete#data_directory='~/.vim/.cache/neocomplete'
+
+  call neobundle#untap()
+endif "}}}
+
+if neobundle#tap('neosnippet.vim') "{{{
+  let g:neosnippet#snippets_directory='~/.vim/snippets'
+
+  imap <expr><TAB> neosnippet#expandable_or_jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : (pumvisible() ? "\<C-n>" : "\<TAB>")
+  smap <expr><TAB> neosnippet#expandable_or_jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+  imap <expr><S-TAB> pumvisible() ? "\<C-p>" : ""
+  smap <expr><S-TAB> pumvisible() ? "\<C-p>" : ""
+
+  call neobundle#untap()
+endif "}}}
 
 " El fin {{{1
 
