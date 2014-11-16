@@ -3,6 +3,9 @@ tmp/
 .cache/
 vimproc/
 
+rc/before.vim
+rc/after.vim
+
 # compiled spell vim file
 *.spl
 

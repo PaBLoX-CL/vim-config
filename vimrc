@@ -17,7 +17,7 @@ function! EnsureExists(path)
 endfunction
 
 function! s:source_rc(path)
-  execute 'source' fnameescape(expand('~/.vim/rc' . a:path))
+  execute 'source' fnameescape(expand('~/.vim/rc/' . a:path))
 endfunction
 
 " ii. Load external configuration before anything else {{{2
@@ -26,8 +26,8 @@ for fpath in split(globpath('~/.vim/before', '*.vim'), '\n')
 endfor
 
 " for local changes that aren't supposed to go under version control
-if filereadable(expand("~/.vim/before.vimrc"))
-  source ~/.vim/before.vimrc
+if filereadable(expand("~/.vim/rc/before.vim"))
+  call s:source_rc('before.vim')
 endif
 
 " iii. NeoBundle Configuration {{{2
@@ -365,6 +365,12 @@ command! -bang Qa qa<bang>
 let $PYTHONPATH='/usr/lib/python3.4/site-packages'
 
 " El fin {{{1
+
+" for local changes that aren't supposed to go under version control
+if filereadable(expand("~/.vim/rc/after.vim"))
+  call s:source_rc('after.vim')
+endif
+
 NeoBundleCheck
 " vim: expandtab softtabstop=2 shiftwidth=2
 " vim: foldmethod=marker foldlevel=0
