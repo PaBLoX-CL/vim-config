@@ -159,24 +159,11 @@ NeoBundleLazy 'marijnh/tern_for_vim', {
       \ }
 
 " 4. Editing {{{1
-NeoBundleLazy 'godlygeek/tabular', {'autoload':{'commands':'Tabularize'}} " {{{
-  nmap <Leader>a& :Tabularize /&<CR>
-  vmap <Leader>a& :Tabularize /&<CR>
-  nmap <Leader>a= :Tabularize /=<CR>
-  vmap <Leader>a= :Tabularize /=<CR>
-  nmap <Leader>a: :Tabularize /:<CR>
-  vmap <Leader>a: :Tabularize /:<CR>
-  nmap <Leader>a:: :Tabularize /:\zs<CR>
-  vmap <Leader>a:: :Tabularize /:\zs<CR>
-  nmap <Leader>a, :Tabularize /,<CR>
-  vmap <Leader>a, :Tabularize /,<CR>
-  nmap <Leader>a<Bar> :Tabularize /<Bar><CR>
-  vmap <Leader>a<Bar> :Tabularize /<Bar><CR>
-  " }}}
+NeoBundleLazy 'godlygeek/tabular', {
+      \ 'commands': 'Tabularize'
+      \ }
 NeoBundle 'bufkill.vim'
-NeoBundle 'maxbrunsfeld/vim-yankstack' " {{{
-  let g:yankstack_yank_keys = [ 'c', 'C', 'd', 'D', 'x', 'X', 'y', 'Y' ]
-  " }}}
+NeoBundle 'maxbrunsfeld/vim-yankstack'
 NeoBundle 'chrisbra/NrrwRgn'
 NeoBundle 'terryma/vim-expand-region'
 NeoBundle 'terryma/vim-multiple-cursors'

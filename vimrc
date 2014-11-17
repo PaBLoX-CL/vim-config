@@ -344,6 +344,22 @@ if neobundle#tap('vim-fugitive') "{{{
   autocmd BufReadPost fugitive://* set bufhidden=delete
   call neobundle#untap()
 endif "}}}
+if neobundle#tap('tabular') "{{{
+  nmap <Leader>a& :Tabularize /&<CR>
+  vmap <Leader>a& :Tabularize /&<CR>
+  nmap <Leader>a= :Tabularize /=<CR>
+  vmap <Leader>a= :Tabularize /=<CR>
+  nmap <Leader>a: :Tabularize /:<CR>
+  vmap <Leader>a: :Tabularize /:<CR>
+  nmap <Leader>a:: :Tabularize /:\zs<CR>
+  vmap <Leader>a:: :Tabularize /:\zs<CR>
+  nmap <Leader>a, :Tabularize /,<CR>
+  vmap <Leader>a, :Tabularize /,<CR>
+  nmap <Leader>a<Bar> :Tabularize /<Bar><CR>
+  vmap <Leader>a<Bar> :Tabularize /<Bar><CR>
+
+  call neobundle#untap()
+endif "}}}
 
 " 4. Completion {{{1
 set completeopt=longest,menuone,preview
@@ -417,7 +433,11 @@ if neobundle#tap('neosnippet.vim') "{{{
 
   call neobundle#untap()
 endif "}}}
+if neobundle#tap('yankstack') "{{{
+  let g:yankstack_yank_keys = [ 'c', 'C', 'd', 'D', 'x', 'X', 'y', 'Y' ]
 
+  call neobundle#untap()
+endif "}}}
 " El fin {{{1
 
 " for local changes that aren't supposed to go under version control
