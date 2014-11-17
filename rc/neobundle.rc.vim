@@ -337,30 +337,14 @@ NeoBundleLazy 'zhaocai/GoldenView.Vim', {
       \ }
 
 " 9. Misc {{{1
-NeoBundleLazy 'Shougo/vimshell.vim', {'autoload':{'commands':[ 'VimShell', 'VimShellInteractive' ]}} "{{{
-  let g:vimshell_editor_command='vim'
-  let g:vimshell_right_prompt='getcwd()'
-  let g:vimshell_data_directory='~/.vim/.cache/vimshell'
-  let g:vimshell_vimshrc_path='~/.vim/vimshrc'
-
-  nnoremap <leader>c :VimShell -split<cr>
-  nnoremap <leader>cc :VimShell -split<cr>
-  nnoremap <leader>cn :VimShellInteractive node<cr>
-  nnoremap <leader>cl :VimShellInteractive lua<cr>
-  nnoremap <leader>cr :VimShellInteractive irb<cr>
-  nnoremap <leader>cp :VimShellInteractive python<cr>
-  "}}}
-NeoBundle 'mhinz/vim-startify' "{{{
-  let g:startify_session_dir = '~/.vim/.cache/sessions'
-  let g:startify_change_to_vcs_root = 1
-  let g:startify_show_sessions = 1
-  nnoremap <F1> :Startify<cr>
-"}}}
-NeoBundle 'benmills/vimux' "{{{
-  map <Leader>rp :VimuxPromptCommand<CR>
-  map <Leader>rl :VimuxRunLastCommand<CR>
-
-  "map <LocalLeader>d :call VimuxRunCommand(@v, 0)<CR>
-  "}}}
+NeoBundleLazy 'Shougo/vimshell.vim', {
+      \ 'commands': [{ 'name': 'VimShell',
+      \                'complete': 'customlist,vimshell#complete' },
+      \              'VimShellInteractive'
+      \             ],
+      \ 'mappings': '<Plug>'
+      \ }
+NeoBundle 'mhinz/vim-startify'
+NeoBundle 'benmills/vimux'
 
 " vim: foldmethod=marker foldlevel=0

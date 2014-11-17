@@ -250,6 +250,11 @@ vnoremap <buffer> <silent> $ g$
 " <F11>
 " <F12>
 
+if neobundle#tap('vim-startify') "{{{
+  nnoremap <F1> :Startify<cr>
+
+  call neobundle#untap()
+endif "}}}
 if neobundle#tap('GoldenView.Vim') "{{{
   let g:goldenview__enable_default_mapping=0
   nmap <silent> <F4> <Plug>GoldenViewSplit
@@ -401,6 +406,24 @@ if neobundle#tap('vim-jsbeautify') "{{{
 
   call neobundle#untap()
 endif "}}}
+if neobundle#tap('vimshell.vim') "{{{
+  nnoremap <Leader>c  :VimShell -split<CR>
+  nnoremap <Leader>cc :VimShell -split<CR>
+  nnoremap <Leader>cn :VimShellInteractive node<CR>
+  nnoremap <Leader>cl :VimShellInteractive lua<CR>
+  nnoremap <Leader>cr :VimShellInteractive irb<CR>
+  nnoremap <Leader>cp :VimShellInteractive python<CR>
+
+  call neobundle#untap()
+endif "}}}
+if neobundle#tap('vimux') "{{{
+  map <Leader>rp :VimuxPromptCommand<CR>
+  map <Leader>rl :VimuxRunLastCommand<CR>
+
+  "map <LocalLeader>d :call VimuxRunCommand(@v, 0)<CR>
+
+  call neobundle#untap()
+endif "}}}
 " 4. Completion {{{1
 set completeopt=longest,menuone,preview
 set wildmenu
@@ -523,6 +546,21 @@ if neobundle#tap('vim-indent-guides') "{{{
     endfunction
     autocmd VimEnter,Colorscheme * call s:indent_set_console_colors()
   endif
+
+  call neobundle#untap()
+endif "}}}
+if neobundle#tap('vimshell.vim') "{{{
+  let g:vimshell_editor_command='vim'
+  let g:vimshell_right_prompt='getcwd()'
+  let g:vimshell_data_directory='~/.vim/.cache/vimshell'
+  let g:vimshell_vimshrc_path='~/.vim/vimshrc'
+
+  call neobundle#untap()
+endif "}}}
+if neobundle#tap('vim-startify') "{{{
+  let g:startify_session_dir = '$CACHE/sessions'
+  let g:startify_change_to_vcs_root = 1
+  let g:startify_show_sessions = 1
 
   call neobundle#untap()
 endif "}}}
