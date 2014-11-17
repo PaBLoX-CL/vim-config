@@ -116,6 +116,7 @@ NeoBundle 'Shougo/neosnippet-snippets'
 "   let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 "   let g:UltiSnipsSnippetsDir='~/.vim/snippets'
 " "}}}
+
 " Haskell {{{3
 NeoBundleLazy 'eagletmt/neco-ghc', {
       \ 'filetypes': 'haskell',
@@ -173,43 +174,14 @@ NeoBundle 'terryma/vim-multiple-cursors'
 NeoBundle 'christoomey/vim-tmux-navigator'
 
 " 5. Navigation {{{1
-NeoBundleLazy 'EasyGrep', {'autoload':{'commands':'GrepOptions'}} "{{{
-  let g:EasyGrepRecursive=1
-  let g:EasyGrepAllOptionsInExplorer=1
-  let g:EasyGrepCommand=1
-  nnoremap <leader>vo :GrepOptions<cr>
-  "}}}
+NeoBundleLazy 'EasyGrep', {
+      \ 'commands': 'GrepOptions',
+      \ }
 NeoBundle 'justinmk/vim-sneak'
-NeoBundle 'kien/ctrlp.vim', { 'depends': 'tacahiroy/ctrlp-funky' } "{{{
-  " let g:ctrlp_clear_cache_on_exit=1
-  let g:ctrlp_max_height=40
-  let g:ctrlp_show_hidden=0
-  let g:ctrlp_follow_symlinks=1
-  let g:ctrlp_working_path_mode=0
-  let g:ctrlp_max_files=20000
-  let g:ctrlp_use_caching=0
-  let g:ctrlp_reuse_window='startify'
-  let g:ctrlp_extensions=['funky']
-  let g:ctrlp_user_command='ag %s -l --nocolor -g "" --ignore'
-
-  " this only applies when ctrlp_user_command is **not** defined
-  let g:ctrlp_custom_ignore = {
-    \ 'dir': '\.git$\|\.hg$\|\.svn$',
-    \ 'file': '\.so$\|\.pyc$\|\.gem$'
-  \ }
-
-  nmap , [ctrlp]
-  nnoremap [ctrlp] <nop>
-
-  nnoremap [ctrlp]t :CtrlPBufTag<cr>
-  nnoremap [ctrlp]T :CtrlPTag<cr>
-  nnoremap [ctrlp]l :CtrlPLine<cr>
-  nnoremap [ctrlp]o :CtrlPFunky<cr>
-  nnoremap [ctrlp]b :CtrlPBuffer<cr>
-  "}}}
-NeoBundle 'mileszs/ack.vim' "{{{
-  let g:ackprg = "ag --nogroup --column --smart-case --follow"
-  "}}}
+NeoBundle 'kien/ctrlp.vim', {
+      \ 'depends': 'tacahiroy/ctrlp-funky',
+      \ }
+NeoBundle 'mileszs/ack.vim'
 " NeoBundleLazy 'scrooloose/nerdtree', {'autoload':{'commands':['NERDTreeToggle','NERDTreeFind']}} "{{{
 "   let NERDTreeShowHidden=1
 "   let NERDTreeQuitOnOpen=0
@@ -222,9 +194,9 @@ NeoBundle 'mileszs/ack.vim' "{{{
 "   nnoremap <F3> :NERDTreeFind<CR>
 "   "}}}
 NeoBundle 'tpope/vim-vinegar'
-NeoBundleLazy 'majutsushi/tagbar', {'autoload':{'commands':'TagbarToggle'}} "{{{
-  nnoremap <silent> <F8> :TagbarToggle<CR>
-"}}}
+NeoBundleLazy 'majutsushi/tagbar', {
+      \ 'commands': 'TagbarToggle'
+      \ }
 
 " 6. Filetypes {{{1
 NeoBundleLazy 'tpope/vim-git', {

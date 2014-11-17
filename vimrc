@@ -252,6 +252,12 @@ endif "}}}
 
 set pastetoggle=<F6>
 
+if neobundle#tap('tagbar') "{{{
+  nnoremap <silent> <F8> :TagbarToggle<CR>
+
+  call neobundle#untap()
+endif "}}}
+
 " toggle spell checking
 map <F9> :setlocal invspell<CR>:set spell?<CR>
 
@@ -360,7 +366,23 @@ if neobundle#tap('tabular') "{{{
 
   call neobundle#untap()
 endif "}}}
+if neobundle#tap('EasyGrep') "{{{
+  nnoremap <leader>vo :GrepOptions<cr>
 
+  call neobundle#untap()
+endif "}}}
+if neobundle#tap('ctrlp.vim') "{{{
+  nmap , [ctrlp]
+  nnoremap [ctrlp] <nop>
+
+  nnoremap [ctrlp]t :CtrlPBufTag<cr>
+  nnoremap [ctrlp]T :CtrlPTag<cr>
+  nnoremap [ctrlp]l :CtrlPLine<cr>
+  nnoremap [ctrlp]o :CtrlPFunky<cr>
+  nnoremap [ctrlp]b :CtrlPBuffer<cr>
+
+  call neobundle#untap()
+endif "}}}
 " 4. Completion {{{1
 set completeopt=longest,menuone,preview
 set wildmenu
@@ -435,6 +457,38 @@ if neobundle#tap('neosnippet.vim') "{{{
 endif "}}}
 if neobundle#tap('yankstack') "{{{
   let g:yankstack_yank_keys = [ 'c', 'C', 'd', 'D', 'x', 'X', 'y', 'Y' ]
+
+  call neobundle#untap()
+endif "}}}
+if neobundle#tap('EasyGrep') "{{{
+  let g:EasyGrepRecursive=1
+  let g:EasyGrepAllOptionsInExplorer=1
+  let g:EasyGrepCommand=1
+
+  call neobundle#untap()
+endif "}}}
+if neobundle#tap('ctrlp.vim') "{{{
+  " let g:ctrlp_clear_cache_on_exit=1
+  let g:ctrlp_max_height=40
+  let g:ctrlp_show_hidden=0
+  let g:ctrlp_follow_symlinks=1
+  let g:ctrlp_working_path_mode=0
+  let g:ctrlp_max_files=20000
+  let g:ctrlp_use_caching=0
+  let g:ctrlp_reuse_window='startify'
+  let g:ctrlp_extensions=['funky']
+  let g:ctrlp_user_command='ag %s -l --nocolor -g "" --ignore'
+
+  " this only applies when ctrlp_user_command is **not** defined
+  let g:ctrlp_custom_ignore = {
+    \ 'dir': '\.git$\|\.hg$\|\.svn$',
+    \ 'file': '\.so$\|\.pyc$\|\.gem$'
+  \ }
+
+  call neobundle#untap()
+endif "}}}
+if neobundle#tap('ack.vim') "{{{
+  let g:ackprg = 'ag --nogroup --column --smart-case --follow'
 
   call neobundle#untap()
 endif "}}}
