@@ -91,14 +91,14 @@ NeoBundle 'tomtom/tcomment_vim'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'airblade/vim-gitgutter'
 NeoBundleLazy 'sjl/gundo.vim', {
-      \  'commands': 'GundoToggle'
+      \  'commands': 'GundoToggle',
       \  }
 " NeoBundle 'honza/vim-snippets'
 NeoBundleLazy 'Shougo/neocomplete.vim', {
       \   'autoload': {
       \     'insert': 1
       \   },
-      \   'vim_version': '7.3.885'
+      \   'vim_version': '7.3.885',
       \ }
 NeoBundle 'Shougo/neosnippet.vim'
   " let g:neosnippet#snippets_directory='~/.vim/bundle/vim-snippets/snippets,~/.vim/snippets'
@@ -117,7 +117,7 @@ NeoBundle 'Shougo/neosnippet-snippets'
 "   let g:UltiSnipsSnippetsDir='~/.vim/snippets'
 " "}}}
 
-" Haskell {{{3
+" Haskell {{{2
 NeoBundleLazy 'eagletmt/neco-ghc', {
       \ 'filetypes': 'haskell',
       \ }
@@ -125,7 +125,7 @@ NeoBundleLazy 'Twinside/vim-haskellFold', {
       \ 'filetypes': 'haskell',
       \ }
 
-" Ruby {{{3
+" Ruby {{{2
 NeoBundleLazy 'vim-ruby/vim-ruby', {
       \ 'filetypes': 'ruby',
       \ }
@@ -137,10 +137,10 @@ NeoBundleLazy 'nelstrom/vim-textobj-rubyblock', {
       \ 'filetypes': 'ruby',
       \ }
 NeoBundleLazy 'skwp/vim-rspec', {
-      \ 'filetypes': 'ruby'
+      \ 'filetypes': 'ruby',
       \ }
 
-" Web {{{3
+" Web {{{2
 " NeoBundleLazy 'mattn/emmet-vim', {'autoload':{'filetypes':['html','xml','xsl','xslt','xsd','css','sass','scss','less','mustache']}} "{{{
 "   function! s:zen_html_tab()
 "     let line = getline('.')
@@ -161,7 +161,7 @@ NeoBundleLazy 'marijnh/tern_for_vim', {
 
 " 4. Editing {{{1
 NeoBundleLazy 'godlygeek/tabular', {
-      \ 'commands': 'Tabularize'
+      \ 'commands': 'Tabularize',
       \ }
 NeoBundle 'bufkill.vim'
 NeoBundle 'maxbrunsfeld/vim-yankstack'
@@ -195,7 +195,7 @@ NeoBundle 'mileszs/ack.vim'
 "   "}}}
 NeoBundle 'tpope/vim-vinegar'
 NeoBundleLazy 'majutsushi/tagbar', {
-      \ 'commands': 'TagbarToggle'
+      \ 'commands': 'TagbarToggle',
       \ }
 
 " 6. Filetypes {{{1
