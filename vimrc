@@ -75,11 +75,17 @@ set viewoptions=folds,options,cursor,unix,slash
 " http://unix.stackexchange.com/a/34723/21088
 " basically fixes use of ctrl and shift inside tmux
 if &term =~ '^screen'
-    " tmux will send xterm-style keys when xterm-keys is on
-    execute "set <xUp>=\e[1;*A"
-    execute "set <xDown>=\e[1;*B"
-    execute "set <xRight>=\e[1;*C"
-    execute "set <xLeft>=\e[1;*D"
+  " tmux will send xterm-style keys when xterm-keys is on
+  execute "set <xUp>=\e[1;*A"
+  execute "set <xDown>=\e[1;*B"
+  execute "set <xRight>=\e[1;*C"
+  execute "set <xLeft>=\e[1;*D"
+" https://unix.stackexchange.com/questions/58361/how-to-fix-the-shifted-function-keys-in-vim-in-xterm-in-gnome-terminal
+elseif &term =~ 'termite$'
+  execute "set <S-F1>=\e[1;2P"
+  execute "set <S-F2>=\e[1;2Q"
+  execute "set <S-F3>=\e[1;2R"
+  execute "set <S-F4>=\e[1;2S"
 endif
 
 " 1.2. Whitespace {{{2
