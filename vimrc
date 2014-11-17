@@ -123,20 +123,20 @@ autocmd BufWritePre * :%s/\s\+$//e
 set undofile
 set undolevels=3000
 set undoreload=10000
-set undodir=~/.vim/.cache/undo
+let &undodir = expand('$CACHE/undo')
 
 " backups
 " set backup
-" set backupdir=~/.vim/.cache/backup
 set nobackup
+let &backupdir = expand('$CACHE/backup')
 
 " swap files
-set directory=~/.vim/.cache/swap
+let &directory = expand('$CACHE/swap')
 set noswapfile
 
-call EnsureExists('~/.vim/.cache')
+call EnsureExists('$CACHE')
 call EnsureExists(&undodir)
-" call EnsureExists(&backupdir)
+call EnsureExists(&backupdir)
 call EnsureExists(&directory)
 
 " 1.5. Searching {{{2
@@ -482,7 +482,7 @@ if neobundle#tap('syntastic') "{{{
 endif "}}}
 if neobundle#tap('neocomplete.vim') "{{{
   let g:neocomplete#enable_at_startup=1
-  let g:neocomplete#data_directory='~/.vim/.cache/neocomplete'
+  let g:neocomplete#data_directory= expand('$CACHE/neocomplete')
 
   call neobundle#untap()
 endif "}}}
@@ -552,13 +552,13 @@ endif "}}}
 if neobundle#tap('vimshell.vim') "{{{
   let g:vimshell_editor_command='vim'
   let g:vimshell_right_prompt='getcwd()'
-  let g:vimshell_data_directory='~/.vim/.cache/vimshell'
+  let g:vimshell_data_directory=expand('$CACHE/vimshell')
   let g:vimshell_vimshrc_path='~/.vim/vimshrc'
 
   call neobundle#untap()
 endif "}}}
 if neobundle#tap('vim-startify') "{{{
-  let g:startify_session_dir = '$CACHE/sessions'
+  let g:startify_session_dir = expand('$CACHE/sessions')
   let g:startify_change_to_vcs_root = 1
   let g:startify_show_sessions = 1
 
