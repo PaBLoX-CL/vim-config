@@ -250,6 +250,13 @@ vnoremap <buffer> <silent> $ g$
 " <F11>
 " <F12>
 
+if neobundle#tap('GoldenView.Vim') "{{{
+  let g:goldenview__enable_default_mapping=0
+  nmap <silent> <F4> <Plug>GoldenViewSplit
+  nmap <S-F4> <Plug>ToggleGoldenViewAutoResize
+
+  call neobundle#untap()
+endif "}}}
 if neobundle#tap('gundo.vim') "{{{
   nnoremap <silent> <F5> :GundoToggle<CR>
 
@@ -389,6 +396,11 @@ if neobundle#tap('ctrlp.vim') "{{{
 
   call neobundle#untap()
 endif "}}}
+if neobundle#tap('vim-jsbeautify') "{{{
+  nnoremap <Leader>fjs :call JsBeautify()<CR>
+
+  call neobundle#untap()
+endif "}}}
 " 4. Completion {{{1
 set completeopt=longest,menuone,preview
 set wildmenu
@@ -495,6 +507,22 @@ if neobundle#tap('ctrlp.vim') "{{{
 endif "}}}
 if neobundle#tap('ack.vim') "{{{
   let g:ackprg = 'ag --nogroup --column --smart-case --follow'
+
+  call neobundle#untap()
+endif "}}}
+if neobundle#tap('vim-indent-guides') "{{{
+  let g:indent_guides_start_level=1
+  let g:indent_guides_guide_size=1
+  let g:indent_guides_enable_on_vim_startup=0
+  let g:indent_guides_color_change_percent=3
+  if !has('gui_running')
+    let g:indent_guides_auto_colors=0
+    function! s:indent_set_console_colors()
+      hi IndentGuidesOdd ctermbg=235
+      hi IndentGuidesEven ctermbg=236
+    endfunction
+    autocmd VimEnter,Colorscheme * call s:indent_set_console_colors()
+  endif
 
   call neobundle#untap()
 endif "}}}
