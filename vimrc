@@ -393,7 +393,6 @@ if neobundle#tap('gist-vim') "{{{
 
   call neobundle#untap()
 endif "}}}
-
 if neobundle#tap('syntastic') "{{{
   let g:syntastic_error_symbol = '✗'
   let g:syntastic_style_error_symbol = '✠'
@@ -402,14 +401,12 @@ if neobundle#tap('syntastic') "{{{
 
   call neobundle#untap()
 endif "}}}
-
 if neobundle#tap('neocomplete.vim') "{{{
   let g:neocomplete#enable_at_startup=1
   let g:neocomplete#data_directory='~/.vim/.cache/neocomplete'
 
   call neobundle#untap()
 endif "}}}
-
 if neobundle#tap('neosnippet.vim') "{{{
   let g:neosnippet#snippets_directory='~/.vim/snippets'
 

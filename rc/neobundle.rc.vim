@@ -117,15 +117,27 @@ NeoBundle 'Shougo/neosnippet-snippets'
 "   let g:UltiSnipsSnippetsDir='~/.vim/snippets'
 " "}}}
 " Haskell {{{3
-NeoBundle 'eagletmt/neco-ghc'
-NeoBundle 'Twinside/vim-haskellFold'
+NeoBundleLazy 'eagletmt/neco-ghc', {
+      \ 'filetypes': 'haskell',
+      \ }
+NeoBundleLazy 'Twinside/vim-haskellFold', {
+      \ 'filetypes': 'haskell',
+      \ }
 
 " Ruby {{{3
-NeoBundle 'vim-ruby/vim-ruby'
+NeoBundleLazy 'vim-ruby/vim-ruby', {
+      \ 'filetypes': 'ruby',
+      \ }
 NeoBundle 'tpope/vim-bundler'
-NeoBundle 'tpope/vim-rails'
-NeoBundleLazy 'nelstrom/vim-textobj-rubyblock', {'autoload':{'filetypes':['ruby']}}
-NeoBundleLazy 'skwp/vim-rspec', {'autoload':{'filetypes':['ruby']}}
+NeoBundleLazy 'tpope/vim-rails', {
+      \ 'filetypes': 'ruby',
+      \ }
+NeoBundleLazy 'nelstrom/vim-textobj-rubyblock', {
+      \ 'filetypes': 'ruby',
+      \ }
+NeoBundleLazy 'skwp/vim-rspec', {
+      \ 'filetypes': 'ruby'
+      \ }
 
 " Web {{{3
 " NeoBundleLazy 'mattn/emmet-vim', {'autoload':{'filetypes':['html','xml','xsl','xslt','xsd','css','sass','scss','less','mustache']}} "{{{
@@ -140,11 +152,11 @@ NeoBundleLazy 'skwp/vim-rspec', {'autoload':{'filetypes':['ruby']}}
 "   autocmd FileType html imap <buffer><expr><tab> <sid>zen_html_tab()
 "   "}}}
 NeoBundleLazy 'marijnh/tern_for_vim', {
-  \ 'autoload': { 'filetypes': ['javascript'] },
-  \ 'build': {
-    \ 'unix': 'npm install'
-  \ },
-\}
+      \   'filetypes': 'javascript',
+      \   'build': {
+      \     'unix': 'npm install',
+      \   }
+      \ }
 
 " 4. Editing {{{1
 NeoBundleLazy 'godlygeek/tabular', {'autoload':{'commands':'Tabularize'}} " {{{
@@ -228,33 +240,74 @@ NeoBundleLazy 'majutsushi/tagbar', {'autoload':{'commands':'TagbarToggle'}} "{{{
 "}}}
 
 " 6. Filetypes {{{1
-NeoBundleLazy 'tpope/vim-git', {'autoload':{'filetypes':['git','gitcommit','gitconfig','gitrebase','gitsendemail']}}
-NeoBundleLazy 'Keithbsmiley/rspec.vim', {'autoload':{'filetypes':['ruby']}}
-NeoBundleLazy 'tpope/vim-cucumber', {'autoload':{'filetypes':['cucumber']}}
-NeoBundleLazy 'zaiste/tmux.vim', {'autoload':{'filetypes':['tmux']}}
-NeoBundleLazy 'travitch/hasksyn', {'autoload':{'filetypes':['haskell']}}
-NeoBundleLazy 'Twinside/vim-syntax-haskell-cabal', {'autoload':{'filetypes':['haskell,cabal']}}
+NeoBundleLazy 'tpope/vim-git', {
+      \ 'filetypes': ['git', 'gitcommit', 'gitconfig', 'gitrebase', 'gitsendemail'],
+      \ }
+NeoBundleLazy 'Keithbsmiley/rspec.vim', {
+      \ 'filetypes': 'ruby',
+      \ }
+NeoBundleLazy 'tpope/vim-cucumber', {
+      \ 'filetypes': 'cucumber',
+      \ }
+NeoBundleLazy 'zaiste/tmux.vim', {
+      \ 'filetypes': 'tmux',
+      \ }
+NeoBundleLazy 'travitch/hasksyn', {
+      \ 'filetypes': 'haskell',
+      \ }
+NeoBundleLazy 'Twinside/vim-syntax-haskell-cabal', {
+      \ 'filetypes': ['haskell', 'cabal'],
+      \ }
 
-" Javascript {{{3
-NeoBundleLazy 'pangloss/vim-javascript', {'autoload':{'filetypes':['javascript']}}
-NeoBundleLazy 'maksimr/vim-jsbeautify', {'autoload':{'filetypes':['javascript']}} "{{{
-  nnoremap <Leader>fjs :call JsBeautify()<CR>
-NeoBundleLazy 'kchmck/vim-coffee-script', {'autoload':{'filetypes':['coffee']}}
-NeoBundleLazy 'mmalecki/vim-node.js', {'autoload':{'filetypes':['javascript']}}
+" Javascript {{{2
+NeoBundleLazy 'pangloss/vim-javascript', {
+      \ 'filetypes': 'javascript',
+      \ }
+NeoBundleLazy 'maksimr/vim-jsbeautify', {
+      \ 'filetypes': 'javascript',
+      \ }
+NeoBundleLazy 'kchmck/vim-coffee-script', {
+      \ 'filetypes': 'coffee',
+      \ }
+NeoBundleLazy 'mmalecki/vim-node.js', {
+      \ 'filetypes': 'javascript',
+      \ }
 " NeoBundleLazy 'leshill/vim-json', {'autoload':{'filetypes':['javascript','json']}}
-NeoBundleLazy 'elzr/vim-json', {'autoload':{'filetypes':['javascript','json']}}
-NeoBundleLazy 'othree/javascript-libraries-syntax.vim', {'autoload':{'filetypes':['javascript','coffe']}}
+NeoBundleLazy 'elzr/vim-json', {
+      \ 'filetypes': ['javascript', 'json'],
+      \ }
+NeoBundleLazy 'othree/javascript-libraries-syntax.vim', {
+      \ 'filetypes': ['javascript','coffee'],
+      \ }
 
-" Html/CSS {{{3
-NeoBundleLazy 'othree/html5.vim', {'autoload':{'filetypes':['html']}}
-NeoBundleLazy 'slim-template/vim-slim', {'autoload':{'filetypes':['slim']}}
-NeoBundleLazy 'cakebaker/scss-syntax.vim', {'autoload':{'filetypes':['scss','sass']}}
-NeoBundleLazy 'hail2u/vim-css3-syntax', {'autoload':{'filetypes':['css','scss','sass']}}
-NeoBundleLazy 'tpope/vim-markdown', {'autoload':{'filetypes':['markdown']}}
-NeoBundleLazy 'tpope/vim-haml', {'autoload':{'filetypes':['haml']}}
-NeoBundleLazy 'digitaltoad/vim-jade', {'autoload':{'filetypes':['jade']}}
-NeoBundleLazy 'wavded/vim-stylus', {'autoload':{'filetypes':['stylus']}}
-NeoBundleLazy 'juvenn/mustache.vim', {'autoload':{'filetypes':['mustache']}}
+" Html/CSS {{{2
+NeoBundleLazy 'othree/html5.vim', {
+      \ 'filetypes': 'html',
+      \ }
+NeoBundleLazy 'slim-template/vim-slim', {
+      \ 'filetypes': 'slim',
+      \ }
+NeoBundleLazy 'cakebaker/scss-syntax.vim', {
+      \ 'filetypes': ['scss','sass'],
+      \ }
+NeoBundleLazy 'hail2u/vim-css3-syntax', {
+      \ 'filetypes': ['css','scss','sass'],
+      \ }
+NeoBundleLazy 'tpope/vim-markdown', {
+      \ 'filetypes': 'markdown',
+      \ }
+NeoBundleLazy 'tpope/vim-haml', {
+      \ 'filetypes': 'haml',
+      \ }
+NeoBundleLazy 'digitaltoad/vim-jade', {
+      \ 'filetypes': 'jade',
+      \ }
+NeoBundleLazy 'wavded/vim-stylus', {
+      \ 'filetypes': 'stylus',
+      \ }
+NeoBundleLazy 'juvenn/mustache.vim', {
+      \ 'filetypes': 'mustache',
+      \ }
 
 " 7. Unite {{{1
 NeoBundle 'Shougo/unite.vim' "{{{
