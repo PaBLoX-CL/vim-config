@@ -269,65 +269,30 @@ NeoBundleLazy 'juvenn/mustache.vim', {
       \ }
 
 " 7. Unite {{{1
-NeoBundle 'Shougo/unite.vim' "{{{
-  let bundle = neobundle#get('unite.vim')
-  function! bundle.hooks.on_source(bundle)
-    call unite#filters#matcher_default#use(['matcher_fuzzy'])
-    call unite#filters#sorter_default#use(['sorter_rank'])
-    call unite#custom#source('line,outline','matchers','matcher_fuzzy')
-    call unite#custom#profile('default', 'context', {
-      \ 'start_insert': 1,
-      \ 'direction': 'botright',
-      \ 'prompt': '» ',
-      \ })
-  endfunction
-
-  let g:unite_data_directory='~/.vim/.cache/unite'
-  let g:unite_source_history_yank_enable=1
-  let g:unite_source_rec_max_cache_files=5000
-
-  let g:unite_source_grep_command='ag'
-  let g:unite_source_grep_default_opts='--nocolor --line-numbers --nogroup -S -C4'
-  let g:unite_source_grep_recursive_opt=''
-
-  function! s:unite_settings()
-    nmap <buffer> Q <plug>(unite_exit)
-    nmap <buffer> <esc> <plug>(unite_exit)
-    imap <buffer> <esc> <plug>(unite_exit)
-  endfunction
-  autocmd FileType unite call s:unite_settings()
-
-  nmap <Space> [unite]
-  nnoremap [unite] <Nop>
-
-  nnoremap <silent> [unite]<Space> :<C-u>Unite -toggle -auto-resize -buffer-name=mixed file_rec/async:! buffer file_mru bookmark<CR><C-u>
-  nnoremap <silent> [unite]f :<C-u>Unite -toggle -auto-resize -buffer-name=files file_rec/async:!<CR><C-u>
-
-  nnoremap <silent> [unite]e :<C-u>Unite -buffer-name=recent file_mru<CR>
-  nnoremap <silent> [unite]y :<C-u>Unite -buffer-name=yanks history/yank<CR>
-  nnoremap <silent> [unite]l :<C-u>Unite -auto-resize -buffer-name=line line<CR>
-  nnoremap <silent> [unite]b :<C-u>Unite -auto-resize -buffer-name=buffers buffer<CR>
-  nnoremap <silent> [unite]/ :<C-u>Unite -no-quit -buffer-name=search grep:.<CR>
-  nnoremap <silent> [unite]m :<C-u>Unite -auto-resize -buffer-name=mappings mapping<CR>
-  nnoremap <silent> [unite]s :<C-u>Unite -quick-match buffer<CR>
-  "}}}
-NeoBundleLazy 'ujihisa/unite-colorscheme', {'autoload':{'unite_sources':'colorscheme'}} "{{{
-  nnoremap <silent> [unite]c :<C-u>Unite -winheight=10 -auto-preview -buffer-name=colorschemes colorscheme<cr>
-  "}}}
-NeoBundleLazy 'tsukkee/unite-tag', {'autoload':{'unite_sources':['tag','tag/file']}} "{{{
-  nnoremap <silent> [unite]t :<C-u>Unite -auto-resize -buffer-name=tag tag tag/file<cr>
-  "}}}
-NeoBundleLazy 'Shougo/unite-outline', {'autoload':{'unite_sources':'outline'}} "{{{
-  nnoremap <silent> [unite]o :<C-u>Unite -auto-resize -buffer-name=outline outline<cr>
-  "}}}
-NeoBundleLazy 'Shougo/unite-help', {'autoload':{'unite_sources':'help'}} "{{{
-  nnoremap <silent> [unite]h :<C-u>Unite -auto-resize -buffer-name=help help<cr>
-  "}}}
-NeoBundleLazy 'Shougo/junkfile.vim', {'autoload':{'commands':'JunkfileOpen','unite_sources':['junkfile','junkfile/new']}} "{{{
-  let g:junkfile#directory=expand("~/.vim/.cache/junk")
-  nnoremap <silent> [unite]j :<C-u>Unite -auto-resize -buffer-name=junk junkfile junkfile/new<cr>
-  "}}}
-NeoBundleLazy 'Shougo/neomru.vim', {'autoload':{'unite_sources':'file_mru'}}
+NeoBundleLazy 'Shougo/unite.vim', {
+      \ 'commands': [{ 'name': 'Unite',
+      \                'complete': 'customlist,unite#complete_source'}],
+      \ 'depends':  'Shougo/neomru.vim',
+      \ }
+NeoBundleLazy 'ujihisa/unite-colorscheme', {
+      \ 'unite_sources': 'colorscheme',
+      \ }
+NeoBundleLazy 'tsukkee/unite-tag', {
+      \ 'unite_sources': ['tag', 'tag/file'],
+      \ }
+NeoBundleLazy 'Shougo/unite-outline', {
+      \ 'unite_sources': 'outline',
+      \ }
+NeoBundleLazy 'Shougo/unite-help', {
+      \ 'unite_sources': 'help',
+      \ }
+NeoBundleLazy 'Shougo/junkfile.vim', {
+      \ 'commands': 'JunkfileOpen',
+      \ 'unite_sources': ['junkfile', 'junkfile/new']
+      \ }
+NeoBundleLazy 'Shougo/neomru.vim', {
+      \ 'filetype': 'all',
+      \ }
 
 " 8. UI {{{1
 " NeoBundle 'itchyny/lightline.vim'
