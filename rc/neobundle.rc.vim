@@ -84,7 +84,9 @@ NeoBundle 'gregsexton/gitv', {
       \     'commands': 'Gitv'
       \   },
       \ }
-NeoBundle 'matchit.zip'
+NeoBundleLazy 'matchit.zip', {
+      \ 'mappings': [['nxo', '%', 'g%']]
+      \ }
 NeoBundle 'tpope/vim-endwise'
 NeoBundle 'tpope/vim-dispatch'
 NeoBundle 'tomtom/tcomment_vim'
@@ -92,7 +94,7 @@ NeoBundle 'scrooloose/syntastic'
 NeoBundle 'airblade/vim-gitgutter'
 NeoBundleLazy 'sjl/gundo.vim', {
       \  'commands': 'GundoToggle',
-      \  }
+      \ }
 " NeoBundle 'honza/vim-snippets'
 NeoBundleLazy 'Shougo/neocomplete.vim', {
       \   'autoload': {
