@@ -93,6 +93,7 @@ endif
 " 1.2. Whitespace {{{2
 
 set autoindent
+set smartindent
 set backspace=indent,eol,start    "allow backspacing everything in insert mode
 set expandtab                     "spaces instead of tabs — sorry tab lovers
 set smarttab                      "use shiftwidth to enter tabs
