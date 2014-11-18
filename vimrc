@@ -43,6 +43,8 @@ else
   NeoBundleSaveCache
 endif
 
+NeoBundleCheck
+
 " ~~~ Interludio ~~~ {{{1
 call neobundle#end()
 call yankstack#setup()
@@ -628,6 +630,5 @@ if filereadable(expand("~/.vim/rc/after.vim"))
   call s:source_rc('after.vim')
 endif
 
-NeoBundleCheck
 " vim: expandtab softtabstop=2 shiftwidth=2
 " vim: foldmethod=marker foldlevel=0
