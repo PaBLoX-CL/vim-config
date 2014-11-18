@@ -129,8 +129,7 @@ let &undodir = expand('$CACHE/undo')
 
 " backups
 " set backup
-set nobackup
-let &backupdir = expand('$CACHE/backup')
+" let &backupdir = expand('$CACHE/backup')
 
 " swap files
 let &directory = expand('$CACHE/swap')
@@ -138,7 +137,7 @@ set noswapfile
 
 call EnsureExists('$CACHE')
 call EnsureExists(&undodir)
-call EnsureExists(&backupdir)
+" call EnsureExists(&backupdir)
 call EnsureExists(&directory)
 
 " 1.5. Searching {{{2
