@@ -189,6 +189,21 @@ endif
 autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 
+let g:xml_syntax_folding=1        "enable xml folding
+
+let g:markdown_fenced_languages = [
+\ 'coffee',
+\ 'css',
+\ 'erb=eruby',
+\ 'javascript',
+\ 'js=javascript',
+\ 'json=javascript',
+\ 'ruby',
+\ 'sass',
+\ 'xml',
+\ 'vim',
+\ ]
+
 " 3. UI Configuration {{{1
 
 set colorcolumn=+3
@@ -209,7 +224,6 @@ set foldenable
 set foldmethod=syntax
 set foldlevelstart=4
 set foldnestmax=10
-let g:xml_syntax_folding=1        "enable xml folding
 nnoremap zr zr:echo &foldlevel<cr>
 nnoremap zm zm:echo &foldlevel<cr>
 nnoremap zR zR:echo &foldlevel<cr>
