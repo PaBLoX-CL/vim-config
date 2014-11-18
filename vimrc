@@ -218,6 +218,12 @@ set numberwidth=3
 "set relativenumber
 set ruler
 set showmatch                     "briefly jump to the matching bracket when inserted
+if exists('+breakindent')
+  set breakindent
+  set wrap
+else
+  set nowrap
+endif
 
 " Fold magic {{{2
 set foldenable
