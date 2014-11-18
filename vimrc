@@ -224,6 +224,7 @@ if exists('+breakindent')
 else
   set nowrap
 endif
+set viewdir=$CACHE/vim_view viewoptions-=options viewoptions+=slash,unix
 
 " Fold magic {{{2
 set foldenable
