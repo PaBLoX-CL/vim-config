@@ -173,9 +173,18 @@ nnoremap g, g,zz
 " Open a Quickfix window for the last search.
 nnoremap <silent> <leader>? :execute 'vimgrep /'.@/.'/g %'<CR>:copen<CR>
 
+" 2. Filetype {{{1
 
+" All the omnifuncs, yo {{{2
+autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
+autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
+autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 
-" 2. UI Configuration {{{1
+" 3. UI Configuration {{{1
 
 set colorcolumn=+3
 " set conceallevel=1                "enable concealing by default
@@ -235,7 +244,7 @@ vnoremap <buffer> <silent> k gk
 vnoremap <buffer> <silent> 0 g0
 vnoremap <buffer> <silent> $ g$
 
-" 3. Mappings {{{1
+" 4. Mappings {{{1
 
 " Function keys {{{2
 " <F1> Startify
@@ -425,7 +434,7 @@ if neobundle#tap('vimux') "{{{
 
   call neobundle#untap()
 endif "}}}
-" 4. Completion {{{1
+" 5. Completion {{{1
 set completeopt=longest,menuone,preview
 set wildmenu
 set wildmode=longest:full,full
@@ -436,34 +445,6 @@ set wildignore+=*.jpg,*.png,*.xpm,*.gif
 set wildignore+=.DS_Store,tmp,*.swp,*.scssc
 set wildignore+=log/
 set wildignore+=vendor/,node_modules/
-
-" All the omnifuncs, yo {{{2
-autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
-autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
-autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
-autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
-autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
-autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
-autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
-
-" 5. Miscellaneous {{{1
-
-" stupid shift keys fixes " {{{
-" stolen from spf13
-command! -bang -nargs=* -complete=file E e<bang> <args>
-command! -bang -nargs=* -complete=file W w<bang> <args>
-command! -bang -nargs=* -complete=file Wq wq<bang> <args>
-command! -bang -nargs=* -complete=file WQ wq<bang> <args>
-command! -bang Wa wa<bang>
-command! -bang WA wa<bang>
-command! -bang Q q<bang>
-command! -bang QA qa<bang>
-command! -bang Qa qa<bang>
-" }}}
-
-" This is important if you use powerline, setting the $PYTHONPATH from the
-" shell could led to really weird issues.
-let $PYTHONPATH='/usr/lib/python3.4/site-packages'
 
 " 6. Plugins {{{1
 
@@ -622,6 +603,25 @@ if neobundle#tap('unite.vim') "{{{
 
   call neobundle#untap()
 endif "}}}
+" 7. Miscellaneous {{{1
+
+" stupid shift keys fixes " {{{
+" stolen from spf13
+command! -bang -nargs=* -complete=file E e<bang> <args>
+command! -bang -nargs=* -complete=file W w<bang> <args>
+command! -bang -nargs=* -complete=file Wq wq<bang> <args>
+command! -bang -nargs=* -complete=file WQ wq<bang> <args>
+command! -bang Wa wa<bang>
+command! -bang WA wa<bang>
+command! -bang Q q<bang>
+command! -bang QA qa<bang>
+command! -bang Qa qa<bang>
+" }}}
+
+" This is important if you use powerline, setting the $PYTHONPATH from the
+" shell could led to really weird issues.
+let $PYTHONPATH='/usr/lib/python3.4/site-packages'
+
 " El fin {{{1
 
 " for local changes that aren't supposed to go under version control
