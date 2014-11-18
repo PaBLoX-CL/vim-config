@@ -286,19 +286,19 @@ vnoremap <buffer> <silent> $ g$
 " <F11>
 " <F12>
 
-if neobundle#tap('vim-startify') "{{{
+if neobundle#tap('vim-startify') "{{{ <F1>
   nnoremap <F1> :Startify<cr>
 
   call neobundle#untap()
 endif "}}}
-if neobundle#tap('GoldenView.Vim') "{{{
+if neobundle#tap('GoldenView.Vim') "{{{ <F4>
   let g:goldenview__enable_default_mapping=0
   nmap <silent> <F4> <Plug>GoldenViewSplit
   nmap <S-F4> <Plug>ToggleGoldenViewAutoResize
 
   call neobundle#untap()
 endif "}}}
-if neobundle#tap('gundo.vim') "{{{
+if neobundle#tap('gundo.vim') "{{{ <F5>
   nnoremap <silent> <F5> :GundoToggle<CR>
 
   call neobundle#untap()
@@ -306,7 +306,7 @@ endif "}}}
 
 set pastetoggle=<F6>
 
-if neobundle#tap('tagbar') "{{{
+if neobundle#tap('tagbar') "{{{ <F8>
   nnoremap <silent> <F8> :TagbarToggle<CR>
 
   call neobundle#untap()
@@ -385,10 +385,14 @@ nnoremap Y y$
 cnoremap <expr>%% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
 
 " Chords {{{2
-call arpeggio#load()
-Arpeggio nnoremap lq :noh<CR>:call clearmatches()<CR>
-Arpeggio nnoremap la :ls<CR>
-Arpeggio inoremap jk <Esc>
+if neobundle#tap('vim-arpeggio')
+  call arpeggio#load()
+  Arpeggio nnoremap lq :noh<CR>:call clearmatches()<CR>
+  Arpeggio nnoremap la :ls<CR>
+  Arpeggio inoremap jk <Esc>
+
+  call neobundle#untap()
+endif
 
 " Plugins {{{2
 
