@@ -652,6 +652,20 @@ command! -bang Qa qa<bang>
 " shell could led to really weird issues.
 let $PYTHONPATH='/usr/lib/python3.4/site-packages'
 
+" 8. GUI Settings {{{1
+
+if has('gui_running')
+  set guioptions-=T         " Remove the toolbar
+  set guioptions-=m         " No menu
+  set guioptions-=rL        " No scrollbars
+  set lines=40                " 40 lines of text instead of 24
+  set guifont=Meslo\ LG\ S\ DZ\ for\ Powerline\ 9
+  " if &term == 'xterm' || &term == 'screen'
+  "   set t_Co=256 " Enable 256 colors to stop the CSApprox warning and make xterm vim shine
+  " endif
+  "set term=builtin_ansi " Make arrow and other keys work
+endif
+
 " El fin {{{1
 
 " for local changes that aren't supposed to go under version control
