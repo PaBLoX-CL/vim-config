@@ -431,13 +431,13 @@ if neobundle#tap('EasyGrep') "{{{
 endif "}}}
 if neobundle#tap('ctrlp.vim') "{{{
   nmap , [ctrlp]
-  nnoremap [ctrlp] <nop>
+  nnoremap [ctrlp] <Nop>
 
-  nnoremap [ctrlp]t :CtrlPBufTag<cr>
-  nnoremap [ctrlp]T :CtrlPTag<cr>
-  nnoremap [ctrlp]l :CtrlPLine<cr>
-  nnoremap [ctrlp]o :CtrlPFunky<cr>
-  nnoremap [ctrlp]b :CtrlPBuffer<cr>
+  nnoremap [ctrlp]t :CtrlPBufTag<CR>
+  nnoremap [ctrlp]T :CtrlPTag<CR>
+  nnoremap [ctrlp]l :CtrlPLine<CR>
+  nnoremap [ctrlp]o :CtrlPFunky<CR>
+  nnoremap [ctrlp]b :CtrlPBuffer<CR>
 
   call neobundle#untap()
 endif "}}}
@@ -461,6 +461,12 @@ if neobundle#tap('vimux') "{{{
   map <Leader>rl :VimuxRunLastCommand<CR>
 
   "map <LocalLeader>d :call VimuxRunCommand(@v, 0)<CR>
+
+  call neobundle#untap()
+endif "}}}
+if neobundle#tap('vim-expand-region') "{{{
+  vmap v     <Plug>(expand_region_expand)
+  vmap <C-v> <Plug>(expand_region_shrink)
 
   call neobundle#untap()
 endif "}}}
