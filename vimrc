@@ -617,7 +617,7 @@ if neobundle#tap('unite.vim') "{{{
   endfunction
   autocmd FileType unite call s:unite_settings()
 
-  nmap <Space> [unite]
+  nmap - [unite]
   nnoremap [unite] <Nop>
 
   nnoremap <silent> [unite]<Space> :<C-u>Unite -toggle -auto-resize -buffer-name=mixed file_rec/async:! buffer file_mru bookmark<CR><C-u>
