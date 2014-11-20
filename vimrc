@@ -464,6 +464,11 @@ if neobundle#tap('vimux') "{{{
 
   call neobundle#untap()
 endif "}}}
+if neobundle#tap('vim-vinegar') "{{{
+  nmap _ <Plug>VinegarUp
+
+  call neobundle#untap()
+endif "}}}
 if neobundle#tap('vim-expand-region') "{{{
   vmap v     <Plug>(expand_region_expand)
   vmap <C-v> <Plug>(expand_region_shrink)
