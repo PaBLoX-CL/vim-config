@@ -14,6 +14,9 @@ NeoBundle 'tpope/vim-surround'
 NeoBundle 'tpope/vim-unimpaired'
 NeoBundle 'tpope/vim-eunuch'
 NeoBundle 'tpope/vim-repeat'
+NeoBundleLazy 'tpope/vim-rsi', {
+      \ 'insert': 1,
+      \ }
 NeoBundle 'pbrisbin/vim-restore-cursor'
 NeoBundle 'pbrisbin/vim-rename-file'
 
