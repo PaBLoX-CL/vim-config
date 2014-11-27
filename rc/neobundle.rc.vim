@@ -2,7 +2,11 @@
 NeoBundleFetch 'Shougo/neobundle.vim'
 
 " Recommended to install
-NeoBundle 'Shougo/vimproc', { 'build' : { 'unix' : 'make -f make_unix.mak' } }
+NeoBundle 'Shougo/vimproc', {
+      \   'build' : {
+      \       'unix' : 'make -f make_unix.mak',
+      \   }
+      \ }
 
 " 1. General {{{1
 NeoBundle 'kana/vim-arpeggio'
@@ -15,7 +19,9 @@ NeoBundle 'pbrisbin/vim-rename-file'
 
 " 2. Colorschemes {{{1
 
-NeoBundle 'ScrollColors'
+NeoBundleLazy 'ScrollColors', {
+      \ 'commands': 'SCROLLCOLOR',
+      \ }
 "NeoBundle 'godlygeek/csapprox'
 
 " Dark {{{2
@@ -73,19 +79,15 @@ endif " }}}
 NeoBundle 'kana/vim-textobj-user'
 NeoBundleLazy 'mattn/gist-vim', {
       \ 'depends': 'mattn/webapi-vim',
-      \ 'autoload': {
-      \   'commands': 'Gist',
-      \   }
+      \ 'commands': 'Gist',
       \ }
 NeoBundle 'tpope/vim-fugitive'
-NeoBundle 'gregsexton/gitv', {
+NeoBundleLazy 'gregsexton/gitv', {
       \   'depends': 'tpope/vim-fugitive',
-      \   'autoload': {
-      \     'commands': 'Gitv'
-      \   },
+      \   'commands': 'Gitv',
       \ }
 NeoBundleLazy 'matchit.zip', {
-      \ 'mappings': [['nxo', '%', 'g%']]
+      \ 'mappings': ['%', 'g%']
       \ }
 NeoBundle 'tpope/vim-endwise'
 NeoBundle 'tpope/vim-dispatch'
@@ -97,15 +99,17 @@ NeoBundleLazy 'sjl/gundo.vim', {
       \ }
 " NeoBundle 'honza/vim-snippets'
 NeoBundleLazy 'Shougo/neocomplete.vim', {
-      \   'autoload': {
-      \     'insert': 1
-      \   },
+      \   'insert': 1,
       \   'vim_version': '7.3.885',
       \ }
-NeoBundle 'Shougo/neosnippet.vim'
-  " let g:neosnippet#snippets_directory='~/.vim/bundle/vim-snippets/snippets,~/.vim/snippets'
-  " let g:neosnippet#disable_runtime_snippets= { '_' : 1 }
-NeoBundle 'Shougo/neosnippet-snippets'
+NeoBundleLazy 'Shougo/neosnippet.vim', {
+      \ 'depends': 'Shougo/neosnippet-snippets',
+      \ 'insert': 1,
+      \ 'filetypes': 'snippet',
+      \ 'unite_sources': [
+      \   'neosnippet', 'neosnippet/user', 'neosnippet/runtime' ],
+      \ }
+" NeoBundle 'Shougo/neosnippet-snippets'
 " NeoBundle 'Valloric/YouCompleteMe', {'vim_version':'7.3.584'} "{{{
 "   let g:ycm_complete_in_comments_and_strings=1
 "   let g:ycm_key_list_select_completion=['<C-n>', '<Down>']
@@ -122,6 +126,7 @@ NeoBundle 'Shougo/neosnippet-snippets'
 " Haskell {{{2
 NeoBundleLazy 'eagletmt/neco-ghc', {
       \ 'filetypes': 'haskell',
+      \ 'external_commands': 'ghc-mod',
       \ }
 NeoBundleLazy 'Twinside/vim-haskellFold', {
       \ 'filetypes': 'haskell',
@@ -195,7 +200,9 @@ NeoBundle 'mileszs/ack.vim'
 "   nnoremap <F2> :NERDTreeToggle<CR>
 "   nnoremap <F3> :NERDTreeFind<CR>
 "   "}}}
-NeoBundle 'tpope/vim-vinegar'
+NeoBundleLazy 'tpope/vim-vinegar', {
+      \ 'mappings': '<Plug>VinegarUp',
+      \ }
 NeoBundleLazy 'majutsushi/tagbar', {
       \ 'commands': 'TagbarToggle',
       \ }
