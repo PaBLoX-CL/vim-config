@@ -476,6 +476,11 @@ if neobundle#tap('vim-expand-region') "{{{
 
   call neobundle#untap()
 endif "}}}
+if neobundle#tap('auto-pairs') "{{{
+  let g:AutoPairsShortcutToggle = "<M-a>"
+
+  call neobundle#untap()
+endif "}}}
 " 5. Completion {{{1
 set completeopt=longest,menuone,preview
 set wildmenu

@@ -178,9 +178,7 @@ NeoBundle 'maxbrunsfeld/vim-yankstack'
 NeoBundle 'chrisbra/NrrwRgn'
 NeoBundle 'terryma/vim-expand-region'
 NeoBundle 'terryma/vim-multiple-cursors'
-" NeoBundle 'jiangmiao/auto-pairs' " {{{
-"    let g:AutoPairsShortcutToggle = '<C-q>'
-"   " }}}
+NeoBundle 'jiangmiao/auto-pairs'
 NeoBundle 'christoomey/vim-tmux-navigator'
 
 " 5. Navigation {{{1
