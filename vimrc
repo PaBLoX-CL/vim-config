@@ -46,6 +46,7 @@ endif
 NeoBundleCheck
 
 " ~~~ Interludio ~~~ {{{1
+call s:source_rc('alt_mappings.rc.vim')
 call neobundle#end()
 call yankstack#setup()
 
