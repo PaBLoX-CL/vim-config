@@ -158,8 +158,7 @@ vnoremap ? ?\v
 nnoremap :s/ :s/\v
 
 " clear search matching
-" noremap <Leader><Space> :noh<cr>:call clearmatches()<CR>
-" nnoremap <BS> :set hlsearch! hlsearch?<CR>
+nnoremap <silent> <Esc><Esc> :let @/=""<CR>
 
 " Don't jump when using * for search
 nnoremap * *<C-o>
@@ -388,7 +387,6 @@ cnoremap <expr>%% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
 " Chords {{{2
 if neobundle#tap('vim-arpeggio')
   call arpeggio#load()
-  Arpeggio nnoremap lq :noh<CR>:call clearmatches()<CR>
   Arpeggio nnoremap la :ls<CR>
   Arpeggio inoremap jk <Esc>
 
