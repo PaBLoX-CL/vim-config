@@ -96,6 +96,7 @@ set smartindent
 set backspace=indent,eol,start    "allow backspacing everything in insert mode
 " set expandtab                     "spaces instead of tabs — sorry tab lovers
 set smarttab                      "use shiftwidth to enter tabs
+set shiftround                    "round indent to multiple of shiftwidth
 
 set tabstop=4
 " set softtabstop=2
