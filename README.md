@@ -9,6 +9,11 @@ Command Line
 + `<Leader>es` expands to :split (directory of current file)/ (open in a horizontal split)
 + `<Leader>ev` expands to :vsplit (directory of current file)/ (open in a vertical split)
 
+Plugins
+=======
+
++ <Leader>nr ([Narrow Region](https://github.com/chrisbra/NrrwRgn))
+
 Miscellaneous
 -------------
 
