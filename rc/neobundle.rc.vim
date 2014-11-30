@@ -185,7 +185,9 @@ NeoBundle 'christoomey/vim-tmux-navigator'
 NeoBundleLazy 'EasyGrep', {
       \ 'commands': 'GrepOptions',
       \ }
-NeoBundle 'justinmk/vim-sneak'
+NeoBundleLazy 'justinmk/vim-sneak', {
+      \ 'mappings': ['s', 'S']
+      \ }
 NeoBundle 'kien/ctrlp.vim', {
       \ 'depends': 'tacahiroy/ctrlp-funky',
       \ }
