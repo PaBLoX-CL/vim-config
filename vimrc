@@ -378,6 +378,10 @@ nnoremap Y y$
 " nnoremap <C-k> <C-w>k
 " nnoremap <C-l> <C-w>l
 
+" Quick horizontal/vertical splits
+nnoremap <Leader><Bar> :vsp<CR>
+nnoremap <Leader>- :sp<CR>
+
 " Command Line {{{2
 " easy expansion of the active file directory
 cnoremap <expr>%% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
