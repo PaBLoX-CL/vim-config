@@ -265,6 +265,7 @@ NeoBundleLazy 'hail2u/vim-css3-syntax', {
       \ 'filetypes': ['css','scss','sass'],
       \ }
 NeoBundleLazy 'tpope/vim-markdown', {
+      \ 'depends': 'kchmck/vim-coffee-script',
       \ 'filetypes': 'markdown',
       \ }
 NeoBundleLazy 'tpope/vim-haml', {
