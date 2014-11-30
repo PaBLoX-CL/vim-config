@@ -94,6 +94,7 @@ NeoBundleLazy 'matchit.zip', {
       \ }
 NeoBundle 'tpope/vim-endwise'
 NeoBundle 'tpope/vim-dispatch'
+NeoBundle 'tpope/vim-sleuth'
 NeoBundle 'tomtom/tcomment_vim'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'airblade/vim-gitgutter'

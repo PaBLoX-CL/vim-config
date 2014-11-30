@@ -94,12 +94,12 @@ endif
 set autoindent
 set smartindent
 set backspace=indent,eol,start    "allow backspacing everything in insert mode
-set expandtab                     "spaces instead of tabs — sorry tab lovers
+" set expandtab                     "spaces instead of tabs — sorry tab lovers
 set smarttab                      "use shiftwidth to enter tabs
 
-set tabstop=2
-set softtabstop=2
-set shiftwidth=2
+set tabstop=4
+" set softtabstop=2
+" set shiftwidth=2
 
 set list                          "highlight whitespace
 set listchars=tab:»·,extends:❯,precedes:❮,trail:␣,conceal:Δ
