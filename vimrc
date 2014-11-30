@@ -48,7 +48,6 @@ NeoBundleCheck
 " ~~~ Interludio ~~~ {{{1
 call s:source_rc('alt_mappings.rc.vim')
 call neobundle#end()
-call yankstack#setup()
 
 " 1. Base configuration {{{1
 " 1.1 Basic options {{{2
@@ -523,8 +522,9 @@ if neobundle#tap('neosnippet.vim') "{{{
 
   call neobundle#untap()
 endif "}}}
-if neobundle#tap('yankstack') "{{{
+if neobundle#tap('vim-yankstack') "{{{
   let g:yankstack_yank_keys = [ 'c', 'C', 'd', 'D', 'x', 'X', 'y', 'Y' ]
+  call yankstack#setup()
 
   call neobundle#untap()
 endif "}}}
