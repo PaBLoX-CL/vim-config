@@ -1,3 +1,14 @@
+Mappings
+--------
+
+Command Line
+============
+
++ `%%` expand the directory of the current file anywhere at the command line
++ `<Leader>ew` expands to :edit (directory of current file)/ (open in the current buffer)
++ `<Leader>es` expands to :split (directory of current file)/ (open in a horizontal split)
++ `<Leader>ev` expands to :vsplit (directory of current file)/ (open in a vertical split)
+
 Miscellaneous
 -------------
 

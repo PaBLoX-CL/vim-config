@@ -384,7 +384,10 @@ nnoremap <Leader>- :sp<CR>
 
 " Command Line {{{2
 " easy expansion of the active file directory
-cnoremap <expr>%% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
+cnoremap %% <C-R>=expand('%:h').'/'<cr>
+nmap <Leader>ew :edit %%
+nmap <Leader>es :split %%
+nmap <Leader>ev :vsplit %%
 
 " when I forget to use sudoedit
 cnoremap w!! w !sudo tee % >/dev/null
