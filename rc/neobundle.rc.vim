@@ -210,6 +210,7 @@ NeoBundleLazy 'tpope/vim-vinegar', {
       \ }
 NeoBundleLazy 'majutsushi/tagbar', {
       \ 'commands': 'TagbarToggle',
+      \ 'external_commands': 'ctags',
       \ }
 
 " 6. Filetypes {{{1
