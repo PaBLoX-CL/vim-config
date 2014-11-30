@@ -68,7 +68,6 @@ set showcmd                       "display incomplete commands
 set spellfile=~/.vim/spell/en.utf-8.add
 set splitright
 set splitbelow
-" set t_Co=256                      "force 256 colors
 set timeoutlen=800                "mapping timeout
 set ttimeoutlen=70                "keycode timeout
 set ttyfast                       "assume fast terminal connection
@@ -675,10 +674,6 @@ if has('gui_running')
   set guioptions-=rL        " No scrollbars
   set lines=40                " 40 lines of text instead of 24
   set guifont=Meslo\ LG\ S\ DZ\ for\ Powerline\ 9
-  " if &term == 'xterm' || &term == 'screen'
-  "   set t_Co=256 " Enable 256 colors to stop the CSApprox warning and make xterm vim shine
-  " endif
-  "set term=builtin_ansi " Make arrow and other keys work
 endif
 
 " El fin {{{1
