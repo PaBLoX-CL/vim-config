@@ -382,6 +382,9 @@ nnoremap Y y$
 " easy expansion of the active file directory
 cnoremap <expr>%% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
 
+" when I forget to use sudoedit
+cnoremap w!! w !sudo tee % >/dev/null
+
 " Chords {{{2
 if neobundle#tap('vim-arpeggio')
   call arpeggio#load()
