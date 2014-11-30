@@ -176,7 +176,9 @@ NeoBundleLazy 'godlygeek/tabular', {
 NeoBundle 'bufkill.vim'
 NeoBundle 'maxbrunsfeld/vim-yankstack'
 NeoBundle 'chrisbra/NrrwRgn'
-NeoBundle 'terryma/vim-expand-region'
+NeoBundleLazy 'terryma/vim-expand-region', {
+      \ 'mappings': '<Plug>(expand_'
+      \ }
 NeoBundle 'terryma/vim-multiple-cursors'
 NeoBundle 'jiangmiao/auto-pairs'
 NeoBundle 'christoomey/vim-tmux-navigator'
