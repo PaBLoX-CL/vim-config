@@ -690,6 +690,8 @@ command! -bang Qa qa<bang>
 " shell could led to really weird issues.
 let $PYTHONPATH='/usr/lib/python3.4/site-packages'
 
+call s:source_rc('abbrev.rc.vim')
+
 " 8. GUI Settings {{{1
 
 if has('gui_running')
