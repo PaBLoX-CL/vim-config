@@ -368,8 +368,20 @@ vmap <C-S-Down> ]egv
 nnoremap <Leader>tag :Dispatch ctags -R<CR>
 
 " yank and put to/from the OS's clipboard
-vnoremap <Leader>yo "+y
-nnoremap <Leader>po "+p
+vnoremap <Leader>y "+y
+vnoremap <Leader>d "+d
+nnoremap <Leader>p "+p
+nnoremap <Leader>P "+P
+vnoremap <Leader>p "+p
+vnoremap <Leader>P "+P
+
+" automatically jump to the end of text that has been pasted
+vnoremap <silent> y y`]
+vnoremap <silent> p p`]
+nnoremap <silent> p p`]
+
+" quickly select text you just pasted:
+nnoremap gV `[v`]
 
 " make Y consistent with C and D. See :help Y
 nnoremap Y y$
