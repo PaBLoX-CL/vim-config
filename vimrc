@@ -68,8 +68,9 @@ set showcmd                       "display incomplete commands
 set spellfile=~/.vim/spell/en.utf-8.add
 set splitright
 set splitbelow
-set timeoutlen=800                "mapping timeout
-set ttimeoutlen=70                "keycode timeout
+"set timeout
+set timeoutlen=3000               "mapping timeout
+set ttimeoutlen=100               "keycode timeout
 set ttyfast                       "assume fast terminal connection
 set viewoptions=folds,options,cursor,unix,slash
 
