@@ -1,3 +1,24 @@
+Install
+-------
+
+1. Clone this repo
+
+    git clone https://github.com/PaBLoX-CL/vim-config ~/.vim
+
+2. Install neobundle
+
+    git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle
+
+3. Install bundles
+
+    vim +NeoBundleInstall +qall
+
+    # or
+
+    ~/.vim/bundle/neobundle.vim/bin/neoinstall
+
+4. Profit! :moneybag:
+
 Mappings
 --------
 
