@@ -4,8 +4,13 @@
 " 0. Bootstrap system {{{1
 set nocompatible                  "anybody cares?
 
-let mapleader="ñ"
-let localmapleader="ñ"
+let mapleader="\<Space>"
+let localmapleader="\<Space>"
+
+" Release keymappings
+nnoremap <Space> <Nop>
+nnoremap , <Nop>
+xnoremap , <Nop>
 
 let $CACHE = expand('~/.vim/.cache')
 
