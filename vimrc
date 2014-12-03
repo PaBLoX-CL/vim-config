@@ -48,6 +48,7 @@ else
   NeoBundleSaveCache
 endif
 
+NeoBundleLocal '~/.vim/bundle'
 NeoBundleCheck
 
 " ~~~ Interludio ~~~ {{{1
