@@ -152,6 +152,7 @@ call EnsureExists('$CACHE')
 call EnsureExists(&undodir)
 " call EnsureExists(&backupdir)
 call EnsureExists(&directory)
+call EnsureExists('$CACHE/viminfo')
 
 " 1.5. Searching {{{2
 set hlsearch                      "highlight searches
@@ -236,6 +237,7 @@ else
   set nowrap
 endif
 set viewdir=$CACHE/vim_view viewoptions-=options viewoptions+=slash,unix
+set viminfo+=n~/.vim/.cache/viminfo/viminfo
 
 " Fold magic {{{2
 set foldenable
