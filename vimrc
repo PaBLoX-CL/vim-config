@@ -33,6 +33,11 @@ endif
 " iii. NeoBundle Configuration {{{2
 
 " Necessary to configure neobundle
+if !isdirectory(expand('~/.vim/bundle/neobundle.vim'))
+  echomsg 'Neobundle not installed, please install it!'
+  exit
+endif
+
 set runtimepath+=~/.vim/bundle/neobundle.vim/
 call neobundle#begin(expand('$CACHE/neobundle'))
 
