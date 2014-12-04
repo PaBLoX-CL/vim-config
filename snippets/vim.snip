@@ -1,0 +1,6 @@
+snippet     nb_tap
+  if neobundle#tap('${1:plugin-name}') "{{{
+    ${2:options}
+
+    call neobundle#untap()
+  endif "}}}
