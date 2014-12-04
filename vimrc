@@ -409,6 +409,9 @@ nnoremap Y y$
 nnoremap <Leader><Bar> :vsp<CR>
 nnoremap <Leader>- :sp<CR>
 
+" Quick save
+nnoremap <Leader>w :w<CR>
+
 " Command Line {{{2
 " easy expansion of the active file directory
 cnoremap %% <C-R>=expand('%:h').'/'<cr>
