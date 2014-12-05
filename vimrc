@@ -655,8 +655,19 @@ if neobundle#tap('unite.vim') "{{{
 
   function! s:unite_settings()
     nmap <buffer> Q <plug>(unite_exit)
-    nmap <buffer> <esc> <plug>(unite_exit)
-    imap <buffer> <esc> <plug>(unite_exit)
+    imap <buffer> <C-w> <plug>(unite_exit)
+
+    " this should work in some terminal, not in termite though :c
+    " nmap <buffer> <esc> <plug>(unite_exit)
+    " imap <buffer> <esc> <plug>(unite_exit)
+
+    " this clever trick does make it leave unite using <Esc>
+    " see: https://github.com/Shougo/unite.vim/issues/693
+    let b:actually_quit = 0
+    setlocal updatetime=3
+    au InsertEnter <buffer> let b:actually_quit = 0
+    au InsertLeave <buffer> let b:actually_quit = 1
+    au CursorHold  <buffer> if exists('b:actually_quit') && b:actually_quit | close | endif
   endfunction
   autocmd FileType unite call s:unite_settings()
 
