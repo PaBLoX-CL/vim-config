@@ -685,6 +685,8 @@ if neobundle#tap('unite.vim') "{{{
   let g:junkfile#directory=expand('$CACHE/junk')
   nnoremap <silent> [unite]j :<C-u>Unite -auto-resize -buffer-name=junk junkfile junkfile/new<CR>
 
+  nnoremap <silent> [unite]z :<C-u>Unite -auto-resize -buffer-name=fold fold<CR>
+
   call neobundle#untap()
 endif "}}}
 " 7. Miscellaneous {{{1

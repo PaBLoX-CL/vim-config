@@ -294,6 +294,9 @@ NeoBundleLazy 'Shougo/unite.vim', {
 NeoBundleLazy 'ujihisa/unite-colorscheme', {
       \ 'unite_sources': 'colorscheme',
       \ }
+NeoBundleLazy 'osyo-manga/unite-fold', {
+      \ 'unite_sources': 'fold',
+      \ }
 NeoBundleLazy 'tsukkee/unite-tag', {
       \ 'unite_sources': ['tag', 'tag/file'],
       \ }
