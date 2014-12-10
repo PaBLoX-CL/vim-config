@@ -411,15 +411,15 @@ vnoremap <Leader>p "+p
 vnoremap <Leader>P "+P
 
 " automatically jump to the end of text that has been pasted
+" NOTE: not working because of yankstack
 vnoremap <silent> y y`]
 vnoremap <silent> p p`]
 nnoremap <silent> p p`]
+" make Y consistent with C and D. See :help Y
+nnoremap Y y$
 
 " quickly select text you just pasted:
 nnoremap gV `[v`]
-
-" make Y consistent with C and D. See :help Y
-nnoremap Y y$
 
 " window shortcuts
 " nnoremap <C-h> <C-w>h
