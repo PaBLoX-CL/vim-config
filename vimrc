@@ -681,28 +681,25 @@ if neobundle#tap('unite.vim') "{{{
   nnoremap [unite] <Nop>
 
   nnoremap <silent> [unite]<Space> :<C-u>Unite -toggle -auto-resize -buffer-name=mixed file_rec/async:! buffer file_mru bookmark<CR><C-u>
-  nnoremap <silent> [unite]f :<C-u>Unite -toggle -auto-resize -buffer-name=files file_rec/async:!<CR><C-u>
-  nnoremap <silent> [unite]e :<C-u>Unite -buffer-name=recent file_mru<CR>
-  nnoremap <silent> [unite]y :<C-u>Unite -buffer-name=yanks history/yank<CR>
-  nnoremap <silent> [unite]l :<C-u>Unite -auto-resize -buffer-name=line line<CR>
-  nnoremap <silent> [unite]b :<C-u>Unite -auto-resize -buffer-name=buffers buffer<CR>
   nnoremap <silent> [unite]/ :<C-u>Unite -no-quit -buffer-name=search grep:.<CR>
+  nnoremap <silent> [unite]b :<C-u>Unite -auto-resize -buffer-name=buffers buffer<CR>
+  nnoremap <silent> [unite]e :<C-u>Unite -buffer-name=recent file_mru<CR>
+  nnoremap <silent> [unite]f :<C-u>Unite -toggle -auto-resize -buffer-name=files file_rec/async:!<CR><C-u>
+  nnoremap <silent> [unite]l :<C-u>Unite -auto-resize -buffer-name=line line<CR>
   nnoremap <silent> [unite]m :<C-u>Unite -auto-resize -buffer-name=mappings mapping<CR>
   nnoremap <silent> [unite]s :<C-u>Unite -quick-match buffer<CR>
+  nnoremap <silent> [unite]y :<C-u>Unite -buffer-name=yanks history/yank<CR>
 
   " unite plugins
 
   nnoremap <silent> [unite]c :<C-u>Unite -winheight=10 -auto-preview -buffer-name=colorschemes colorscheme<CR>
   " show Git changes and recently edited files
   nnoremap <silent><expr> [unite]d UniteWrapper((empty(system('git rev-parse --is-inside-work-tree 2>/dev/null')) ? '' : 'giti/status ') . 'file_mru', '-buffer-name=unite-changes')
-  nnoremap <silent> [unite]t :<C-u>Unite -auto-resize -buffer-name=tag tag tag/file<CR>
-
-  nnoremap <silent> [unite]o :<C-u>Unite -auto-resize -buffer-name=outline outline<CR>
   nnoremap <silent> [unite]h :<C-u>Unite -auto-resize -buffer-name=help help<CR>
-
   let g:junkfile#directory=expand('$CACHE/junk')
   nnoremap <silent> [unite]j :<C-u>Unite -auto-resize -buffer-name=junk junkfile junkfile/new<CR>
-
+  nnoremap <silent> [unite]o :<C-u>Unite -auto-resize -buffer-name=outline outline<CR>
+  nnoremap <silent> [unite]t :<C-u>Unite -auto-resize -buffer-name=tag tag tag/file<CR>
   nnoremap <silent> [unite]z :<C-u>Unite -auto-resize -buffer-name=fold fold<CR>
 
   call neobundle#untap()
