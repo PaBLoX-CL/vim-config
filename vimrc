@@ -392,10 +392,13 @@ vmap <C-S-Down> ]egv
 " Normal mode {{{2
 
 " remap arrow keys (aka hard mode)
+" TODO: Find useful mappings for these keys
+nnoremap <Left> <Nop>
+nnoremap <Right> <Nop>
+nnoremap <Up> <Nop>
+nnoremap <Down> <Nop>
 " nnoremap <Left> :bprev<CR>
 " nnoremap <Right> :bnext<CR>
-" nnoremap <Up>
-" nnoremap <Down>
 
 nnoremap <Leader>tag :Dispatch ctags -R<CR>
 
@@ -753,7 +756,7 @@ if has('gui_running')
   set guioptions-=T         " Remove the toolbar
   set guioptions-=m         " No menu
   set guioptions-=rL        " No scrollbars
-  set lines=40                " 40 lines of text instead of 24
+  set lines=40              " 40 lines of text instead of 24
   set guifont=Meslo\ LG\ S\ DZ\ for\ Powerline\ 9
 endif
 
