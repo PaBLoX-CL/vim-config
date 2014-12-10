@@ -509,7 +509,6 @@ if neobundle#tap('vimshell.vim') "{{{
   nnoremap <Leader>c  :VimShell -split<CR>
   nnoremap <Leader>cc :VimShell -split<CR>
   nnoremap <Leader>cn :VimShellInteractive node<CR>
-  nnoremap <Leader>cl :VimShellInteractive lua<CR>
   nnoremap <Leader>cr :VimShellInteractive irb<CR>
   nnoremap <Leader>cp :VimShellInteractive python<CR>
 
