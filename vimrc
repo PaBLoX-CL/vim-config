@@ -227,7 +227,6 @@ set matchtime=2                   "tens of a second to show the matching paren
 set noshowmode
 set number
 set numberwidth=3
-"set relativenumber
 set ruler
 set showmatch                     "briefly jump to the matching bracket when inserted
 if exists('+breakindent')
@@ -265,6 +264,21 @@ augroup cline
   au InsertLeave * set cursorline
 augroup END
 
+" Relative Number {{{2
+set relativenumber
+
+augroup relnumber
+  " Turn off relative number when losing focus
+  autocmd FocusLost   * setlocal number norelativenumber
+  autocmd FocusGained * setlocal relativenumber
+  autocmd WinLeave    * setlocal number norelativenumber
+  autocmd WinEnter    * setlocal relativenumber
+
+  " Turn on relative number only when in normal mode
+  autocmd InsertEnter * setlocal number norelativenumber
+  autocmd InsertLeave * setlocal relativenumber
+augroup END
+
 " Navigation {{{2
 
 set scrolljump=5 "minimum number of lines to scroll
@@ -287,7 +301,7 @@ vnoremap <buffer> <silent> $ g$
 
 " Function keys {{{2
 " <F1> Startify
-" <F2>
+" <F2> Toggle Relative Number
 " <F3>
 " <F4> GoldenView Autoresize
 " <F5> Gundo Toggle
@@ -304,6 +318,11 @@ if neobundle#tap('vim-startify') "{{{ <F1>
 
   call neobundle#untap()
 endif "}}}
+
+" {{{ <F2>
+nnoremap <silent> <F2> :setlocal norelativenumber! relativenumber?<CR>
+" }}}
+
 if neobundle#tap('GoldenView.Vim') "{{{ <F4>
   let g:goldenview__enable_default_mapping=0
   nmap <silent> <F4> <Plug>GoldenViewSplit
