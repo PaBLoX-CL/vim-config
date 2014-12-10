@@ -590,7 +590,7 @@ if neobundle#tap('ctrlp.vim') "{{{
   let g:ctrlp_custom_ignore = {
     \ 'dir': '\.git$\|\.hg$\|\.svn$',
     \ 'file': '\.so$\|\.pyc$\|\.gem$'
-  \ }
+    \ }
 
   call neobundle#untap()
 endif "}}}
@@ -636,12 +636,15 @@ if neobundle#tap('unite.vim') "{{{
   function! bundle.hooks.on_source(bundle)
     call unite#filters#matcher_default#use(['matcher_fuzzy'])
     call unite#filters#sorter_default#use(['sorter_rank'])
-    call unite#custom#source('line,outline', 'matchers', 'matcher_fuzzy')
+    call unite#custom#source('line, outline',
+          \ 'matchers', 'matcher_fuzzy')
+    call unite#custom#source('file_mru',
+          \ 'matchers', ['matcher_project_files', 'matcher_fuzzy'])
     call unite#custom#profile('default', 'context', {
-      \ 'start_insert': 1,
-      \ 'direction': 'botright',
-      \ 'prompt': '» ',
-      \ })
+          \ 'start_insert': 1,
+          \ 'direction': 'botright',
+          \ 'prompt': '» ',
+          \ })
   endfunction
 
   let g:unite_data_directory=expand('$CACHE/unite')
