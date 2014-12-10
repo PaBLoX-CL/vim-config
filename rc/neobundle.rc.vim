@@ -313,6 +313,9 @@ NeoBundleLazy 'Shougo/junkfile.vim', {
 NeoBundleLazy 'Shougo/neomru.vim', {
       \ 'filetype': 'all',
       \ }
+NeoBundleLazy 'kmnk/vim-unite-giti', {
+      \ 'unite_sources': 'giti',
+      \ }
 
 " 8. UI {{{1
 " NeoBundle 'itchyny/lightline.vim'

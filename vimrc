@@ -671,12 +671,17 @@ if neobundle#tap('unite.vim') "{{{
   endfunction
   autocmd FileType unite call s:unite_settings()
 
+  " idea taken from:
+  " https://github.com/toupeira/dotfiles/blob/master/vim/vimrc#L982
+  function! UniteWrapper(action, arguments)
+    return ":\<C-u>silent! Unite -toggle " . a:action . " " . a:arguments . "\<CR>"
+  endfunction
+
   nmap - [unite]
   nnoremap [unite] <Nop>
 
   nnoremap <silent> [unite]<Space> :<C-u>Unite -toggle -auto-resize -buffer-name=mixed file_rec/async:! buffer file_mru bookmark<CR><C-u>
   nnoremap <silent> [unite]f :<C-u>Unite -toggle -auto-resize -buffer-name=files file_rec/async:!<CR><C-u>
-
   nnoremap <silent> [unite]e :<C-u>Unite -buffer-name=recent file_mru<CR>
   nnoremap <silent> [unite]y :<C-u>Unite -buffer-name=yanks history/yank<CR>
   nnoremap <silent> [unite]l :<C-u>Unite -auto-resize -buffer-name=line line<CR>
@@ -688,6 +693,8 @@ if neobundle#tap('unite.vim') "{{{
   " unite plugins
 
   nnoremap <silent> [unite]c :<C-u>Unite -winheight=10 -auto-preview -buffer-name=colorschemes colorscheme<CR>
+  " show Git changes and recently edited files
+  nnoremap <silent><expr> [unite]d UniteWrapper((empty(system('git rev-parse --is-inside-work-tree 2>/dev/null')) ? '' : 'giti/status ') . 'file_mru', '-buffer-name=unite-changes')
   nnoremap <silent> [unite]t :<C-u>Unite -auto-resize -buffer-name=tag tag tag/file<CR>
 
   nnoremap <silent> [unite]o :<C-u>Unite -auto-resize -buffer-name=outline outline<CR>
