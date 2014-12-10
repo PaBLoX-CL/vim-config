@@ -484,7 +484,7 @@ if neobundle#tap('tabular') "{{{
   call neobundle#untap()
 endif "}}}
 if neobundle#tap('EasyGrep') "{{{
-  nnoremap <leader>vo :GrepOptions<cr>
+  nnoremap <Leader>vo :GrepOptions<cr>
 
   call neobundle#untap()
 endif "}}}
@@ -492,11 +492,11 @@ if neobundle#tap('ctrlp.vim') "{{{
   nmap , [ctrlp]
   nnoremap [ctrlp] <Nop>
 
+  nnoremap [ctrlp]b :CtrlPBuffer<CR>
+  nnoremap [ctrlp]o :CtrlPFunky<CR>
+  nnoremap [ctrlp]l :CtrlPLine<CR>
   nnoremap [ctrlp]t :CtrlPBufTag<CR>
   nnoremap [ctrlp]T :CtrlPTag<CR>
-  nnoremap [ctrlp]l :CtrlPLine<CR>
-  nnoremap [ctrlp]o :CtrlPFunky<CR>
-  nnoremap [ctrlp]b :CtrlPBuffer<CR>
 
   call neobundle#untap()
 endif "}}}
