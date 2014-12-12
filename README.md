@@ -51,6 +51,20 @@ Install
 
 4. Profit! :moneybag:
 
+UI Details
+----------
+
++ I use powerline, but it's installed system wide, so that's why I don't have
+  any kind of statusline configuration
++ I have the `colorcolumn` activated by default
++ *Soft* wrap is on
++ My colorscheme is jellybeans. I have tried to change it a lot of times. I keep
+  coming back.
++ `cursorline` is set on by default, but only in normal mode and when in the
+  window (this is extremely useful)
++ `relativenumber` is also set by default. I found it incredible useful when
+  navigating, but not so much when leaving the window or losing focus
+
 Mappings
 --------
 
