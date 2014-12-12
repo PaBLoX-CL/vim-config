@@ -28,6 +28,11 @@ the PR :)
 Install
 -------
 
+0. Install external tools
+
+    + `the_silver_searcher` (`ag`)
+    + `git`
+
 1. Clone this repo
 
     git clone https://github.com/PaBLoX-CL/vim-config ~/.vim
