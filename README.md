@@ -1,3 +1,30 @@
+Introduction
+------------
+
+This is my *personal* vim configuration, that I have tweaked over time, taking
+bits, reading the documentation, (hint: probably the most useful command in
+vim is `:help`) and a lot of trial & error. Hopefully, it could be useful for
+someone else :)
+
+Some things to keep in mind:
+
++ Opinionated
++ This is not a distribution
++ I use GNU/Linux
+
+I have tested my configuration on different systems and vps (linode, digital
+ocean and works fine by default), and most times works fine out of the box.
+Neobundle does a great job not allowing loading plugins that can't work without
+dependencies.
+
+One of the main reasons I decided to build my own vim configuration, it's
+basically because I was never completely satisfied with having to intervene, and
+I didn't like to start having tricky specific configuration `let`s, to customize
+to my own needs. That's why I also avoided lots of `if`s to see if executables
+were present or some tools were present. This could mean some things could not
+work, if it's not too much I might be willing to add it. In any case, just do
+the PR :)
+
 Install
 -------
 
