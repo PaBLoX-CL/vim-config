@@ -6,3 +6,4 @@ config
 rcm
 configs
 vim
+linux
