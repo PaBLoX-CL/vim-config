@@ -362,7 +362,10 @@ inoremap kj <Esc>
 inoremap <C-h> <Left>
 inoremap <C-l> <Right>
 
+" recover from accidental <C-u>
+" http://vim.wikia.com/wiki/Recover_from_accidental_Ctrl-U
 inoremap <C-u> <C-g>u<C-u>
+inoremap <C-w> <C-g>u<C-w>
 
 " suggests word when spelling it's on
 " https://stackoverflow.com/a/16481737/417527
