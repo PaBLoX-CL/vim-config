@@ -359,8 +359,10 @@ inoremap jk <Esc>
 inoremap kj <Esc>
 
 " change cursor position
-inoremap <C-h> <Left>
-inoremap <C-l> <Right>
+" TODO: See if I can find something more useful, or that doesn't conflict with
+" existing mappings
+" inoremap <C-h> <Left>
+" inoremap <C-l> <Right>
 
 " recover from accidental <C-u>
 " http://vim.wikia.com/wiki/Recover_from_accidental_Ctrl-U
