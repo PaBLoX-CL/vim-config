@@ -416,7 +416,6 @@ vnoremap <Leader>p "+p
 vnoremap <Leader>P "+P
 
 " automatically jump to the end of text that has been pasted
-" NOTE: not working because of yankstack
 vnoremap <silent> y y`]
 vnoremap <silent> p p`]
 nnoremap <silent> p p`]
@@ -584,12 +583,6 @@ if neobundle#tap('neosnippet.vim') "{{{
   smap <expr><TAB> neosnippet#expandable_or_jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
   imap <expr><S-TAB> pumvisible() ? "\<C-p>" : ""
   smap <expr><S-TAB> pumvisible() ? "\<C-p>" : ""
-
-  call neobundle#untap()
-endif "}}}
-if neobundle#tap('vim-yankstack') "{{{
-  let g:yankstack_yank_keys = [ 'c', 'C', 'd', 'D', 'x', 'X', 'y', 'Y' ]
-  call yankstack#setup()
 
   call neobundle#untap()
 endif "}}}

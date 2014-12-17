@@ -175,7 +175,6 @@ NeoBundleLazy 'godlygeek/tabular', {
       \ 'commands': 'Tabularize',
       \ }
 NeoBundle 'bufkill.vim'
-NeoBundle 'maxbrunsfeld/vim-yankstack'
 NeoBundle 'chrisbra/NrrwRgn'
 NeoBundleLazy 'terryma/vim-expand-region', {
       \ 'mappings': '<Plug>(expand_'
