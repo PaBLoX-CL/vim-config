@@ -17,7 +17,7 @@ let $CACHE = expand('~/.vim/.cache')
 " i. Functions {{{2
 function! EnsureExists(path)
   if !isdirectory(expand(a:path))
-    call mkdir(expand(a:path))
+    call mkdir(expand(a:path), 'p')
   endif
 endfunction
 
