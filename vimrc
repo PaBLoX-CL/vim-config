@@ -13,6 +13,7 @@ nnoremap , <Nop>
 xnoremap , <Nop>
 
 let $CACHE = expand('~/.vim/.cache')
+let s:neobundle_path = expand("$CACHE/neobundle/neobundle.vim")
 
 " i. Functions {{{2
 function! EnsureExists(path)
@@ -38,12 +39,11 @@ endif
 " iii. NeoBundle Configuration {{{2
 
 " Necessary to configure neobundle
-if !isdirectory(expand('~/.vim/bundle/neobundle.vim'))
+if !isdirectory(s:neobundle_path)
   echomsg 'Neobundle not installed, please install it!'
-  exit
 endif
 
-set runtimepath+=~/.vim/bundle/neobundle.vim/
+execute 'set runtimepath^=' . s:neobundle_path
 call neobundle#begin(expand('$CACHE/neobundle'))
 
 if neobundle#has_cache()
