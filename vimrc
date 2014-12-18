@@ -46,7 +46,7 @@ endif
 execute 'set runtimepath^=' . s:neobundle_path
 call neobundle#begin(expand('$CACHE/neobundle'))
 
-if neobundle#has_cache()
+if neobundle#has_fresh_cache()
   NeoBundleLoadCache
 else
   call s:source_rc('neobundle.rc.vim')
