@@ -53,7 +53,10 @@ else
   NeoBundleSaveCache
 endif
 
-NeoBundleLocal '~/.vim/bundle'
+" This is **awesome** when developing local plugins, or when you want to test
+" new plugins before inserting them on your `vimrc` or `rc/neobundle.rc.vim`.
+" It basically works the same as pathogen.
+NeoBundleLocal ~/.vim/bundle
 NeoBundleCheck
 
 " ~~~ Interludio ~~~ {{{1
