@@ -4,6 +4,7 @@
 " 0. Bootstrap system {{{1
 set nocompatible                  "anybody cares?
 
+" This has to be set first, or later the plugins and stuff won't respect it
 let mapleader="\<Space>"
 let localmapleader="\<Space>"
 
@@ -187,7 +188,7 @@ nnoremap g; g;zz
 nnoremap g, g,zz
 
 " Open a Quickfix window for the last search.
-nnoremap <silent> <leader>? :execute 'vimgrep /'.@/.'/g %'<CR>:copen<CR>
+nnoremap <silent> <Leader>? :execute 'vimgrep /'.@/.'/g %'<CR>:copen<CR>
 
 " 2. Filetype {{{1
 
@@ -246,10 +247,10 @@ set foldenable
 set foldmethod=syntax
 set foldlevelstart=4
 set foldnestmax=10
-nnoremap zr zr:echo &foldlevel<cr>
-nnoremap zm zm:echo &foldlevel<cr>
-nnoremap zR zR:echo &foldlevel<cr>
-nnoremap zM zM:echo &foldlevel<cr>
+nnoremap zr zr:echo &foldlevel<CR>
+nnoremap zm zm:echo &foldlevel<CR>
+nnoremap zR zR:echo &foldlevel<CR>
+nnoremap zM zM:echo &foldlevel<CR>
 
 " Color {{{2
 set background=dark
@@ -317,7 +318,7 @@ vnoremap <buffer> <silent> $ g$
 " <F12>
 
 if neobundle#tap('vim-startify') "{{{ <F1>
-  nnoremap <F1> :Startify<cr>
+  nnoremap <F1> :Startify<CR>
 
   call neobundle#untap()
 endif "}}}
@@ -357,7 +358,7 @@ map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans
 
 " Insert mode {{{2
 
-" smash scape
+" smash escape
 inoremap jk <Esc>
 inoremap kj <Esc>
 
@@ -443,7 +444,7 @@ nnoremap <Leader>w :w<CR>
 
 " Command Line {{{2
 " easy expansion of the active file directory
-cnoremap %% <C-R>=expand('%:h').'/'<cr>
+cnoremap %% <C-R>=expand('%:h').'/'<CR>
 nmap <Leader>ew :edit %%
 nmap <Leader>es :split %%
 nmap <Leader>ev :vsplit %%
@@ -491,7 +492,7 @@ if neobundle#tap('tabular') "{{{
   call neobundle#untap()
 endif "}}}
 if neobundle#tap('EasyGrep') "{{{
-  nnoremap <Leader>vo :GrepOptions<cr>
+  nnoremap <Leader>vo :GrepOptions<CR>
 
   call neobundle#untap()
 endif "}}}
