@@ -64,8 +64,7 @@ UI Details
   window (this is extremely useful)
 + `relativenumber` is also set by default. I found it incredible useful when
   navigating, but not so much when leaving the window or losing focus (I got the
-  idea from [Jeff Kreefmeijer post](http://jeffkreeftmeijer.com/2012/relative-line
-  -numbers-in-vim-for-super-fast-movement/))
+  idea from [Jeff Kreefmeijer post](http://jeffkreeftmeijer.com/2012/relative-line-numbers-in-vim-for-super-fast-movement/))
 
 [jellybeans]: https://github.com/nanotech/jellybeans.vim
 [powerline]: https://github.com/powerline/powerline
