@@ -121,7 +121,6 @@ set tabstop=4
 
 set list                          "highlight whitespace
 set listchars=tab:»·,extends:❯,precedes:❮,trail:␣,conceal:Δ
-set showbreak=↪
 
 " 1.3. Trailing whitespace {{{2
 " Only shown when not in insert mode so I don't go insane.
@@ -237,6 +236,7 @@ set showmatch                     "briefly jump to the matching bracket when ins
 if exists('+breakindent')
   set breakindent
   set wrap
+  set showbreak=↪
 else
   set nowrap
 endif
