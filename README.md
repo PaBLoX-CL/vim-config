@@ -1,3 +1,6 @@
+Pablo's Vim Config
+==================
+
 Introduction
 ------------
 
@@ -76,8 +79,7 @@ normally used by the community:
 + <kbd>Esc</kbd><kbd>Esc</kbd> clears search match
 + `<Leader>` is <kbd>SPACE</kbd>
 
-Normal mode
-===========
+### Normal mode
 
 Arrow keys are disabled in normal mode. No more cheating.
 
@@ -86,7 +88,7 @@ Arrow keys are disabled in normal mode. No more cheating.
 + `<Leader>{|,-}`: quick splits
 + `<Leader>w`: quick save
 
-### Function keys
+#### Function keys
 
 + <kbd>F1</kbd>: Startify
 + <kbd>F2</kbd>: Toggle Relative Number
@@ -100,41 +102,35 @@ Arrow keys are disabled in normal mode. No more cheating.
 **Rationale:** Function keys are for things that I don't use too much, and can
 be toggled.
 
-### Alt mappings
+#### Alt mappings
 
 + <kbd>ALT + p</kbd>: Toggle auto-pairs
 
-### Miscellaneous
-
-Insert Mode
-===========
+### Insert Mode
 
 + Smash escape: `jk` and `kj` in rapid succession, or at the same time (thanks
   to [vim-arpeggio][])
 + <kbd>CTRL</kbd><kbd>l</kbd>: Suggests word when spelling and pick the first
 
-Visual Mode
-===========
+### Visual Mode
 
 + Clever trick from [sheerun's article](http://sheerun.net/2014/03/21/how-to-boost-your-vim-productivity/)
     + <kbd>v</kbd> region_expand (once, visual mode; twice, select word; thrice,
       sentence ...)
     + <kbd>CTRL + V</kbd> region_shrink (the opposite)
 
-Command Line
-============
+### Command Line
 
 + `%%` expand the directory of the current file anywhere at the command line
 + `<Leader>ew` expands to :edit (directory of current file)/ (open in the current buffer)
 + `<Leader>es` expands to :split (directory of current file)/ (open in a horizontal split)
 + `<Leader>ev` expands to :vsplit (directory of current file)/ (open in a vertical split)
 
-Plugins
-=======
+### Plugins
 
 I have [vinegar][] as a plugin, but I use <kbd>`_`</kbd> instead of <kbd>-</kbd>.
 
-### Ctrl-p
+#### Ctrl-p
 
 I'm using [ctrl-p][] with a pseudo-leader key: <kbd>,</kbd>.
 
@@ -145,7 +141,7 @@ I'm using [ctrl-p][] with a pseudo-leader key: <kbd>,</kbd>.
 + <kbd>,t</kbd>: search tag within the current buffer
 + <kbd>,T</kbd>: search tag globally
 
-### Unite
+#### Unite
 
 This was a recent discovery, I found it more awesome everyday I use it, problem
 is that I have been using [ctrl-p][] for a long time, and I can't get rid of my
@@ -161,7 +157,7 @@ muscle memory that fast. I'm using also a pseudo-leader key: <kbd>-</kbd>
 + <kbd>-s</kbd>: buffers (with quick-match)
 + <kbd>-y</kbd>: yanks
 
-#### And with some plugins (or *sources*)
+##### And with some plugins (or *sources*)
 
 + <kbd>-c</kbd>: colorschemes
 + <kbd>-d</kbd>: git status
@@ -171,13 +167,13 @@ muscle memory that fast. I'm using also a pseudo-leader key: <kbd>-</kbd>
 + <kbd>-t</kbd>: tags
 + <kbd>-z</kbd>: folds
 
-### Filetype plugin mappings
+#### Filetype plugin mappings
 
 All filetype plugins, start with a pseudo-leader, <kbd><Leader>f</kbd>
 
 + <kbd>js</kbd>: jsbeautify
 
-### General mappings
+#### General mappings
 
 + `<Leader>a{&,=,:,,,|}`: [Tabular][tabularize] align commands
 + <kbd>[]c</kbd>: [GitGutter][gitgutter] prev/next hunk
@@ -205,16 +201,14 @@ All filetype plugins, start with a pseudo-leader, <kbd><Leader>f</kbd>
 Miscellaneous
 -------------
 
-Colorschemes
-============
+### Colorschemes
 
 If you want to include the extra colorschemes, just add the following in
 your `before.vimrc` file:
 
     let g:colorscheme_extras = 1
 
-Key-stuff
-=========
+### Key-stuff
 
 I have added some alt + key mappings, if you need to add more, just modify
 the `characters` list from [](rc/alt_mappings.rc.vim).
@@ -232,50 +226,50 @@ This vim configuration has been created from a lot of years of tweaking and
 reading other more clever vim developers. I tried to document what did I took
 and where, but of course something could be unintentionally left out.
 
->     If I have seen further than others, it is by standing upon the shoulders 
->     of giants.
+>        If I have seen further than others, it is by standing upon the shoulders
+>        of giants.
 >
->                                    Letter to Robert Hooke (15 February 1676) 
->                                                              —  Isaac Newton
+>                                       Letter to Robert Hooke (15 February 1676)
+>                                                                 —  Isaac Newton
 
 Well, I haven't seen any further, but oh well, you get the idea.
 
-### [Shougo's vim](https://github.com/Shougo/shougo-s-github)
+##### [Shougo's vim](https://github.com/Shougo/shougo-s-github)
 
 This configuration is heavily based on this configuration, the distribution, and
 some functions. Most notorious thing should be the use of the `neobundle#tap`
 function.
 
-### [bling's Dotvim](https://github.com/bling/dotvim)
+##### [bling's Dotvim](https://github.com/bling/dotvim)
 
 Until a couple of months ago I was using a fork from this vim distribution until
 I found Shougo's. I didn't like to declare every plugin configuration along
 with the plugin, besides that doesn't play along very well with Neobundle.
 
-### [vimified](https://zaiste.github.io/vimified)
+##### [vimified](https://zaiste.github.io/vimified)
 
 I used this from at least a couple of years. It's awesome, easier to follow, and
 doesn't suffer the problem that big distributions like Janus had, overly
 complex, and annoying configuration.
 
-### [Spf13](https://github.com/spf13/spf13-vim)
+##### [Spf13](https://github.com/spf13/spf13-vim)
 
 I never used spf13 as a whole, I just stole a couple of ideas from it. It looks
 very good for use with gVim though.
 
-### [Janus](https://github.com/carlhuda/janus)
+##### [Janus](https://github.com/carlhuda/janus)
 
 Janus was the first distribution I ever used when I started using vim more
 seriously. It was awesome to use out-of-the box, but the submodule
 configuration, the use of local directories, discouraged me (and also, I always
 felt that was focus to MacVim, more than linux version).
 
-### [Terryma's Dotfiles](https://github.com/terryma/dotfiles)
+##### [Terryma's Dotfiles](https://github.com/terryma/dotfiles)
 
 I found this one just a while ago, so I haven't checked it with detail, but it
 is definitely on the todo list.
 
-### [YADR project](https://github.com/skwp/dotfiles)
+##### [YADR project](https://github.com/skwp/dotfiles)
 
 It has a very modular distribution, but sometimes feel it's way too much.
 I tried to use it a while ago, but I never felt comfortable with that. I rather
