@@ -232,10 +232,11 @@ This vim configuration has been created from a lot of years of tweaking and
 reading other more clever vim developers. I tried to document what did I took
 and where, but of course something could be unintentionally left out.
 
-> If I have seen further than others, it is by standing upon the shoulders of
-> giants.
+>     If I have seen further than others, it is by standing upon the shoulders 
+>     of giants.
 >
->                                                       &emdash; Isaac Newton
+>                                    Letter to Robert Hooke (15 February 1676) 
+>                                                              —  Isaac Newton
 
 Well, I haven't seen any further, but oh well, you get the idea.
 
