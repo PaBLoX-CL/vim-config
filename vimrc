@@ -227,6 +227,7 @@ let g:markdown_fenced_languages = [
 
 set colorcolumn=+3
 " set conceallevel=1                "enable concealing by default
+set fillchars=vert:\ ,fold:\ ,stl:\ ,stlnc:\ ,diff:⣿
 set formatoptions=qn1             "see 'fo-table' for more info
 set lazyredraw
 set laststatus=2                  "always show statusline
