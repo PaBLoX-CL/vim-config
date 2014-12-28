@@ -224,3 +224,65 @@ support for `<S-F1>` to `<S-F4>`.
 
 This [answer](https://stackoverflow.com/a/27206531/417527) on StackOverflow
 explains how it is done.
+
+Acknowledgments
+---------------
+
+This vim configuration has been created from a lot of years of tweaking and
+reading other more clever vim developers. I tried to document what did I took
+and where, but of course something could be unintentionally left out.
+
+> If I have seen further than others, it is by standing upon the shoulders of
+> giants.
+>
+>                                                       &emdash; Isaac Newton
+
+Well, I haven't seen any further, but oh well, you get the idea.
+
+### [Shougo's vim](https://github.com/Shougo/shougo-s-github)
+
+This configuration is heavily based on this configuration, the distribution, and
+some functions. Most notorious thing should be the use of the `neobundle#tap`
+function.
+
+### [bling's Dotvim](https://github.com/bling/dotvim)
+
+Until a couple of months ago I was using a fork from this vim distribution until
+I found Shougo's. I didn't like to declare every plugin configuration along
+with the plugin, besides that doesn't play along very well with Neobundle.
+
+### [vimified](https://zaiste.github.io/vimified)
+
+I used this from at least a couple of years. It's awesome, easier to follow, and
+doesn't suffer the problem that big distributions like Janus had, overly
+complex, and annoying configuration.
+
+### [Spf13](https://github.com/spf13/spf13-vim)
+
+I never used spf13 as a whole, I just stole a couple of ideas from it. It looks
+very good for use with gVim though.
+
+### [Janus](https://github.com/carlhuda/janus)
+
+Janus was the first distribution I ever used when I started using vim more
+seriously. It was awesome to use out-of-the box, but the submodule
+configuration, the use of local directories, discouraged me (and also, I always
+felt that was focus to MacVim, more than linux version).
+
+### [Terryma's Dotfiles](https://github.com/terryma/dotfiles)
+
+I found this one just a while ago, so I haven't checked it with detail, but it
+is definitely on the todo list.
+
+### [YADR project](https://github.com/skwp/dotfiles)
+
+It has a very modular distribution, but sometimes feel it's way too much.
+I tried to use it a while ago, but I never felt comfortable with that. I rather
+have a sort of "long" vimrc that having every possible option spread trough the
+repo.
+
+License
+-------
+
+Copyright © Pablo Olmos de Aguilera Corradini. Distributed under the same terms
+as vim itself. See `:help license` for more information.
