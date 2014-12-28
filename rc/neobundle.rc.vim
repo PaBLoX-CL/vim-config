@@ -190,7 +190,7 @@ NeoBundleLazy 'EasyGrep', {
 NeoBundleLazy 'justinmk/vim-sneak', {
       \ 'mappings': ['s', 'S']
       \ }
-NeoBundle 'kien/ctrlp.vim', {
+NeoBundle 'ctrlpvim/ctrlp.vim', {
       \ 'depends': 'tacahiroy/ctrlp-funky',
       \ }
 NeoBundle 'mileszs/ack.vim'
