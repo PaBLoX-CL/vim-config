@@ -76,6 +76,8 @@ set display+=lastline
 set encoding=utf-8
 set hidden                        "allow buffer switch without saving
 set history=1000
+set isfname-==                    "remove `=` from filename characters
+set iskeyword+=-
 set matchpairs+=<:>
 set mouse=a
 set mousehide
