@@ -482,6 +482,10 @@ nmap <Leader>ev :vsplit %%
 " when I forget to use sudoedit
 cnoremap w!! w !sudo tee % >/dev/null
 
+" change to current working directory of the current file
+cnoremap cwd lcd %:p:h
+cnoremap cd. lcd %:p:h
+
 " Chords {{{2
 if neobundle#tap('vim-arpeggio')
   call arpeggio#load()
