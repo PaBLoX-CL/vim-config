@@ -210,7 +210,7 @@ your `before.vimrc` file:
 ### Key-stuff
 
 I have added some alt + key mappings, if you need to add more, just modify
-the `characters` list from [](rc/alt_mappings.rc.vim).
+the `characters` list from [rc/alt_mappings.rc.vim](rc/alt_mappings.rc.vim).
 
 For [termite](https://github.com/thestinger/termite), I have configured the
 support for `<S-F1>` to `<S-F4>`.
