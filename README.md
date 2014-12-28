@@ -132,7 +132,75 @@ Command Line
 Plugins
 =======
 
-+ <Leader>nr ([Narrow Region](https://github.com/chrisbra/NrrwRgn))
+I have [vinegar][] as a plugin, but I use <kbd>`_`</kbd> instead of <kbd>-</kbd>.
+
+### Ctrl-p
+
+I'm using [ctrl-p][] with a pseudo-leader key: <kbd>,</kbd>.
+
++ <kbd>CTRL + P</kbd>: summon ctrl-p :heart:
++ <kbd>,b</kbd>: search buffers
++ <kbd>,o</kbd>: search outline (using [ctrlp-funky][])
++ <kbd>,l</kbd>: search line
++ <kbd>,t</kbd>: search tag within the current buffer
++ <kbd>,T</kbd>: search tag globally
+
+### Unite
+
+This was a recent discovery, I found it more awesome everyday I use it, problem
+is that I have been using [ctrl-p][] for a long time, and I can't get rid of my
+muscle memory that fast. I'm using also a pseudo-leader key: <kbd>-</kbd>
+
++ <kbd>- + SPACE</kbd>: a mix of buffers, most recent used files and bookmarks
++ <kbd>-/</kbd>: grep
++ <kbd>-b</kbd>: buffers
++ <kbd>-e</kbd>: recent files (from within the directory)
++ <kbd>-f</kbd>: directory files (async)
++ <kbd>-l</kbd>: lines
++ <kbd>-m</kbd>: mappings
++ <kbd>-s</kbd>: buffers (with quick-match)
++ <kbd>-y</kbd>: yanks
+
+#### And with some plugins (or *sources*)
+
++ <kbd>-c</kbd>: colorschemes
++ <kbd>-d</kbd>: git status
++ <kbd>-h</kbd>: help
++ <kbd>-j</kbd>: junkfile
++ <kbd>-o</kbd>: outline
++ <kbd>-t</kbd>: tags
++ <kbd>-z</kbd>: folds
+
+### Filetype plugin mappings
+
+All filetype plugins, start with a pseudo-leader, <kbd><Leader>f</kbd>
+
++ <kbd>js</kbd>: jsbeautify
+
+### General mappings
+
++ `<Leader>a{&,=,:,,,|}`: [Tabular][tabularize] align commands
++ <kbd>[]c</kbd>: [GitGutter][gitgutter] prev/next hunk
++ `<Leader>h{s,r}`: [GitGutter's][gitgutter] hunk-staging/reverting
++ `<Leader>g{s,d,c,b,l,p,w,r}`: [Fugitive's][fugitive] git   status/diff/commit/
+  blame/log/push/write/remove
++ `<Leader>nr`: [Narrow Region][narrow_region]
++ `<Leader>vo`: [EasyGrep][easy_grep]
++ `<Leader>c`: [vim-shell][] mappings
+    + `c` open vimshell in a vertical split
+    + `n` node repl
+    + `r` ruby repl
+    + `p` python repl
+
+[fugitive]: https://github.com/tpope/vim-fugitive
+[gitgutter]: https://github.com/airblade/vim-gitgutter
+[narrow_region]: https://github.com/chrisbra/NrrwRgn
+[tabularize]: https://github.com/godlygeek/tabular
+[easy_grep]: http://www.vim.org/scripts/script.php?script_id=2438
+[ctrl-p]: https://github.com/kien/ctrlp.vim
+[ctrlp-funky]: https://github.com/tacahiroy/ctrlp-funky
+[vim-arpeggio]: https://github.com/kana/vim-arpeggio
+[vim-shell]: https://github.com/Shougo/vimshell.vim
 
 Miscellaneous
 -------------
