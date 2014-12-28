@@ -252,6 +252,7 @@ set foldenable
 set foldmethod=syntax
 set foldlevelstart=4
 set foldnestmax=10
+set foldopen+=jump
 nnoremap zr zr:echo &foldlevel<CR>
 nnoremap zm zm:echo &foldlevel<CR>
 nnoremap zR zR:echo &foldlevel<CR>
