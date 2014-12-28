@@ -41,6 +41,7 @@ NeoBundle 'altercation/vim-colors-solarized' "{{{
   let g:solarized_termcolors=256
   let g:solarized_termtrans=1
   "}}}
+NeoBundle 'morhetz/gruvbox'
 NeoBundle 'chriskempson/base16-vim'
 
 if exists('g:colorscheme_extras') " {{{2
