@@ -71,6 +71,7 @@ filetype plugin indent on
 syntax enable
 
 set autoread
+set dictionary+=/usr/share/dict/words
 set display+=lastline
 set encoding=utf-8
 set hidden                        "allow buffer switch without saving
