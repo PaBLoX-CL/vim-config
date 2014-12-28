@@ -10,6 +10,9 @@ NeoBundle 'Shougo/vimproc', {
 
 " 1. General {{{1
 NeoBundle 'kana/vim-arpeggio'
+NeoBundleLazy 'tpope/vim-capslock', {
+      \ 'insert': 1
+      \ }
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'tpope/vim-unimpaired'
 NeoBundle 'tpope/vim-eunuch'
@@ -333,5 +336,6 @@ NeoBundleLazy 'Shougo/vimshell.vim', {
       \ }
 NeoBundle 'mhinz/vim-startify'
 NeoBundle 'benmills/vimux'
+NeoBundle 'tpope/vim-tbone'
 
 " vim: foldmethod=marker foldlevel=0
