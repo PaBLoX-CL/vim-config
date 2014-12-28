@@ -448,6 +448,30 @@ nnoremap <Leader>- :sp<CR>
 " Quick save
 nnoremap <Leader>w :w<CR>
 
+" stolen from janus
+" upper/lower word
+nnoremap <Leader>u mQviwU`Q
+nnoremap <Leader>l mQviwu`Q
+
+" upper/lower first char of the word
+nnoremap <Leader>U mQgewvU`Q
+nnoremap <Leader>L mQgewvu`Q
+
+" swap two words
+nnoremap <silent>gw :s/\(\%#\w\+\)\(\_W\+\)\(\w\+\)/\3\2\1/<CR>`'
+
+" find merge conflict markers
+nnoremap <Leader>fc /\v^[<\|=>]{7}( .*\|$)<CR>
+
+" easier horizontal scrolling
+nnoremap zl zL
+nnoremap zh zH
+nnoremap zL zl
+nnoremap zH zh
+
+" quick format
+nnoremap <silent> <Leader>q gwip
+
 " Command Line {{{2
 " easy expansion of the active file directory
 cnoremap %% <C-R>=expand('%:h').'/'<CR>
