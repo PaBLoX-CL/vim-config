@@ -1,5 +1,6 @@
 " vimrc
-" Author: Pablo Olmos de Aguilera C.
+" Author: Pablo Olmos de Aguilera C. <pablo+vim at odac dot co>
+" Source: https://github.com/PaBLoX-CL/vim-config
 
 " 0. Bootstrap system {{{1
 set nocompatible                  "anybody cares?
