@@ -83,7 +83,6 @@ if exists('g:colorscheme_extras') " {{{2
 endif " }}}
 
 " 3. Development {{{1
-NeoBundle 'kana/vim-textobj-user'
 NeoBundleLazy 'mattn/gist-vim', {
       \ 'depends': 'mattn/webapi-vim',
       \ 'commands': 'Gist',
@@ -149,6 +148,10 @@ NeoBundleLazy 'tpope/vim-rails', {
       \ 'filetypes': 'ruby',
       \ }
 NeoBundleLazy 'nelstrom/vim-textobj-rubyblock', {
+      \ 'depends': 'vim-scripts/matchit.zip',
+      \ 'filetypes': 'ruby',
+      \ }
+NeoBundleLazy 'bootleq/vim-textobj-rubysymbol', {
       \ 'filetypes': 'ruby',
       \ }
 NeoBundleLazy 'skwp/vim-rspec', {
@@ -175,6 +178,10 @@ NeoBundleLazy 'marijnh/tern_for_vim', {
       \ }
 
 " 4. Editing {{{1
+NeoBundle 'kana/vim-textobj-user'
+NeoBundle 'kana/vim-textobj-function'
+NeoBundle 'kana/vim-textobj-indent'
+NeoBundle 'lucapette/vim-textobj-underscore'
 NeoBundleLazy 'godlygeek/tabular', {
       \ 'commands': 'Tabularize',
       \ }
