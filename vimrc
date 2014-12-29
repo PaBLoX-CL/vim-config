@@ -780,12 +780,6 @@ command! -bang QA qa<bang>
 command! -bang Qa qa<bang>
 " }}}
 
-" automatically switch to the current directory when a new buffer is opened
-" (spf13)
-if !exists('g:plx_no_autochdir')
-  autocmd BufEnter * if bufname("") !~ "^\[A-Za-z0-9\]*://" | lcd %:p:h | endif
-endif
-
 " This is important if you use powerline, setting the $PYTHONPATH from the
 " shell could led to really weird issues.
 let $PYTHONPATH='/usr/lib/python3.4/site-packages'
