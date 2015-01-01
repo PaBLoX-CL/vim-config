@@ -1,6 +1,7 @@
 TODO
 ====
 
-+ create tmp dirs first (ctrlp, yankring, vimshell)
 + remember about installing hpricot for use with vim-rspec
 
+<!-- vim: ft=markdown
+-->
