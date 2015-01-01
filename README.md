@@ -13,7 +13,7 @@ Some things to keep in mind:
 
 + Opinionated
 + This is not a distribution
-+ I use GNU/Linux
++ I use GNU/Linux (Arch Linux to be more specific)
 
 I have tested my configuration on different systems and vps (linode, digital
 ocean and works fine), and most times works fine out of the box.  Neobundle does
@@ -23,8 +23,9 @@ One of the main reasons I decided to build my own vim configuration, it's
 basically because I was never completely satisfied with having to intervene, and
 I didn't like to start having tricky specific configuration `let`s, to customize
 to my own needs. That's why I also avoided lots of `if`s to see if executables
-or some tools were present. This could mean some things could not work, but if
-it's not too much I might be willing to add it. In any case, just do the PR :)
+or some tools were present. This could mean some things could not work, if you
+think adding some of them could had value, and it's not too much I might be
+willing to add it. In any case, just do the PR :)
 
 Install
 -------
@@ -177,7 +178,7 @@ All filetype plugins, start with a pseudo-leader, <kbd><Leader>f</kbd>
 + `<Leader>a{&,=,:,,,|}`: [Tabular][tabularize] align commands
 + <kbd>[]c</kbd>: [GitGutter][gitgutter] prev/next hunk
 + `<Leader>h{s,r}`: [GitGutter's][gitgutter] hunk-staging/reverting
-+ `<Leader>g{s,d,c,b,l,p,w,r}`: [Fugitive's][fugitive] git   status/diff/commit/
++ `<Leader>g{s,d,c,b,l,p,w,r}`: [Fugitive's][fugitive] git status/diff/commit/
   blame/log/push/write/remove
 + `<Leader>nr`: [Narrow Region][narrow_region]
 + `<Leader>vo`: [EasyGrep][easy_grep]
