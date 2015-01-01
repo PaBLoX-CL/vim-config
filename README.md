@@ -172,6 +172,7 @@ muscle memory that fast. I'm using also a pseudo-leader key: <kbd>-</kbd>
 All filetype plugins, start with a pseudo-leader, <kbd><Leader>f</kbd>
 
 + <kbd>js</kbd>: jsbeautify
++ `<LocalLeader>ul`: underline
 
 #### General mappings
 
