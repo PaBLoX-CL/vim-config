@@ -7,7 +7,7 @@ set nocompatible                  "anybody cares?
 
 " This has to be set first, or later the plugins and stuff won't respect it
 let mapleader="\<Space>"
-let localmapleader="\<Space>"
+let maplocalleader="\<Space>"
 
 " Release keymappings
 nnoremap <Space> <Nop>
