@@ -22,7 +22,9 @@ NeoBundleLazy 'tpope/vim-rsi', {
       \ }
 NeoBundle 'pbrisbin/vim-restore-cursor'
 NeoBundle 'pbrisbin/vim-rename-file'
-
+NeoBundle 'xolox/vim-reload', {
+      \ 'depends': 'xolox/vim-misc',
+      \ }
 " 2. Colorschemes {{{1
 
 NeoBundleLazy 'ScrollColors', {
@@ -92,7 +94,7 @@ NeoBundleLazy 'gregsexton/gitv', {
       \   'depends': 'tpope/vim-fugitive',
       \   'commands': 'Gitv',
       \ }
-NeoBundleLazy 'matchit.zip', {
+NeoBundleLazy 'vim-scripts/matchit.zip', {
       \ 'mappings': ['%', 'g%']
       \ }
 NeoBundle 'tpope/vim-endwise'
@@ -192,6 +194,12 @@ NeoBundleLazy 'terryma/vim-expand-region', {
 NeoBundle 'terryma/vim-multiple-cursors'
 NeoBundle 'jiangmiao/auto-pairs'
 NeoBundle 'christoomey/vim-tmux-navigator'
+NeoBundleLazy 'AndrewRadev/splitjoin.vim', {
+      \ 'mappings': ['gS', 'gJ'],
+      \ }
+NeoBundleLazy 'greyblake/vim-preview', {
+      \ 'commands': 'Preview',
+      \ }
 
 " 5. Navigation {{{1
 NeoBundleLazy 'EasyGrep', {
