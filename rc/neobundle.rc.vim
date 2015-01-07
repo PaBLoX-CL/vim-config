@@ -231,6 +231,9 @@ NeoBundleLazy 'Twinside/vim-syntax-haskell-cabal', {
 NeoBundleLazy 'othree/javascript-libraries-syntax.vim', {
       \ 'filetypes': ['javascript','coffee'],
       \ }
+NeoBundleLazy 'jtratner/vim-flavored-markdown', {
+      \ 'filetypes': 'markdown',
+      \ }
 
 " 7. Unite {{{1
 NeoBundleLazy 'Shougo/unite.vim', {
