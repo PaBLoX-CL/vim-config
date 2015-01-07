@@ -673,6 +673,13 @@ if neobundle#tap('vim-indent-guides') "{{{
 
   call neobundle#untap()
 endif "}}}
+if neobundle#tap('vim-rsi') "{{{
+  if !has('gui_running')
+    let g:rsi_no_meta = 1
+  endif
+
+  call neobundle#untap()
+endif "}}}
 if neobundle#tap('vimshell.vim') "{{{
   let g:vimshell_editor_command='vim'
   let g:vimshell_right_prompt='getcwd()'
