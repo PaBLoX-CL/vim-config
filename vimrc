@@ -229,7 +229,7 @@ set colorcolumn=+3
 " set conceallevel=1                "enable concealing by default
 set fillchars=vert:\ ,fold:\ ,stl:\ ,stlnc:\ ,diff:⣿
 set formatoptions=qn1             "see 'fo-table' for more info
-set lazyredraw
+set lazyredraw                    "no redraw in macros
 set laststatus=2                  "always show statusline
 set matchtime=2                   "tens of a second to show the matching paren
 set noshowmode
