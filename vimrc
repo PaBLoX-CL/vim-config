@@ -177,7 +177,7 @@ vnoremap ? ?\v
 nnoremap :s/ :s/\v
 
 " clear search matching
-nnoremap <silent> <Esc><Esc> :let @/=""<CR>
+nnoremap <silent> <Leader>cm :noh<CR> :call clearmatches()<CR>
 
 " Don't jump when using * for search
 nnoremap * *<C-o>
@@ -491,6 +491,7 @@ if neobundle#tap('vim-arpeggio')
   call arpeggio#load()
   Arpeggio nnoremap la :ls<CR>
   Arpeggio inoremap jk <Esc>
+  Arpeggio nnoremap <silent> cm :noh<CR> :call clearmatches()<CR>
 
   call neobundle#untap()
 endif
