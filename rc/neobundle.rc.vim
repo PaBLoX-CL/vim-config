@@ -100,7 +100,7 @@ NeoBundleLazy 'vim-scripts/matchit.zip', {
 NeoBundle 'tpope/vim-endwise'
 NeoBundle 'tpope/vim-dispatch'
 NeoBundle 'tpope/vim-sleuth'
-NeoBundle 'tomtom/tcomment_vim'
+NeoBundle 'tpope/vim-commentary'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'airblade/vim-gitgutter'
 NeoBundleLazy 'sjl/gundo.vim', {
