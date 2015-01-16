@@ -576,7 +576,12 @@ if neobundle#tap('vim-expand-region') "{{{
   call neobundle#untap()
 endif "}}}
 if neobundle#tap('auto-pairs') "{{{
-  let g:AutoPairsShortcutToggle = "<M-a>"
+  " <M-a> produces a weird issue when trying to type á (somehow clobbers it),
+  " and <M-p> conflicts results in <Esc>p let's try with AltGr
+  let g:AutoPairsShortcutToggle     = 'þ'   " p
+  let g:AutoPairsShortcutFastWrap   = '€'   " e
+  let g:AutoPairsShortcutJump       = 'µ'   " m (altgr + n → n)
+  let g:AutoPairsShortcutBackInsert = '”'   " b
 
   call neobundle#untap()
 endif "}}}
