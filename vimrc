@@ -405,6 +405,12 @@ vmap <C-S-Down> ]egv
 
 " Normal mode {{{2
 
+" Use `<Enter>` to map `:`
+" https://stackoverflow.com/a/16360104/417527
+nnoremap <CR> :
+autocmd CmdwinEnter * nnoremap <CR> <CR>
+autocmd BufReadPost quickfix nnoremap <CR> <CR>
+
 " remap arrow keys (aka hard mode)
 " TODO: Find useful mappings for these keys
 nnoremap <Left> <Nop>
