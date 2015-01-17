@@ -311,27 +311,30 @@ vnoremap <buffer> <silent> $ g$
 " Function keys {{{2
 " <F1> Startify
 " <F2> Toggle Relative Number
-" <F3>
+" <F3> Tagbar Toggle
 " <F4> GoldenView Autoresize
 " <F5> Gundo Toggle
 " <F6> Paste Toggle
-" <F7>
-" <F8> Tagbar Toggle
+" <F7> Dispatch
+" <F8> Start (Dispatch)
 " <F9> Spellcheck Toggle
-" <F10> Get syntax group information
+" <F10>
 " <F11>
-" <F12>
+" <F12> Get syntax group information
 
 if neobundle#tap('vim-startify') "{{{ <F1>
   nnoremap <F1> :Startify<CR>
 
   call neobundle#untap()
 endif "}}}
-
 " {{{ <F2>
 nnoremap <silent> <F2> :setlocal norelativenumber! relativenumber?<CR>
 " }}}
+if neobundle#tap('tagbar') "{{{ <F3>
+  nnoremap <silent> <F3> :TagbarToggle<CR>
 
+  call neobundle#untap()
+endif "}}}
 if neobundle#tap('GoldenView.Vim') "{{{ <F4>
   let g:goldenview__enable_default_mapping=0
   nmap <silent> <F4> <Plug>GoldenViewSplit
@@ -344,22 +347,21 @@ if neobundle#tap('gundo.vim') "{{{ <F5>
 
   call neobundle#untap()
 endif "}}}
-
 set pastetoggle=<F6>
-
-if neobundle#tap('tagbar') "{{{ <F8>
-  nnoremap <silent> <F8> :TagbarToggle<CR>
+if neobundle#tap('dispatch') "{{{ <F7> <F8>
+  nnoremap <silent> <F7> :Dispatch<CR>
+  nnoremap <silent> <F8> :Start<CR>
 
   call neobundle#untap()
 endif "}}}
-
-" toggle spell checking
-map <F9> :setlocal invspell<CR>:set spell?<CR>
-
-" Get syntax information
-map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
+" toggle spell checking {{{ <F9>
+noremap <F9> :setlocal invspell<CR>:set spell?<CR>
+" }}}
+" Get syntax information {{{ <F10>
+noremap <F12> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
         \ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
         \ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
+" }}}
 
 " Insert mode {{{2
 
