@@ -4,7 +4,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 " Recommended to install
 NeoBundle 'Shougo/vimproc', {
       \   'build' : {
-      \       'unix' : 'make -f make_unix.mak',
+      \       'unix' : 'make -f make_unix.mak'
       \   }
       \ }
 
@@ -18,17 +18,17 @@ NeoBundle 'tpope/vim-unimpaired'
 NeoBundle 'tpope/vim-eunuch'
 NeoBundle 'tpope/vim-repeat'
 NeoBundleLazy 'tpope/vim-rsi', {
-      \ 'insert': 1,
+      \ 'insert': 1
       \ }
 NeoBundle 'pbrisbin/vim-restore-cursor'
 NeoBundle 'pbrisbin/vim-rename-file'
 NeoBundle 'xolox/vim-reload', {
-      \ 'depends': 'xolox/vim-misc',
+      \ 'depends': 'xolox/vim-misc'
       \ }
 " 2. Colorschemes {{{1
 
 NeoBundleLazy 'ScrollColors', {
-      \ 'commands': 'SCROLLCOLOR',
+      \ 'commands': 'SCROLLCOLOR'
       \ }
 "NeoBundle 'godlygeek/csapprox'
 
@@ -81,18 +81,19 @@ if exists('g:colorscheme_extras') " {{{2
 
   " Light {{{3
   NeoBundle 'github-theme'
+  " 3}}}
 
-endif " }}}
+endif " 2}}}
 
 " 3. Development {{{1
 NeoBundleLazy 'mattn/gist-vim', {
       \ 'depends': 'mattn/webapi-vim',
-      \ 'commands': 'Gist',
+      \ 'commands': 'Gist'
       \ }
 NeoBundle 'tpope/vim-fugitive'
 NeoBundleLazy 'gregsexton/gitv', {
       \   'depends': 'tpope/vim-fugitive',
-      \   'commands': 'Gitv',
+      \   'commands': 'Gitv'
       \ }
 NeoBundleLazy 'vim-scripts/matchit.zip', {
       \ 'mappings': ['%', 'g%']
@@ -104,60 +105,53 @@ NeoBundle 'tpope/vim-commentary'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'airblade/vim-gitgutter'
 NeoBundleLazy 'sjl/gundo.vim', {
-      \  'commands': 'GundoToggle',
+      \  'commands': 'GundoToggle'
       \ }
 " NeoBundle 'honza/vim-snippets'
 NeoBundleLazy 'Shougo/neocomplete.vim', {
       \   'insert': 1,
-      \   'vim_version': '7.3.885',
+      \   'vim_version': '7.3.885'
       \ }
 NeoBundleLazy 'Shougo/neosnippet.vim', {
       \ 'depends': 'Shougo/neosnippet-snippets',
       \ 'insert': 1,
       \ 'filetypes': 'snippet',
       \ 'unite_sources': [
-      \   'neosnippet', 'neosnippet/user', 'neosnippet/runtime' ],
+      \   'neosnippet', 'neosnippet/user', 'neosnippet/runtime' ]
       \ }
-" NeoBundle 'Shougo/neosnippet-snippets'
 " NeoBundle 'Valloric/YouCompleteMe', {'vim_version':'7.3.584'} "{{{
 "   let g:ycm_complete_in_comments_and_strings=1
 "   let g:ycm_key_list_select_completion=['<C-n>', '<Down>']
 "   let g:ycm_key_list_previous_completion=['<C-p>', '<Up>']
 "   let g:ycm_filetype_blacklist={'unite': 1}
 "   "}}}
-" NeoBundle 'SirVer/ultisnips' "{{{
-"   let g:UltiSnipsExpandTrigger="<tab>"
-"   let g:UltiSnipsJumpForwardTrigger="<tab>"
-"   let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
-"   let g:UltiSnipsSnippetsDir='~/.vim/snippets'
-" "}}}
 
 " Haskell {{{2
 NeoBundleLazy 'eagletmt/neco-ghc', {
       \ 'filetypes': 'haskell',
-      \ 'external_commands': 'ghc-mod',
+      \ 'external_commands': 'ghc-mod'
       \ }
 NeoBundleLazy 'Twinside/vim-haskellFold', {
-      \ 'filetypes': 'haskell',
+      \ 'filetypes': 'haskell'
       \ }
 
 " Ruby {{{2
 NeoBundle 'tpope/vim-bundler'
 NeoBundleLazy 'tpope/vim-rails', {
-      \ 'filetypes': 'ruby',
+      \ 'filetypes': 'ruby'
       \ }
 NeoBundleLazy 'nelstrom/vim-textobj-rubyblock', {
       \ 'depends': 'vim-scripts/matchit.zip',
-      \ 'filetypes': 'ruby',
+      \ 'filetypes': 'ruby'
       \ }
 NeoBundleLazy 'bootleq/vim-textobj-rubysymbol', {
-      \ 'filetypes': 'ruby',
+      \ 'filetypes': 'ruby'
       \ }
 NeoBundleLazy 'skwp/vim-rspec', {
-      \ 'filetypes': 'ruby',
+      \ 'filetypes': 'ruby'
       \ }
 
-" Web {{{2
+" Web {{{
 " NeoBundleLazy 'mattn/emmet-vim', {'autoload':{'filetypes':['html','xml','xsl','xslt','xsd','css','sass','scss','less','mustache']}} "{{{
 "   function! s:zen_html_tab()
 "     let line = getline('.')
@@ -172,11 +166,11 @@ NeoBundleLazy 'skwp/vim-rspec', {
 NeoBundleLazy 'marijnh/tern_for_vim', {
       \   'filetypes': 'javascript',
       \   'build': {
-      \     'unix': 'npm install',
+      \     'unix': 'npm install'
       \   }
       \ }
 NeoBundleLazy 'maksimr/vim-jsbeautify', {
-      \ 'filetypes': 'javascript',
+      \ 'filetypes': 'javascript'
       \ }
 " 4. Editing {{{1
 NeoBundle 'kana/vim-textobj-user'
@@ -184,7 +178,7 @@ NeoBundle 'kana/vim-textobj-function'
 NeoBundle 'kana/vim-textobj-indent'
 NeoBundle 'lucapette/vim-textobj-underscore'
 NeoBundleLazy 'godlygeek/tabular', {
-      \ 'commands': 'Tabularize',
+      \ 'commands': 'Tabularize'
       \ }
 NeoBundle 'bufkill.vim'
 NeoBundle 'chrisbra/NrrwRgn'
@@ -195,21 +189,21 @@ NeoBundle 'terryma/vim-multiple-cursors'
 NeoBundle 'jiangmiao/auto-pairs'
 NeoBundle 'christoomey/vim-tmux-navigator'
 NeoBundleLazy 'AndrewRadev/splitjoin.vim', {
-      \ 'mappings': ['gS', 'gJ'],
+      \ 'mappings': ['gS', 'gJ']
       \ }
 NeoBundleLazy 'greyblake/vim-preview', {
-      \ 'commands': 'Preview',
+      \ 'commands': 'Preview'
       \ }
 
 " 5. Navigation {{{1
 NeoBundleLazy 'EasyGrep', {
-      \ 'commands': 'GrepOptions',
+      \ 'commands': 'GrepOptions'
       \ }
 NeoBundleLazy 'justinmk/vim-sneak', {
       \ 'mappings': ['s', 'S']
       \ }
 NeoBundle 'ctrlpvim/ctrlp.vim', {
-      \ 'depends': 'tacahiroy/ctrlp-funky',
+      \ 'depends': 'tacahiroy/ctrlp-funky'
       \ }
 NeoBundle 'mileszs/ack.vim'
 " NeoBundleLazy 'scrooloose/nerdtree', {'autoload':{'commands':['NERDTreeToggle','NERDTreeFind']}} "{{{
@@ -224,62 +218,62 @@ NeoBundle 'mileszs/ack.vim'
 "   nnoremap <F3> :NERDTreeFind<CR>
 "   "}}}
 NeoBundleLazy 'tpope/vim-vinegar', {
-      \ 'mappings': '<Plug>VinegarUp',
+      \ 'mappings': '<Plug>VinegarUp'
       \ }
 NeoBundleLazy 'majutsushi/tagbar', {
       \ 'commands': 'TagbarToggle',
-      \ 'external_commands': 'ctags',
+      \ 'external_commands': 'ctags'
       \ }
 
 " 6. Filetypes {{{1
 NeoBundle 'sheerun/vim-polyglot'
 NeoBundleLazy 'Twinside/vim-syntax-haskell-cabal', {
-      \ 'filetypes': ['haskell', 'cabal'],
+      \ 'filetypes': ['haskell', 'cabal']
       \ }
 NeoBundleLazy 'othree/javascript-libraries-syntax.vim', {
-      \ 'filetypes': ['javascript','coffee'],
+      \ 'filetypes': ['javascript','coffee']
       \ }
 NeoBundleLazy 'jtratner/vim-flavored-markdown', {
-      \ 'filetypes': 'markdown',
+      \ 'filetypes': 'markdown'
       \ }
 
 " 7. Unite {{{1
 NeoBundleLazy 'Shougo/unite.vim', {
       \ 'commands': [{ 'name': 'Unite',
       \                'complete': 'customlist,unite#complete_source'}],
-      \ 'depends':  'Shougo/neomru.vim',
+      \ 'depends':  'Shougo/neomru.vim'
       \ }
 NeoBundleLazy 'ujihisa/unite-colorscheme', {
-      \ 'unite_sources': 'colorscheme',
+      \ 'unite_sources': 'colorscheme'
       \ }
 NeoBundleLazy 'osyo-manga/unite-fold', {
-      \ 'unite_sources': 'fold',
+      \ 'unite_sources': 'fold'
       \ }
 NeoBundleLazy 'tsukkee/unite-tag', {
-      \ 'unite_sources': ['tag', 'tag/file'],
+      \ 'unite_sources': ['tag', 'tag/file']
       \ }
 NeoBundleLazy 'Shougo/unite-outline', {
-      \ 'unite_sources': 'outline',
+      \ 'unite_sources': 'outline'
       \ }
 NeoBundleLazy 'Shougo/unite-help', {
-      \ 'unite_sources': 'help',
+      \ 'unite_sources': 'help'
       \ }
 NeoBundleLazy 'Shougo/junkfile.vim', {
       \ 'commands': 'JunkfileOpen',
       \ 'unite_sources': ['junkfile', 'junkfile/new']
       \ }
 NeoBundleLazy 'Shougo/neomru.vim', {
-      \ 'filetype': 'all',
+      \ 'filetype': 'all'
       \ }
 NeoBundleLazy 'kmnk/vim-unite-giti', {
-      \ 'unite_sources': 'giti',
+      \ 'unite_sources': 'giti'
       \ }
 
 " 8. UI {{{1
 " NeoBundle 'itchyny/lightline.vim'
 NeoBundle 'nathanaelkane/vim-indent-guides'
 NeoBundleLazy 'zhaocai/GoldenView.Vim', {
-      \ 'mappings': ['<Plug>ToggleGoldenViewAutoResize','<Plug>GoldenViewSplit'],
+      \ 'mappings': ['<Plug>ToggleGoldenViewAutoResize','<Plug>GoldenViewSplit']
       \ }
 
 " 9. Misc {{{1
