@@ -348,7 +348,7 @@ if neobundle#tap('gundo.vim') "{{{ <F5>
   call neobundle#untap()
 endif "}}}
 set pastetoggle=<F6>
-if neobundle#tap('dispatch') "{{{ <F7> <F8>
+if neobundle#tap('vim-dispatch') "{{{ <F7> <F8>
   nnoremap <silent> <F7> :Dispatch<CR>
   nnoremap <silent> <F8> :Start<CR>
 
